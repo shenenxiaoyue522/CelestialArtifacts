@@ -1,0 +1,15 @@
+{
+  "type": "celestial_core:fishing_cooldown",
+  "chance": "celestial_configs/celestial_artifacts-common.toml/necklace.treasureHunterNecklaceChance",
+  "condition": "celestial_artifacts:treasure_hunter_necklace",
+  "conditions": [
+    {
+      "biomes": "minecraft:has_structure/pillager_outpost",
+      "condition": "celestial_artifacts:fishing",
+      "item": "celestial_artifacts:treasure_hunter_necklace",
+      "open": true
+    }
+  ],
+  "cooldown": "celestial_configs/celestial_artifacts-common.toml/necklace.treasureHunterNecklaceCooldown",
+  "result": "celestial_core:pillager_outpost_loot_box"
+}

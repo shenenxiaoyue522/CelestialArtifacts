@@ -1,0 +1,122 @@
+1.5.3
+- Fix treasure hunter
+- Change min value of certain config options to 0
+
+1.5.2
+- Fix Gaia Totem description
+
+1.5.1
+- Fix reinforcement plates
+
+1.5.0
+- Refactor code
+
+1.4.10
+- Fix models and textures
+
+1.4.9
+- Add reinforce plates
+- Add a necklace
+- Add a scepter
+- Add gaia totem
+- Add potion bag
+
+1.4.8
+- Add more config options for artifacts
+- Fix server crash
+
+1.4.7
+- Fix end curse triggering
+- Add a cloak
+
+1.4.6
+- Add 3 new curios
+- Replace textures
+
+1.4.5
+- Add config to locking catastrophe on player and giving player items on start
+- Fix Magic Arrow Bag config
+- Add blacklist for Desire curse
+- Add more l18n
+
+1.4.3
+- Fix Fang Necklace, Life Bracelet
+- Items will no longer drop after reload
+
+1.4.2
+- Fixed the bug that magic horseshoe cannot be fished and buff the chance from 3% to 20%
+
+1.4.1
+- Fix refmap that causes startup crash
+
+1.4.0
+- Rework triggering conditions
+
+1.3.9
+- Use new Hierloom Necklace texture from Kayn
+- Curse of Truth no longer amplify damage if it's 0
+- Add Russian translation
+
+1.3.7
+- Fix Lock of Abyss recursive damage stacking
+- Fix End Dust description
+- Reduce Catastrophe scroll end curse duration from 30 sec to 10 sec (requires reset config)
+
+1.3.6
+- Fix Truth Etching drop missing Nebula Cube as fail drop
+
+1.3.5
+- fix bugs on CatastropheScroll when used with L2Library
+
+1.3.4
+- Fix equipOnStart
+- change texture for curios empty slot
+- Add L2Hostility compatibility with no_seal tag
+
+1.3.3
+- Replace back, bracelet, necklace, heart textures
+
+1.3.2
+- Show cannot destroy tooltip only while not pressing shift
+- 5 etchings that requires player kill won't be dropped when player has the curse reverted
+- Fix Cursed Protector not using config file properly
+- Replace bracelet, necklace, etchings, and arrow bag textures
+
+1.3.1
+- Fix origin etching break speed bonus
+- Fix Spirit Bracelet
+- Fix charms dropped when rejoining
+- Tweak loot and fortune
+- Fix loot and fortune tooltip
+- Chaotic Pendant compat with Apotheosis
+
+1.3.0
+- Fix a mysterious crash in large modpack involving Sinytra Connector
+- Replace head / charm / scroll textures
+- Fix tool models
+- Allow Catastrophe Scroll to show full effects
+- Finish all configs
+
+1.2.7
+- replace scabbard texture
+- change recipe to make nihility etching possible to obtain
+- Fix charms that reduce damage
+
+1.2.6
+- Fix Hidden Bracelet crash
+- Allow config to disable items
+- Use tag for require-curse
+- Fix curse equip limit
+- fix translation
+- redo pendant textures (original is edited EL texture)
+
+1.2.5
+- Change recipe, make more curios to require Catastrophe Scroll
+- Buff Earth tools
+- Fix Nebula Cube drop problem
+- Fix crash on damage reduction / negation charms
+
+1.2.4
+- Fix Catastrophe Scroll Origin/End Curse
+- Fix Amethyst Ring flashing
+- Fix Break Speed / Heal / Exp Pickup / Shield Block effect never triggered
