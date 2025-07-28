@@ -445,6 +445,14 @@ public class CARecipeGen {
 						.define('E', CAItems.DESIRE_ETCHING)
 						.save(saver);
 
+				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.DEERS_MERCY_AMULET.get(), 1)::unlockedBy, CCItems.TREASURE_FRAGMENT.get())
+						.pattern("I I").pattern("GTG").pattern("D D")
+						.define('I', Items.IRON_INGOT)
+						.define('G', Items.GOLD_INGOT)
+						.define('T', CCItems.TREASURE_FRAGMENT)
+						.define('D', Items.GLOWSTONE_DUST)
+						.save(saver);
+
 			}
 
 			// 2 etchings
