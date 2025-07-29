@@ -318,7 +318,7 @@ public class CAItems {
 							AttrFacet.add(() -> Attributes.ARMOR, CAModConfig.COMMON.charm.deerInscribedAmuletArmor::get),
 							AttrFacet.add(() -> Attributes.ARMOR_TOUGHNESS, CAModConfig.COMMON.charm.deerInscribedAmuletToughness::get),
 							AttrFacet.add(() -> Attributes.ATTACK_DAMAGE, CAModConfig.COMMON.charm.deerInscribedAmuletDamage::get),
-							new DeerInscribedAmulet()));
+							new TokenFacet<>("deer_inscribed_amulet", DeerInscribedAmulet::new)));
 		}
 
 		// heart

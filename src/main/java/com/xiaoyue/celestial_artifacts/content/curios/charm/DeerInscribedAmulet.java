@@ -10,7 +10,6 @@ import com.xiaoyue.celestial_artifacts.utils.CurioUtils;
 import com.xiaoyue.celestial_core.utils.EntityUtils;
 import dev.xkmc.l2damagetracker.contents.attack.AttackCache;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
-import dev.xkmc.l2library.init.events.GeneralEventHandler;
 import dev.xkmc.l2serial.serialization.SerialClass;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.LivingEntity;
@@ -32,17 +31,17 @@ public class DeerInscribedAmulet extends BaseTickingToken implements CAAttackTok
     }
 
     @SerialClass.SerialField
-    private boolean strength;
+    private int chargingTime;
 
     @Override
     protected void removeImpl(Player player) {
-        strength = false;
+        chargingTime = 0;
     }
 
     @Override
     protected void tickImpl(Player player) {
-        if (player.tickCount % time() * 20 == 0) {
-            strength = true;
+        if (chargingTime < time() * 20) {
+            chargingTime++;
         }
     }
 
@@ -55,11 +54,9 @@ public class DeerInscribedAmulet extends BaseTickingToken implements CAAttackTok
     @Override
     public void onPlayerHurtTarget(Player player, AttackCache cache) {
         LivingEntity target = cache.getAttackTarget();
-        if (strength) {
-            GeneralEventHandler.schedule(() -> {
-                EntityUtils.addEct(target, CAEffects.ENFEEBLED_LACERATION.get(), 100);
-                strength = false;
-            });
+        if (chargingTime == time() * 20) {
+            EntityUtils.addEct(target, CAEffects.ENFEEBLED_LACERATION.get(), 100);
+            chargingTime = 0;
         }
         if (CurioUtils.isCsOn(player)) {
             int mulBonus = CurioUtils.getCurseAmount(player) == 0 ? 8 : 8 - CurioUtils.getCurseAmount(player);

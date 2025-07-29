@@ -10,7 +10,7 @@ public class EnfeebledLaceration extends CelestialEffect {
     public EnfeebledLaceration() {
         super(MobEffectCategory.HARMFUL, 0xffae0007);
         String uuid = MathHelper.getUUIDFromString("celestial_artifacts:enfeebled_laceration").toString();
-        addAttributeModifier(Attributes.ATTACK_DAMAGE, uuid, 0.8, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        addAttributeModifier(Attributes.MOVEMENT_SPEED, uuid, 0.8, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        addAttributeModifier(Attributes.ATTACK_DAMAGE, uuid, -0.2, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        addAttributeModifier(Attributes.MOVEMENT_SPEED, uuid, -0.2, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 }
