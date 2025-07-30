@@ -1,6 +1,6 @@
-// 1.20.1	2025-07-28T19:49:21.9691555	Registrate Provider for celestial_artifacts [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects)]
-694f4e772b463fc9a9e81d70210e84d578801d2b assets/celestial_artifacts/lang/en_ud.json
-0f0913f6157d25ddc862fe07694862f30c86cbca assets/celestial_artifacts/lang/en_us.json
+// 1.20.1	2025-07-30T13:33:31.2658202	Registrate Provider for celestial_artifacts [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects)]
+037404264710f120e6b604f0e6077883b8eefdd6 assets/celestial_artifacts/lang/en_ud.json
+58c3a42a634d4f327ca44c2273f0f0f90ba5784e assets/celestial_artifacts/lang/en_us.json
 6bac01ffbdb846e51d42cc3387aa9add978b1ccf assets/celestial_artifacts/models/item/abyss_core.json
 aa8ae8969def9a9afc7e66a3e189cb3ec87c48ad assets/celestial_artifacts/models/item/abyss_will_badge.json
 d9744c1da9516b25ffbab28cdfb841b7f055d9f2 assets/celestial_artifacts/models/item/amethyst_reinforce_plate.json
@@ -123,6 +123,7 @@ b82b5811d45e140e35ea97416ff77a29cd699fbd data/celestial_artifacts/advancements/r
 39eefe4b99ae4d1b4438d3f7bf6e6a878a1759a6 data/celestial_artifacts/advancements/recipes/misc/cursed_talisman.json
 05d567aad32b908849666c8a04d425b4d9545d04 data/celestial_artifacts/advancements/recipes/misc/cursed_totem.json
 8ab3eebadb52a52204cca4e1653b97058e95f0aa data/celestial_artifacts/advancements/recipes/misc/deers_mercy_amulet.json
+288125c902b0abce6945b14308c1fb533db7423d data/celestial_artifacts/advancements/recipes/misc/deer_inscribed_amulet.json
 5a893db98bb2c3283fd562db5f96404ce2ae948a data/celestial_artifacts/advancements/recipes/misc/destroyer_badge.json
 66abf7039fb23b043d9aefc9995ca2d002ea29a6 data/celestial_artifacts/advancements/recipes/misc/diamond_ring.json
 1287bd0856f37277f0dec6a20a0cf1ee6a48bd23 data/celestial_artifacts/advancements/recipes/misc/earth_axe.json
@@ -205,6 +206,7 @@ ea744531d2eee12221a967732180329dcdd031f8 data/celestial_artifacts/recipes/cursed
 e621de9c5c96983a4c25f4f63e1cdf7be5e06abb data/celestial_artifacts/recipes/cursed_talisman.json
 fb75a95dc16eb87f0540ab12661dfb8474961c52 data/celestial_artifacts/recipes/cursed_totem.json
 6425640453b66a1526ff2188a5a199d504c7f232 data/celestial_artifacts/recipes/deers_mercy_amulet.json
+d673fdfea803f4eca974b3198e15f1a4659b50da data/celestial_artifacts/recipes/deer_inscribed_amulet.json
 8fa25919a7fa472b3c29873eb9db2152f5367b30 data/celestial_artifacts/recipes/destroyer_badge.json
 f00590f197c9aa69c8917c731cc8f444363b4b98 data/celestial_artifacts/recipes/diamond_ring.json
 644787e2d9ea9035cb578ff603aae0943e4de473 data/celestial_artifacts/recipes/earth_axe.json

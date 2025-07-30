@@ -48,7 +48,8 @@ public class DeerInscribedAmulet extends BaseTickingToken implements CAAttackTok
     @Override
     public void addText(@Nullable Level level, List<Component> list) {
         list.add(TextFacet.wrap(CALang.Charm.DEER_INSCRIBED_AMULET_1.get(TextFacet.num(time()), TextFacet.eff(CAEffects.ENFEEBLED_LACERATION.get()))));
-        list.add(TextFacet.wrap(CALang.Charm.DEER_INSCRIBED_AMULET_2.get(TextFacet.perc(bonus()), TextFacet.perc(bonus()))));
+        list.add(TextFacet.wrap(CALang.Charm.DEER_INSCRIBED_AMULET_2.get()));
+        list.add(TextFacet.inner(CALang.Charm.DEER_INSCRIBED_AMULET_3.get(TextFacet.perc(bonus()), TextFacet.perc(bonus()))));
     }
 
     @Override
