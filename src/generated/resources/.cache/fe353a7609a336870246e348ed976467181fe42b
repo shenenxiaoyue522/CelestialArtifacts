@@ -1,6 +1,6 @@
-// 1.20.1	2025-07-30T13:33:31.2658202	Registrate Provider for celestial_artifacts [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects)]
-037404264710f120e6b604f0e6077883b8eefdd6 assets/celestial_artifacts/lang/en_ud.json
-58c3a42a634d4f327ca44c2273f0f0f90ba5784e assets/celestial_artifacts/lang/en_us.json
+// 1.20.1	2025-11-06T23:30:07.6766194	Registrate Provider for celestial_artifacts [Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud), Tags (attributes), Tags (enchantments), Tags (mob_effects)]
+12b02d4530ebb540824c390c13cc34054c46dc4f assets/celestial_artifacts/lang/en_ud.json
+e84ee6a41751586cd46d16bec3603175cfd7190c assets/celestial_artifacts/lang/en_us.json
 6bac01ffbdb846e51d42cc3387aa9add978b1ccf assets/celestial_artifacts/models/item/abyss_core.json
 aa8ae8969def9a9afc7e66a3e189cb3ec87c48ad assets/celestial_artifacts/models/item/abyss_will_badge.json
 d9744c1da9516b25ffbab28cdfb841b7f055d9f2 assets/celestial_artifacts/models/item/amethyst_reinforce_plate.json
@@ -67,6 +67,7 @@ cb332bc50e53a4265bc02c57829c37ff8878229a assets/celestial_artifacts/models/item/
 5a51a4016ba8992bad25cec2df2b918abef46d0d assets/celestial_artifacts/models/item/netherite_ring.json
 5527205ac039fe5c9c9a6fc3d275177993122c1e assets/celestial_artifacts/models/item/nether_fire.json
 8285b557f74cf672aebad0179b217e059e907e98 assets/celestial_artifacts/models/item/nihility_etching.json
+785bef1a9c019f69fc35efc8402da554ae076de5 assets/celestial_artifacts/models/item/nostalgic_butterfly_ring.json
 0c8b3ba9531be09b882239ac49fb4124158ba51a assets/celestial_artifacts/models/item/origin_etching.json
 0bb1e2dc8033a92aa846d1497457b73bc9806ada assets/celestial_artifacts/models/item/potions_bag.json
 3c518cccc725fb944b58e1340edf734e55b04507 assets/celestial_artifacts/models/item/prayer_crown.json
@@ -156,6 +157,7 @@ a243cbc7eae4e979b075c5f03c8a16d88d0ee3fd data/celestial_artifacts/advancements/r
 0ece71f4dc5449cef4aa029131851dabb36eb0a5 data/celestial_artifacts/advancements/recipes/misc/magic_arrow_bag.json
 ac1f05660dabc1271f7a7a9e245ca42032fc3a21 data/celestial_artifacts/advancements/recipes/misc/netherite_ring.json
 6d44d7d6367682e87ba1ffc682810a984a6ede4d data/celestial_artifacts/advancements/recipes/misc/nether_fire.json
+f0f87d789b8826f85d70bbe3a541db596c5f6d8f data/celestial_artifacts/advancements/recipes/misc/nostalgic_butterfly_ring.json
 4250e676839caae7571bb5e3716514bddbd89e22 data/celestial_artifacts/advancements/recipes/misc/potions_bag.json
 08b7dbcd2b72428c5b1d172d21c95f36217cfafc data/celestial_artifacts/advancements/recipes/misc/prayer_crown.json
 aa064fd2f547f0ae9984958173654bfbb34c2978 data/celestial_artifacts/advancements/recipes/misc/precious_bracelet.json
@@ -206,7 +208,7 @@ ea744531d2eee12221a967732180329dcdd031f8 data/celestial_artifacts/recipes/cursed
 e621de9c5c96983a4c25f4f63e1cdf7be5e06abb data/celestial_artifacts/recipes/cursed_talisman.json
 fb75a95dc16eb87f0540ab12661dfb8474961c52 data/celestial_artifacts/recipes/cursed_totem.json
 6425640453b66a1526ff2188a5a199d504c7f232 data/celestial_artifacts/recipes/deers_mercy_amulet.json
-d673fdfea803f4eca974b3198e15f1a4659b50da data/celestial_artifacts/recipes/deer_inscribed_amulet.json
+8028ada40111ced6c89d34b7154441d8dec06901 data/celestial_artifacts/recipes/deer_inscribed_amulet.json
 8fa25919a7fa472b3c29873eb9db2152f5367b30 data/celestial_artifacts/recipes/destroyer_badge.json
 f00590f197c9aa69c8917c731cc8f444363b4b98 data/celestial_artifacts/recipes/diamond_ring.json
 644787e2d9ea9035cb578ff603aae0943e4de473 data/celestial_artifacts/recipes/earth_axe.json
@@ -239,6 +241,7 @@ fe89621718544c9119072f8f163539dd3f29c821 data/celestial_artifacts/recipes/lock_o
 b5b794d0a425b69cfc8621872d4784b3318e434f data/celestial_artifacts/recipes/magic_arrow_bag.json
 854a7023a51abd21916eb573a7e1cedd553c9193 data/celestial_artifacts/recipes/netherite_ring.json
 565e5cc7e71990a433e51bbfae307d11f300f7fe data/celestial_artifacts/recipes/nether_fire.json
+ff6c5a39a0258ebbb538caa3d7c0ba10a459bc76 data/celestial_artifacts/recipes/nostalgic_butterfly_ring.json
 47827b5a0d6b54f214c3452f8751875201cf1473 data/celestial_artifacts/recipes/potions_bag.json
 adafbd0caceb709887a3eef30eaa72978af3f18e data/celestial_artifacts/recipes/prayer_crown.json
 8df57f161e1c18bb608009d590bdf12f3a703f11 data/celestial_artifacts/recipes/precious_bracelet.json
@@ -275,7 +278,7 @@ a6206a3d5baad2b734515ea39951ce7d5c60f6d0 data/curios/tags/items/back.json
 0300fd3fa12b19852f85a6fa3a75e3d4501575c2 data/curios/tags/items/heart.json
 c189da7e505d92d6d857bdfdb7c025fd7d4fdda8 data/curios/tags/items/necklace.json
 2116f35ca177fd1e0b416c0f32d383faf7fb1409 data/curios/tags/items/pendant.json
-2c8f3a2a7f2b8078f78124dd2fd70a4d471cd64f data/curios/tags/items/ring.json
+70865704f34e1a1797d49afaa9b401d74c5dc9d4 data/curios/tags/items/ring.json
 30921501fd07b88d6836c5c150c14672cfdf6b2a data/curios/tags/items/scroll.json
 10d6ef6fc9584bb192a3839de11708b5d6cb358e data/l2hostility/tags/items/no_seal.json
 e1ac4fc7bcbfe86eeb8114c770f56e9f077496d4 data/minecraft/tags/items/axes.json

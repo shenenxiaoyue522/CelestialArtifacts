@@ -43,8 +43,8 @@ import static com.xiaoyue.celestial_artifacts.CelestialArtifacts.MODID;
 @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class CAMiscCuriosHandler {
 
-	public static final String COPPER_REF = "CelestialCore_copperReinforce";
-	public static final String AMETHYST_REF = "CelestialCore_amethystReinforce";
+	public static final String COPPER_REF = "CelestialArtifacts_CopperReinforce";
+	public static final String AMETHYST_REF = "CelestialArtifacts_AmethystReinforce";
 
 	@SubscribeEvent
 	public static void anvilRecipe(AnvilUpdateEvent event) {

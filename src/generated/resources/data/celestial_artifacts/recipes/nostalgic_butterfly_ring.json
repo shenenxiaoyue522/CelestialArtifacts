@@ -7,35 +7,29 @@
       "expected": true,
       "line": [
         "itemToggle",
-        "deer_inscribed_amulet"
+        "nostalgic_butterfly_ring"
       ],
       "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "key": {
-    "D": {
-      "item": "celestial_core:light_fragment"
-    },
-    "G": {
-      "item": "minecraft:diamond"
-    },
-    "I": {
-      "item": "minecraft:feather"
+    "A": {
+      "item": "minecraft:iron_ingot"
     },
     "T": {
-      "item": "celestial_artifacts:deers_mercy_amulet"
+      "item": "celestial_core:treasure_fragment"
     },
     "X": {
-      "item": "celestial_artifacts:life_etching"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [
-    "I I",
-    "GTG",
-    "DXD"
+    " AX",
+    "ATA",
+    " A "
   ],
   "result": {
-    "item": "celestial_artifacts:deer_inscribed_amulet"
+    "item": "celestial_artifacts:nostalgic_butterfly_ring"
   },
   "show_notification": true
 }

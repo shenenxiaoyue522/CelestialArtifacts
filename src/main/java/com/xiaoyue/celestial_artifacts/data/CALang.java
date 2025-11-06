@@ -271,7 +271,7 @@ public class CALang {
 		TWIST_1("You lose 1 [Twist] every %s seconds", 1),
 		TWIST_2("Every [Twist] increase your melee damage by %s", 1),
 		TWIST_3("When you bear %s curse, increase by %s instead", 2),
-		TWIST_4("Current [Twist]: %s", 1);
+		TWIST_4("Current [Twist]: %s / %s", 2);
 
 		final Entry entry;
 
@@ -601,7 +601,9 @@ public class CALang {
 		SPIRIT_0("Gain %2$s after pulling bow for %1$s", 2),
 		SPIRIT_1("Increase %s damage from behind by %s", 2),
 		SPIRIT_2("When you have %s:", 1),
-		SPIRIT_3("Your projectile has %s chance to inflict %s", 2);
+		SPIRIT_3("Your projectile has %s chance to inflict %s", 2),
+		DEER_BUTTERFLY_0("When attacking with a non-Abyssal Damage type", 0),
+		DEER_BUTTERFLY_1("there is a chance to inflict additional Magic Damage or Abyssal Damage equal to %s of Attack Damage", 1);
 
 		final Entry entry;
 

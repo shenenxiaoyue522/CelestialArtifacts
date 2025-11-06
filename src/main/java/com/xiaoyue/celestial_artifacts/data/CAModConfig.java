@@ -123,6 +123,7 @@ public class CAModConfig {
 			public final ForgeConfigSpec.IntValue twistedScabbardInterval;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAttack;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAttackEnd;
+			public final ForgeConfigSpec.IntValue twistedScabbardMaxAttackBonus;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAtkKonck;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAtkSpeed;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardHealRate;
@@ -172,6 +173,8 @@ public class CAModConfig {
 						.defineInRange("twistedScabbardAttack", 0.05, 0, 1);
 				twistedScabbardAttackEnd = builder.comment("Twisted Scabbard: attack bonus in End curse")
 						.defineInRange("twistedScabbardAttackEnd", 0.1, 0, 1);
+				twistedScabbardMaxAttackBonus = builder.comment("Twisted Scabbard: Maximum number of stacks")
+						.defineInRange("twistedScabbardMaxAttackBonus", 100, 1, Integer.MAX_VALUE);
 				twistedScabbardBladeInterval = builder.comment("Twisted Scabbard: interval in seconds for blade modifier effect")
 						.defineInRange("twistedScabbardBladeInterval", 5, 0, 100);
 				twistedScabbardAtkKonck = builder.comment("Twisted Scabbard: attack knock back")
@@ -1219,6 +1222,8 @@ public class CAModConfig {
 			public final ForgeConfigSpec.DoubleValue netheriteRingProtection;
 			public final ForgeConfigSpec.IntValue netherFireRingFireTime;
 			public final ForgeConfigSpec.IntValue ringOfLifeEffectInterval;
+			public final ForgeConfigSpec.DoubleValue nostalgicButterflyRingCritRate;
+			public final ForgeConfigSpec.DoubleValue nostalgicButterflyRingCritDmg;
 
 			private Ring(ForgeConfigSpec.Builder builder) {
 				builder.push("ring");
@@ -1232,6 +1237,12 @@ public class CAModConfig {
 				ringOfLifeEffectInterval = builder
 						.comment("Ring Of Life: effect interval")
 						.defineInRange("ringOfLifeEffectInterval", 5, 1, 100);
+				nostalgicButterflyRingCritRate = builder
+						.comment("Nostalgic Butterfly Ring: crit rate bonus")
+						.defineInRange("nostalgicButterflyRingCritRate", 0.2, 0, 100);
+				nostalgicButterflyRingCritDmg = builder
+						.comment("Nostalgic Butterfly Ring: crit damage reduce")
+						.defineInRange("nostalgicButterflyRingCritRate", 0.2, 0, 100);
 				builder.pop();
 			}
 
@@ -1304,6 +1315,7 @@ public class CAModConfig {
 			public final ForgeConfigSpec.IntValue spiritEffectDuration;
 			public final ForgeConfigSpec.IntValue spiritEffectAmplifier;
 			public final ForgeConfigSpec.DoubleValue spiritProtect;
+			public final ForgeConfigSpec.DoubleValue deerButterFlyDmgMul;
 
 			private Set(ForgeConfigSpec.Builder builder) {
 				builder.push("set");
@@ -1341,6 +1353,9 @@ public class CAModConfig {
 					spiritProtect = builder.comment("Spirit Set: projectile damage reduction")
 							.defineInRange("spiritProtect", 0.2, 0, 1);
 				}
+
+				deerButterFlyDmgMul = builder.comment("Deer Butter Fly Set: extra damage multiplier")
+						.defineInRange("deerButterFlyDmgMul", 0.15, 0, 100);
 				builder.pop();
 			}
 

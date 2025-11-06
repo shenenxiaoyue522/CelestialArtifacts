@@ -42,6 +42,10 @@ public class TwistedScabbard extends BaseTickingToken
 		return CAModConfig.COMMON.back.twistedScabbardAttackEnd.get();
 	}
 
+	private static int maxAtkBonus() {
+		return 100;
+	}
+
 	@Override
 	public void onPlayerKill(Player player, LivingDeathEvent event) {
 		twisted_scabbard_add++;
@@ -91,9 +95,8 @@ public class TwistedScabbard extends BaseTickingToken
 				CALang.Curse.END_TITLE.get().withStyle(ChatFormatting.RED),
 				TextFacet.perc(endAtk())
 		)));
-
 		list.add(TextFacet.wrap(CALang.Back.TWIST_4.get(
-				TextFacet.num(twisted_scabbard_add)
+				TextFacet.num(twisted_scabbard_add), TextFacet.num(maxAtkBonus())
 		).withStyle(ChatFormatting.DARK_PURPLE)));
 	}
 

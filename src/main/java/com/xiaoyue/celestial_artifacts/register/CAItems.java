@@ -40,6 +40,7 @@ import com.xiaoyue.celestial_artifacts.content.curios.ring.RingOfLife;
 import com.xiaoyue.celestial_artifacts.content.curios.scroll.SeaGodScroll;
 import com.xiaoyue.celestial_artifacts.content.curios.scroll.SkywalkerScroll;
 import com.xiaoyue.celestial_artifacts.content.curios.scroll.TwistedScroll;
+import com.xiaoyue.celestial_artifacts.content.curios.set.DeerButterflySet;
 import com.xiaoyue.celestial_artifacts.content.curios.set.EmeraldSet;
 import com.xiaoyue.celestial_artifacts.content.curios.set.SeaGodSet;
 import com.xiaoyue.celestial_artifacts.content.curios.set.SpiritSet;
@@ -83,11 +84,12 @@ public class CAItems {
 			p -> new CCTooltipItem(new Item.Properties().rarity(Rarity.EPIC), false,
 					() -> CALang.Tooltip.END_DUST.get(CALang.Modular.curseItem(),
 							TextFacet.perc(CAModConfig.COMMON.materials.endDustDropChance.get()))));
+
 	public static final ItemEntry<CCTooltipItem> NEBULA_CUBE = material("nebula_cube",
 			p -> new CCTooltipItem(new Item.Properties().rarity(Rarity.EPIC), false, CALang.Tooltip.NEBULA_CUBE::get));
 
 	public static final ItemEntry<ModularCurio> GOLD_RING, AMETHYST_RING, DIAMOND_RING, EMERALD_RING, FLIGHT_RING, NETHERITE_RING, RING_OF_LIFE, THUNDER_RING, NETHER_FIRE, FREEZE_RING,
-			WAR_DEAD_BADGE, UNDEAD_CHARM, DESTROYER_BADGE, TWISTED_BRAIN, CORRUPT_BADGE,
+			NOSTALGIC_BUTTERFLY_RING, WAR_DEAD_BADGE, UNDEAD_CHARM, DESTROYER_BADGE, TWISTED_BRAIN, CORRUPT_BADGE,
 			CURSED_TALISMAN, CURSED_PROTECTOR, CURSED_TOTEM, HOLY_TALISMAN, HOLY_SWORD, ANGEL_HEART,
 			ANGEL_PEARL, DEMON_CURSE, KNIGHT_SHELTER, SOUL_BOX, SOLAR_MAGNET, GLUTTONY_BADGE, MAGIC_HORSESHOE,
 			BEARING_STAMEN, ABYSS_WILL_BADGE, SANDS_TALISMAN, SACRIFICIAL_OBJECT, DEERS_MERCY_AMULET, DEER_INSCRIBED_AMULET,
@@ -148,6 +150,10 @@ public class CAItems {
 			// 冰冻之戒
 			FREEZE_RING = ring("freeze_ring", () -> ModularCurio.builder().rarity(Rarity.RARE)
 					.build(SimpleListener.negateType(CALang.DamageTypes.FREEZE)));
+
+			NOSTALGIC_BUTTERFLY_RING = ring("nostalgic_butterfly_ring", () -> ModularCurio.builder().rarity(Rarity.UNCOMMON)
+					.build(AttrFacet.add(L2DamageTracker.CRIT_RATE::get, CAModConfig.COMMON.ring.nostalgicButterflyRingCritRate::get),
+							AttrFacet.add(L2DamageTracker.CRIT_DMG::get, () -> -CAModConfig.COMMON.ring.nostalgicButterflyRingCritDmg.get()), DeerButterflySet()));
 		}
 
 		// charms
@@ -313,7 +319,7 @@ public class CAItems {
 					));
 
 			DEER_INSCRIBED_AMULET = charm("deer_inscribed_amulet", () -> ModularCurio.builder()
-					.rarity(Rarity.UNCOMMON).build(
+					.rarity(Rarity.UNCOMMON).build(DeerButterflySet(),
 							AttrFacet.multBase(() -> Attributes.MAX_HEALTH, CAModConfig.COMMON.charm.deerInscribedAmuletMaxHealth::get),
 							AttrFacet.add(() -> Attributes.ARMOR, CAModConfig.COMMON.charm.deerInscribedAmuletArmor::get),
 							AttrFacet.add(() -> Attributes.ARMOR_TOUGHNESS, CAModConfig.COMMON.charm.deerInscribedAmuletToughness::get),
@@ -796,6 +802,9 @@ public class CAItems {
 	private static final SetTokenFacet<SeaGodSet> SEA_GOD_SET = new SetTokenFacet<>("sea_god",
 			List.of(SEA_GOD_CROWN, SEA_GOD_SCROLL), SeaGodSet::new);
 
+	private static final SetTokenFacet<DeerButterflySet> DEER_BUTTER_FLY_SET = new SetTokenFacet<>("deer_butter_fly",
+			List.of(DEER_INSCRIBED_AMULET, NOSTALGIC_BUTTERFLY_RING), DeerButterflySet::new);
+
 	public static SetTokenFacet<SpiritSet> spiritSet() {
 		return SPIRIT_SET;
 	}
@@ -806,6 +815,10 @@ public class CAItems {
 
 	public static SetTokenFacet<SeaGodSet> seaGodSet() {
 		return SEA_GOD_SET;
+	}
+
+	public static SetTokenFacet<DeerButterflySet> DeerButterflySet() {
+		return DEER_BUTTER_FLY_SET;
 	}
 
 	public static ItemEntry<ModularCurio> ring(String id, NonNullSupplier<ModularCurio> factory) {

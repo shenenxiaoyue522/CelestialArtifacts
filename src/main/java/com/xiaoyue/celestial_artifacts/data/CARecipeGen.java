@@ -130,6 +130,13 @@ public class CARecipeGen {
 						.define('T', CCItems.TREASURE_FRAGMENT.get())
 						.save(saver);
 
+				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.NOSTALGIC_BUTTERFLY_RING.get(), 1)::unlockedBy, Items.IRON_INGOT)
+						.pattern(" AX").pattern("ATA").pattern(" A ")
+						.define('A', Items.IRON_INGOT)
+						.define('T', CCItems.TREASURE_FRAGMENT.get())
+						.define('X', Items.DIAMOND)
+						.save(saver);
+
 				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.DIAMOND_RING.get(), 1)::unlockedBy, Items.DIAMOND)
 						.pattern(" A ").pattern("ATA").pattern(" A ")
 						.define('A', Items.DIAMOND)
@@ -376,6 +383,13 @@ public class CARecipeGen {
 						.define('D', Items.GOLD_BLOCK)
 						.save(saver);
 
+				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.DEERS_MERCY_AMULET.get(), 1)::unlockedBy, CCItems.TREASURE_FRAGMENT.get())
+						.pattern("I I").pattern("GTG").pattern("D D")
+						.define('I', Items.IRON_INGOT)
+						.define('G', Items.GOLD_INGOT)
+						.define('T', CCItems.TREASURE_FRAGMENT)
+						.define('D', Items.GLOWSTONE_DUST)
+						.save(saver);
 			}
 
 			// 1 etching
@@ -445,20 +459,13 @@ public class CARecipeGen {
 						.define('E', CAItems.DESIRE_ETCHING)
 						.save(saver);
 
-				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.DEERS_MERCY_AMULET.get(), 1)::unlockedBy, CCItems.TREASURE_FRAGMENT.get())
-						.pattern("I I").pattern("GTG").pattern("D D")
-						.define('I', Items.IRON_INGOT)
-						.define('G', Items.GOLD_INGOT)
-						.define('T', CCItems.TREASURE_FRAGMENT)
-						.define('D', Items.GLOWSTONE_DUST)
-						.save(saver);
-
 				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.DEER_INSCRIBED_AMULET.get(), 1)::unlockedBy, CAItems.DEERS_MERCY_AMULET.get())
-						.pattern("I I").pattern("GTG").pattern("D D")
+						.pattern("I I").pattern("GTG").pattern("DXD")
 						.define('I', Items.FEATHER)
 						.define('G', Items.DIAMOND)
 						.define('T', CAItems.DEERS_MERCY_AMULET)
 						.define('D', CCItems.LIGHT_FRAGMENT)
+						.define('X', CAItems.LIFE_ETCHING)
 						.save(saver);
 
 			}

@@ -235,7 +235,7 @@
   "celestial_artifacts.back.twist_1": "每%s秒流失1层[扭曲附着]",
   "celestial_artifacts.back.twist_2": "每层[扭曲附着]提高%s近战伤害",
   "celestial_artifacts.back.twist_3": "背负%s诅咒时，增伤变为%s",
-  "celestial_artifacts.back.twist_4": "当前已积攒的[扭曲附着]: %s",
+  "celestial_artifacts.back.twist_4": "当前已积攒的[扭曲附着]: %s / %s",
   "celestial_artifacts.bracelet.charm_0": "击杀僵尸时，周围的村民会提高%s点对你的好感度",
   "celestial_artifacts.bracelet.charm_1": "受到攻击时周围的生物会优先攻击刚才攻击你的生物，冷却%s秒",
   "celestial_artifacts.bracelet.hidden_0": "%s消失后%s秒获得%s",
@@ -339,6 +339,8 @@
   "celestial_artifacts.sets.spirit_1": "从目标背后射出的%s伤害提高%s",
   "celestial_artifacts.sets.spirit_2": "拥有%s效果时",
   "celestial_artifacts.sets.spirit_3": "射出的箭矢有%s概率施加%s",
+  "celestial_artifacts.sets.deer_butterfly_0": "使用非深渊伤害类型攻击时",
+  "celestial_artifacts.sets.deer_butterfly_1": "有概率额外造成攻击伤害%s的魔法伤害或深渊伤害",
   "curios.identifier.scroll": "星月-书卷",
   "curios.modifiers.scroll": "佩戴书卷时：",
   "curios.identifier.heart": "星月-心",
@@ -358,5 +360,6 @@
   "celestial_artifacts.charms.deer_inscribed_amulet_1": "每%s秒强化下一次攻击，强化时攻击使目标陷入%s效果",
   "celestial_artifacts.charms.deer_inscribed_amulet_2": "佩戴灾厄之册时",
   "item.celestial_artifacts.deer_inscribed_amulet": "悯鹿护符",
-  "celestial_artifacts.charms.deer_inscribed_amulet_3": "每反转一条诅咒将使你造成的攻击伤害提高%s，全部反转时额外提高%s"
+  "celestial_artifacts.charms.deer_inscribed_amulet_3": "每反转一条诅咒将使你造成的攻击伤害提高%s，全部反转时额外提高%s",
+  "item.celestial_artifacts.nostalgic_butterfly_ring": "眷蝶之戒"
 }
