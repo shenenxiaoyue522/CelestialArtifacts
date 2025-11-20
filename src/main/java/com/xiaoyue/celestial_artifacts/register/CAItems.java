@@ -705,7 +705,7 @@ public class CAItems {
 			// 泰坦剑鞘
 			TITAN_SCABBARD = back("titan_scabbard", () ->
 					ModularCurio.builder().rarity(Rarity.RARE).build(
-							EffectFacet.of(CCEffects.REPLY_POWER::get, () -> 3, () -> 0,
+							EffectFacet.of(CCEffects.BLADE_MODIFIER::get, () -> 3, () -> 0,
 									CAModConfig.COMMON.back.titanScabbardBladeInterval::get),
 							SimpleListener.hurtBonus(
 									() -> CALang.Condition.TITAN.get(TextFacet.eff(CCEffects.REPLY_POWER.get())),

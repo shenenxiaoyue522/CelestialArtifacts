@@ -1,5 +1,6 @@
 package com.xiaoyue.celestial_artifacts.content.core.attack;
 
+import com.xiaoyue.celestial_artifacts.content.core.modular.AttrTextFacet;
 import com.xiaoyue.celestial_artifacts.content.core.modular.IFacet;
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
 import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
@@ -110,13 +111,12 @@ public class SimpleListener {
 			Supplier<MutableComponent> text,
 			Predicate<DamageSource> condition,
 			DoubleSupplier bonus)
-			implements TextFacet, CAAttackToken {
+			implements AttrTextFacet, CAAttackToken {
 
 		@Override
-		public void addText(@Nullable Level level, List<Component> list) {
-			list.add(TextFacet.wrap(CALang.Modular.PROTECT_TYPE
-					.get(text.get(), TextFacet.perc(bonus.getAsDouble()))
-					.withStyle(ChatFormatting.GRAY)));
+		public void addAttrText(List<Component> list) {
+			MutableComponent bonus = Component.literal(bonus().getAsDouble() * 100 + "%").withStyle(ChatFormatting.BLUE);
+			list.add(CALang.Modular.PROTECT_TYPE.get(this.text.get(), bonus).withStyle(ChatFormatting.BLUE));
 		}
 
 		@Override
