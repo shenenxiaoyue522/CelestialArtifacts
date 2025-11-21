@@ -329,8 +329,9 @@ public class CALang {
 
 		SOLAR_MAGNET("Attract surrounding items", 0),
 
-		SACRIFICIAL_OBJECT_1("%s chance to leave a gold ingot on death", 1),
-		SACRIFICIAL_OBJECT_2("%a chance to kill surrounding enemies with lower max health than you", 1),
+		SACRIFICIAL_OBJECT_1("When you die:", 0),
+		SACRIFICIAL_OBJECT_2("%s chance to leave a gold ingot in place", 1),
+		SACRIFICIAL_OBJECT_3("%a chance to kill surrounding enemies with lower max health than you", 1),
 
 		KNIGHT_SHELTER_1("When you have shield in off hand, heal 1 point every %s seconds. Heals at double rate when you have shield in main hand.", 1),
 		KNIGHT_SHELTER_2("When you use shield to block damage reflect %s of the damage blocked", 1),

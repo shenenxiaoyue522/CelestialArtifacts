@@ -7,7 +7,9 @@ import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -42,7 +44,9 @@ public class AngelHeart implements MultiLineText, TickFacet, CAAttackToken {
 			entity.heal(healAmount());
 		}
 		if (entity.tickCount % (removeInterval() * 20) == 0) {
-			entity.getActiveEffects().removeIf(ins -> ins.getEffect().getCategory() == MobEffectCategory.HARMFUL);
+			List<MobEffect> list = entity.getActiveEffects().stream().map(MobEffectInstance::getEffect)
+					.filter(effect -> effect.getCategory().equals(MobEffectCategory.HARMFUL)).toList();
+			list.forEach(entity::removeEffect);
 		}
 	}
 

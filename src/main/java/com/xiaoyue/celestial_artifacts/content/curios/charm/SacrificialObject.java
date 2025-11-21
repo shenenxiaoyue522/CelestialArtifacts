@@ -43,8 +43,9 @@ public class SacrificialObject implements MultiLineText {
 
 	@Override
 	public void addText(@Nullable Level level, List<Component> list) {
-		list.add(TextFacet.wrap(CALang.Charm.SACRIFICIAL_OBJECT_1.get(TextFacet.perc(goldChance()))));
-		list.add(TextFacet.wrap(CALang.Charm.SACRIFICIAL_OBJECT_2.get(TextFacet.perc(chance()))));
+		list.add(TextFacet.wrap(CALang.Charm.SACRIFICIAL_OBJECT_1.get()));
+		list.add(TextFacet.inner(CALang.Charm.SACRIFICIAL_OBJECT_2.get(TextFacet.perc(goldChance()))));
+		list.add(TextFacet.inner(CALang.Charm.SACRIFICIAL_OBJECT_3.get(TextFacet.perc(chance()))));
 	}
 
 }
