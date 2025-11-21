@@ -235,7 +235,7 @@
   "celestial_artifacts.back.twist_1": "每%s秒流失1层[扭曲附着]",
   "celestial_artifacts.back.twist_2": "每层[扭曲附着]提高%s近战伤害",
   "celestial_artifacts.back.twist_3": "背负%s诅咒时，增伤变为%s",
-  "celestial_artifacts.back.twist_4": "[扭曲附着]: %s / %s",
+  "celestial_artifacts.back.twist_4": "当前积攒的[扭曲附着]: %s / %s",
   "celestial_artifacts.bracelet.charm_0": "击杀僵尸时，周围的村民会提高%s点对你的好感度",
   "celestial_artifacts.bracelet.charm_1": "受到攻击时周围的生物会优先攻击刚才攻击你的生物，冷却%s秒",
   "celestial_artifacts.bracelet.hidden_0": "%s消失后%s秒获得%s",
