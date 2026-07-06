@@ -708,7 +708,7 @@ public class CAItems {
 							EffectFacet.of(CCEffects.BLADE_MODIFIER::get, () -> 3, () -> 0,
 									CAModConfig.COMMON.back.titanScabbardBladeInterval::get),
 							SimpleListener.hurtBonus(
-									() -> CALang.Condition.TITAN.get(TextFacet.eff(CCEffects.REPLY_POWER.get())),
+									() -> CALang.Condition.TITAN.get(TextFacet.eff(CCEffects.BLADE_MODIFIER.get())),
 									(p, t, c) -> CAAttackToken.isMelee(c) && p.hasEffect(CCEffects.BLADE_MODIFIER.get()) &&
 											t.getMaxHealth() > p.getMaxHealth(),
 									CAModConfig.COMMON.back.titanScabbardDamageFactor::get)
