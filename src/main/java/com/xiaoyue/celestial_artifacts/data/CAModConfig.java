@@ -1242,7 +1242,7 @@ public class CAModConfig {
 						.defineInRange("nostalgicButterflyRingCritRate", 0.2, 0, 100);
 				nostalgicButterflyRingCritDmg = builder
 						.comment("Nostalgic Butterfly Ring: crit damage reduce")
-						.defineInRange("nostalgicButterflyRingCritRate", 0.2, 0, 100);
+						.defineInRange("nostalgicButterflyRingCritDmg", 0.2, 0, 100);
 				builder.pop();
 			}
 

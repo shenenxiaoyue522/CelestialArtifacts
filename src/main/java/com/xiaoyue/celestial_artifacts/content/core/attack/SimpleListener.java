@@ -23,29 +23,19 @@ import java.util.function.Supplier;
 
 public class SimpleListener {
 
-	public static IFacet hurtBonus(
-			Supplier<MutableComponent> text,
-			HurtBonusPredicate condition,
-			DoubleSupplier bonus) {
+	public static IFacet hurtBonus(Supplier<MutableComponent> text, HurtBonusPredicate condition, DoubleSupplier bonus) {
 		return new HurtBonus(text, condition, bonus);
 	}
 
-	public static IFacet protect(
-			Supplier<MutableComponent> text,
-			ProtectPredicate condition,
-			DoubleSupplier bonus) {
+	public static IFacet protect(Supplier<MutableComponent> text, ProtectPredicate condition, DoubleSupplier bonus) {
 		return new Protection(text, condition, bonus);
 	}
 
-	public static IFacet protectType(
-			CALang.DamageTypes text,
-			DoubleSupplier bonus) {
+	public static IFacet protectType(CALang.DamageTypes text, DoubleSupplier bonus) {
 		return new ProtectionType(text::get, text::pred, bonus);
 	}
 
-	public static IFacet avoidType(
-			CALang.DamageTypes text,
-			DoubleSupplier chance) {
+	public static IFacet avoidType(CALang.DamageTypes text, DoubleSupplier chance) {
 		return new AvoidType(text::get, text::pred, chance);
 	}
 
@@ -65,17 +55,13 @@ public class SimpleListener {
 
 	}
 
-	record HurtBonus(
-			Supplier<MutableComponent> text,
-			HurtBonusPredicate condition,
-			DoubleSupplier bonus)
+	record HurtBonus(Supplier<MutableComponent> text, HurtBonusPredicate condition, DoubleSupplier bonus)
 			implements TextFacet, CAAttackToken {
 
 		@Override
 		public void addText(@Nullable Level level, List<Component> list) {
 			list.add(TextFacet.wrap(text.get()));
-			list.add(TextFacet.inner(CALang.Modular.HURT_BONUS
-					.get(TextFacet.perc(bonus.getAsDouble())).withStyle(ChatFormatting.GRAY)));
+			list.add(TextFacet.inner(CALang.Modular.HURT_BONUS.get(TextFacet.perc(bonus.getAsDouble())).withStyle(ChatFormatting.GRAY)));
 		}
 
 		@Override
@@ -86,17 +72,13 @@ public class SimpleListener {
 		}
 	}
 
-	record Protection(
-			Supplier<MutableComponent> text,
-			ProtectPredicate condition,
-			DoubleSupplier bonus)
+	record Protection(Supplier<MutableComponent> text, ProtectPredicate condition, DoubleSupplier bonus)
 			implements TextFacet, CAAttackToken {
 
 		@Override
 		public void addText(@Nullable Level level, List<Component> list) {
 			list.add(TextFacet.wrap(text.get()));
-			list.add(TextFacet.inner(CALang.Modular.PROTECT
-					.get(TextFacet.perc(bonus.getAsDouble())).withStyle(ChatFormatting.GRAY)));
+			list.add(TextFacet.inner(CALang.Modular.PROTECT.get(TextFacet.perc(bonus.getAsDouble())).withStyle(ChatFormatting.GRAY)));
 		}
 
 		@Override
@@ -107,10 +89,7 @@ public class SimpleListener {
 		}
 	}
 
-	record ProtectionType(
-			Supplier<MutableComponent> text,
-			Predicate<DamageSource> condition,
-			DoubleSupplier bonus)
+	record ProtectionType(Supplier<MutableComponent> text, Predicate<DamageSource> condition, DoubleSupplier bonus)
 			implements AttrTextFacet, CAAttackToken {
 
 		@Override
@@ -128,10 +107,7 @@ public class SimpleListener {
 
 	}
 
-	record AvoidType(
-			Supplier<MutableComponent> text,
-			Predicate<DamageSource> condition,
-			@Nullable DoubleSupplier chance)
+	record AvoidType(Supplier<MutableComponent> text, Predicate<DamageSource> condition, @Nullable DoubleSupplier chance)
 			implements TextFacet, CAAttackToken {
 
 		@Override
@@ -147,8 +123,7 @@ public class SimpleListener {
 
 		@Override
 		public boolean onPlayerAttacked(Player player, AttackCache cache) {
-			return condition.test(CAAttackToken.getSource(cache)) &&
-					(chance == null || CAAttackToken.chance(player, chance.getAsDouble()));
+			return condition.test(CAAttackToken.getSource(cache)) && (chance == null || CAAttackToken.chance(player, chance.getAsDouble()));
 		}
 
 	}

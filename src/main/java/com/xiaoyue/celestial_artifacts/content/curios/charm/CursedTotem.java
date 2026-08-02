@@ -26,8 +26,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 @SerialClass
-public class CursedTotem extends BaseTickingToken
-		implements NetworkSensitiveToken<CursedTotem>, CAAttackToken, TotemFacet {
+public class CursedTotem extends BaseTickingToken implements NetworkSensitiveToken<CursedTotem>, CAAttackToken, TotemFacet {
 
 	public static final TokenFacet<CursedTotem> TOKEN = new TokenFacet<>("cursed_totem", CursedTotem::new);
 

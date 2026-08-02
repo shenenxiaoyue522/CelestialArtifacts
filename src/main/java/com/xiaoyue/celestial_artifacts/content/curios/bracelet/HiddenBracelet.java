@@ -43,11 +43,8 @@ public class HiddenBracelet extends BaseTickingToken implements CAAttackToken {
 
 	@Override
 	public void addText(@Nullable Level level, List<Component> list) {
-		list.add(TextFacet.wrap(CALang.Bracelet.HIDDEN_0.get(
-				TextFacet.eff(eff()), TextFacet.num(dur()), TextFacet.eff(eff())
-		)));
-		list.add(TextFacet.wrap(CALang.Bracelet.HIDDEN_1.get(
-				TextFacet.eff(eff()), TextFacet.perc(atk()))));
+		list.add(TextFacet.wrap(CALang.Bracelet.HIDDEN_0.get(TextFacet.eff(eff()), TextFacet.num(dur()), TextFacet.eff(eff()))));
+		list.add(TextFacet.wrap(CALang.Bracelet.HIDDEN_1.get(TextFacet.eff(eff()), TextFacet.perc(atk()))));
 	}
 
 	@Override

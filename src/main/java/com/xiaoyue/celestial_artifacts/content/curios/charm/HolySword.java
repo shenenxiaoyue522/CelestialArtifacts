@@ -53,9 +53,8 @@ public class HolySword implements MultiLineText, CAAttackToken {
 	@Override
 	public void onPlayerDamagedFinal(Player player, AttackCache cache) {
 		if (cache.getAttacker() != null)
-			GeneralEventHandler.schedule(() ->
-					cache.getAttacker().hurt(player.damageSources().playerAttack(player),
-							cache.getDamageDealt() * (float) reflect()));
+			GeneralEventHandler.schedule(() -> cache.getAttacker().hurt(player.damageSources().playerAttack(player),
+					cache.getDamageDealt() * (float) reflect()));
 	}
 
 }

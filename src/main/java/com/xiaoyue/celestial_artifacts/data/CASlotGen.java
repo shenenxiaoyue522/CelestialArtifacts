@@ -22,7 +22,6 @@ public class CASlotGen extends RecordDataProvider {
 
 	@Override
 	public void add(BiConsumer<String, Record> map) {
-
 		for (var e : Type.values()) {
 			int order = 20 + e.ordinal();
 			if (e == Type.CATASTROPHE) order = -5;
@@ -30,13 +29,11 @@ public class CASlotGen extends RecordDataProvider {
 					new ResourceLocation(CelestialArtifacts.MODID, "slot/empty_" + e.id() + "_slot").toString(),
 					e.slot, CurioSlotBuilder.Operation.SET));
 		}
-
 		map.accept(CelestialArtifacts.MODID + "/curios/entities/player_vanilla", new CurioEntityBuilder(
 				new ArrayList<>(List.of(new ResourceLocation("player"))),
 				new ArrayList<>(List.of("back", "body", "bracelet", "charm", "head", "necklace", "ring")),
 				SlotCondition.of()
 		));
-
 		map.accept(CelestialArtifacts.MODID + "/curios/entities/player_celestial", new CurioEntityBuilder(
 				new ArrayList<>(List.of(new ResourceLocation("player"))),
 				new ArrayList<>(Stream.of(Type.values()).map(Type::id).toList()),
@@ -56,11 +53,8 @@ public class CASlotGen extends RecordDataProvider {
 		Type(int slot) {
 			this.slot = slot;
 		}
-
 		public String id() {
 			return name().toLowerCase(Locale.ROOT);
 		}
-
-
 	}
 }

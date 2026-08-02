@@ -74,8 +74,7 @@ public class SoulBox implements MultiLineText, CAAttackToken, TotemFacet {
 		TotemFacet.super.trigger(player, stack, slot, source);
 		if (source.getEntity() instanceof LivingEntity le) {
 			le.addEffect(effHigh());
-			GeneralEventHandler.schedule(() ->
-					le.hurt(CCDamageTypes.abyss(player), (float) (player.getMaxHealth() * damageFactor())));
+			GeneralEventHandler.schedule(() -> le.hurt(CCDamageTypes.abyss(player), (float) (player.getMaxHealth() * damageFactor())));
 		}
 		player.getCooldowns().addCooldown(stack.getItem(), cooldown() * 20);
 	}

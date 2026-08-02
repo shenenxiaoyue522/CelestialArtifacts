@@ -12,8 +12,7 @@ import java.util.UUID;
 import java.util.function.DoubleSupplier;
 import java.util.function.Supplier;
 
-public record AttrAdder(String name, Supplier<Attribute> attr, UUID uuid,
-						AttributeModifier.Operation op, DoubleSupplier value)
+public record AttrAdder(String name, Supplier<Attribute> attr, UUID uuid, AttributeModifier.Operation op, DoubleSupplier value)
 		implements ISubToken, IAttrAdder {
 
 	public static AttrAdder of(String name, Supplier<Attribute> id, AttributeModifier.Operation op, double value) {

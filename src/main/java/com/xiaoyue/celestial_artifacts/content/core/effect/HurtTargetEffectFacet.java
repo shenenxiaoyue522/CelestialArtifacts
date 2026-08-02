@@ -16,13 +16,10 @@ import java.util.function.DoubleSupplier;
 import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
-public record HurtTargetEffectFacet(
-		@Nullable DoubleSupplier chance,
-		Supplier<MobEffect> eff, IntSupplier duration, IntSupplier amplifier
-) implements SingleLineText, CAAttackToken {
+public record HurtTargetEffectFacet(@Nullable DoubleSupplier chance, Supplier<MobEffect> eff, IntSupplier duration, IntSupplier amplifier)
+		implements SingleLineText, CAAttackToken {
 
-	public static HurtTargetEffectFacet of(
-			DoubleSupplier chance, Supplier<MobEffect> eff, IntSupplier duration, IntSupplier amplifier) {
+	public static HurtTargetEffectFacet of(DoubleSupplier chance, Supplier<MobEffect> eff, IntSupplier duration, IntSupplier amplifier) {
 		return new HurtTargetEffectFacet(chance, eff, duration, amplifier);
 	}
 

@@ -17,18 +17,10 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
-public record ConditionalEffectFacet(
-		boolean toggleText,
-		Predicate<Player> pred,
-		Supplier<MutableComponent> text,
-		List<EffectFacet> effs)
+public record ConditionalEffectFacet(boolean toggleText, Predicate<Player> pred, Supplier<MutableComponent> text, List<EffectFacet> effs)
 		implements TickFacet, TextFacet {
 
-	public static ConditionalEffectFacet of(
-			boolean toggleText,
-			Predicate<Player> pred,
-			Supplier<MutableComponent> text,
-			EffectFacet... effs) {
+	public static ConditionalEffectFacet of(boolean toggleText, Predicate<Player> pred, Supplier<MutableComponent> text, EffectFacet... effs) {
 		return new ConditionalEffectFacet(toggleText, pred, text, List.of(effs));
 	}
 
@@ -38,8 +30,7 @@ public record ConditionalEffectFacet(
 		for (var e : effs) {
 			if (first) first = false;
 			else effLine = effLine.append(CALang.Modular.comma().withStyle(base));
-			effLine = effLine.append(ClientTokenHelper.disable(met,
-					EffectFacet.getDesc(e.get(), true)));
+			effLine = effLine.append(ClientTokenHelper.disable(met, EffectFacet.getDesc(e.get(), true)));
 		}
 		return effLine;
 	}

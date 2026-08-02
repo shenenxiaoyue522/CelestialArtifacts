@@ -22,8 +22,7 @@ public record HurtPlayerEffectFacet(
 		@Nullable Predicate<DamageSource> type,
 		@Nullable Supplier<MutableComponent> text,
 		@Nullable DoubleSupplier chance,
-		List<EffectFacet> effs
-) implements TextFacet, CAAttackToken {
+		List<EffectFacet> effs) implements TextFacet, CAAttackToken {
 
 	public static HurtPlayerEffectFacet of(
 			Predicate<Player> pred,

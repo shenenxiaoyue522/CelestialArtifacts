@@ -13,8 +13,7 @@ import java.util.function.Supplier;
 
 import static net.minecraft.world.item.ItemStack.ATTRIBUTE_MODIFIER_FORMAT;
 
-public record AttrFacet(Supplier<Attribute> attr, DoubleSupplier val,
-						AttributeModifier.Operation op) implements IFacet {
+public record AttrFacet(Supplier<Attribute> attr, DoubleSupplier val, AttributeModifier.Operation op) implements IFacet {
 
 	public static AttrFacet add(Supplier<Attribute> attr, DoubleSupplier val) {
 		return new AttrFacet(attr, val, AttributeModifier.Operation.ADDITION);

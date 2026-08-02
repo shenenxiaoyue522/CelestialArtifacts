@@ -38,8 +38,7 @@ public record SlotAdder(String name, String slotId, UUID slot, int slotCount) im
 	}
 
 	public MutableComponent getTooltip() {
-		return Component.translatable(
-				"attribute.modifier.plus." + AttributeModifier.Operation.ADDITION.toValue(),
+		return Component.translatable("attribute.modifier.plus." + AttributeModifier.Operation.ADDITION.toValue(),
 				ItemStack.ATTRIBUTE_MODIFIER_FORMAT.format(slotCount),
 				Component.translatable("curios.identifier." + slotId));
 	}

@@ -23,8 +23,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 @SerialClass
-public class TwistedScabbard extends BaseTickingToken
-		implements NetworkSensitiveToken<TwistedScabbard>, CAAttackToken {
+public class TwistedScabbard extends BaseTickingToken implements NetworkSensitiveToken<TwistedScabbard>, CAAttackToken {
 
 	public static final TokenFacet<TwistedScabbard> TOKEN = new TokenFacet<>("twisted_scabbard", TwistedScabbard::new);
 	@SerialClass.SerialField
