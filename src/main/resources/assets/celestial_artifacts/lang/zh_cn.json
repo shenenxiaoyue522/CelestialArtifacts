@@ -357,7 +357,7 @@
   "key.category.celestial_artifacts.celestial_artifacts": "星月遗物",
   "item.celestial_artifacts.deers_mercy_amulet": "铭鹿护符",
   "effect.celestial_artifacts.enfeebled_laceration": "疲弱诅咒",
-  "effect.celestial_artifacts.enfeebled_laceration.description": "降低生物的移动速度，攻击伤害，受治疗量",
+  "effect.celestial_artifacts.enfeebled_laceration.description": "降低生物的移动速度，攻击伤害，再生力",
   "celestial_artifacts.charms.deer_inscribed_amulet_1": "每%s秒强化下一次攻击，强化时攻击使目标陷入%s效果",
   "celestial_artifacts.charms.deer_inscribed_amulet_2": "佩戴灾厄之册时",
   "item.celestial_artifacts.deer_inscribed_amulet": "悯鹿护符",

@@ -9,7 +9,7 @@ import net.minecraft.world.effect.MobEffect;
 public class CAEffects {
 
     public static final RegistryEntry<EnfeebledLaceration> ENFEEBLED_LACERATION = effect("enfeebled_laceration", EnfeebledLaceration::new,
-            "Reduce the movement speed, attack damage, and healing amount of organisms");
+            "Reduce the movement speed, attack damage, and regen rate");
 
     public static <T extends MobEffect> RegistryEntry<T> effect(String name, NonNullSupplier<T> sup, String desc) {
         return CelestialArtifacts.REGISTRATE.effect(name, sup, desc).lang(MobEffect::getDescriptionId).register();

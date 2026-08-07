@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_artifacts.content.effect;
 
 import com.xiaoyue.celestial_core.content.generic.CelestialEffect;
+import com.xiaoyue.celestial_core.register.CCAttributes;
 import dev.xkmc.l2library.util.math.MathHelper;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,5 +13,6 @@ public class EnfeebledLaceration extends CelestialEffect {
         String uuid = MathHelper.getUUIDFromString("celestial_artifacts:enfeebled_laceration").toString();
         addAttributeModifier(Attributes.ATTACK_DAMAGE, uuid, -0.2, AttributeModifier.Operation.MULTIPLY_TOTAL);
         addAttributeModifier(Attributes.MOVEMENT_SPEED, uuid, -0.2, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        addAttributeModifier(CCAttributes.REPLY_POWER.get(), uuid, -0.2, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 }
