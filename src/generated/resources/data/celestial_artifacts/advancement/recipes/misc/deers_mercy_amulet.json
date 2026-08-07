@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "deers_mercy_amulet"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "celestial_artifacts:deers_mercy_amulet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_treasure_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "celestial_core:treasure_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_treasure_fragment"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "celestial_artifacts:deers_mercy_amulet"
+    ]
+  }
+}

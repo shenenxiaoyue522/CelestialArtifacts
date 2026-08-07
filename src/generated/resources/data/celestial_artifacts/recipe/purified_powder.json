@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:experience_bottle"
+    },
+    {
+      "item": "celestial_artifacts:the_end_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:purified_powder"
+  }
+}

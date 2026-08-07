@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "gluttony_badge"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "C": {
+      "item": "celestial_core:death_essence"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "ACA",
+    "BAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:gluttony_badge"
+  }
+}

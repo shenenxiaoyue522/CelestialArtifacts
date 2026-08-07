@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "precious_bracelet"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "B": {
+      "item": "minecraft:ender_pearl"
+    },
+    "C": {
+      "item": "celestial_core:treasure_fragment"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    "DCD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:precious_bracelet"
+  }
+}

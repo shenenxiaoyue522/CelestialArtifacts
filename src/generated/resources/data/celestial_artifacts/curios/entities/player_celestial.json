@@ -1,0 +1,12 @@
+{
+  "entities": [
+    "minecraft:player"
+  ],
+  "slots": [
+    "etching",
+    "catastrophe",
+    "scroll",
+    "pendant",
+    "heart"
+  ]
+}

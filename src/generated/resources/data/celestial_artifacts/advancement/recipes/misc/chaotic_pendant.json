@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "chaotic_pendant"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enchanted_book": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:enchanted_book"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "celestial_artifacts:chaotic_pendant"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enchanted_book"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "celestial_artifacts:chaotic_pendant"
+    ]
+  }
+}

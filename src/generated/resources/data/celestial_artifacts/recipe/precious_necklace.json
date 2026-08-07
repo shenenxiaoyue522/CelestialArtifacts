@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "precious_necklace"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:experience_bottle"
+    },
+    "C": {
+      "item": "minecraft:netherite_scrap"
+    },
+    "D": {
+      "item": "celestial_core:treasure_fragment"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ABA",
+    "CDC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:precious_necklace"
+  }
+}

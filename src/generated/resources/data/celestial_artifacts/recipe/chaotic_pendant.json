@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "chaotic_pendant"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:enchanted_book"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "celestial_artifacts:the_end_dust"
+    },
+    "D": {
+      "item": "celestial_artifacts:unowned_pendant"
+    }
+  },
+  "pattern": [
+    " C ",
+    "BDB",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:chaotic_pendant"
+  }
+}

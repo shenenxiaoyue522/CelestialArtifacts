@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "sea_god_scroll"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:trident"
+    },
+    "B": {
+      "item": "minecraft:paper"
+    },
+    "C": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "D": {
+      "item": "minecraft:prismarine_shard"
+    },
+    "E": {
+      "item": "celestial_core:ocean_essence"
+    },
+    "F": {
+      "item": "minecraft:prismarine_crystals"
+    }
+  },
+  "pattern": [
+    "DEB",
+    "ACD",
+    "FDF"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:sea_god_scroll"
+  }
+}

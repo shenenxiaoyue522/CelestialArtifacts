@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "nether_fire"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherite_ring": {
+      "conditions": {
+        "items": [
+          {
+            "items": "celestial_artifacts:netherite_ring"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "celestial_artifacts:nether_fire"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_netherite_ring"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "celestial_artifacts:nether_fire"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "sakura_hairpin"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:cherry_log"
+    },
+    "B": {
+      "item": "celestial_core:sakura_steel"
+    },
+    "C": {
+      "item": "celestial_core:sakura_fragment"
+    },
+    "D": {
+      "item": "celestial_core:light_fragment"
+    }
+  },
+  "pattern": [
+    "ABC",
+    "BAD",
+    " CA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:sakura_hairpin"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "emerald_necklace"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:diamond"
+    },
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "C": {
+      "item": "minecraft:emerald"
+    },
+    "D": {
+      "item": "celestial_core:treasure_fragment"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ADA",
+    "BCB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:emerald_necklace"
+  }
+}

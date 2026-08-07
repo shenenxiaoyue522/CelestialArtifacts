@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "angel_desire"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "celestial_core:pure_nether_star"
+    },
+    "B": {
+      "item": "minecraft:phantom_membrane"
+    },
+    "C": {
+      "item": "minecraft:feather"
+    },
+    "D": {
+      "item": "celestial_core:light_fragment"
+    }
+  },
+  "pattern": [
+    "CDC",
+    "BAB",
+    "C C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:angel_desire"
+  }
+}

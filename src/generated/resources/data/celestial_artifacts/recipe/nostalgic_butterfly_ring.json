@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "nostalgic_butterfly_ring"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "celestial_core:treasure_fragment"
+    },
+    "X": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " AX",
+    "ATA",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:nostalgic_butterfly_ring"
+  }
+}

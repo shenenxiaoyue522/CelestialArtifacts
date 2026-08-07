@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "deers_mercy_amulet"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:iron_ingot"
+    },
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "I": {
+      "item": "celestial_core:treasure_fragment"
+    },
+    "T": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "pattern": [
+    "I I",
+    "GTG",
+    "D D"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:deers_mercy_amulet"
+  }
+}

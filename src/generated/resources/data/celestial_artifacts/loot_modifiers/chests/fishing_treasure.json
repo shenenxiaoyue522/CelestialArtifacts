@@ -1,0 +1,14 @@
+{
+  "type": "celestial_core:add_loot_table",
+  "conditions": [
+    {
+      "condition": "celestial_core:fishing",
+      "open": true
+    },
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "minecraft:gameplay/fishing"
+    }
+  ],
+  "lootTable": "celestial_artifacts:chests/fishing_treasure"
+}

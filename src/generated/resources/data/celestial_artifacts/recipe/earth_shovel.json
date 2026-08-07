@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "celestial_core:earth_core"
+  },
+  "base": {
+    "item": "minecraft:netherite_shovel"
+  },
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:earth_shovel"
+  },
+  "template": {
+    "item": "celestial_artifacts:nebula_cube"
+  }
+}

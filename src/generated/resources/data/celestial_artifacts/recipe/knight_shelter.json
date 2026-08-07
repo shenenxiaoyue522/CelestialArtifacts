@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "knight_shelter"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:nether_star"
+    },
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "C": {
+      "item": "celestial_core:light_fragment"
+    },
+    "D": {
+      "item": "celestial_artifacts:origin_etching"
+    },
+    "E": {
+      "item": "celestial_artifacts:nebula_cube"
+    }
+  },
+  "pattern": [
+    "ADA",
+    "BCB",
+    "EBE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:knight_shelter"
+  }
+}

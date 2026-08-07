@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "evil_eye"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:ender_eye"
+    },
+    "B": {
+      "item": "minecraft:blaze_powder"
+    },
+    "C": {
+      "item": "minecraft:ink_sac"
+    },
+    "D": {
+      "item": "celestial_core:midnight_fragment"
+    }
+  },
+  "pattern": [
+    " B ",
+    "BAB",
+    "DCD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:evil_eye"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "iron_scabbard"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:leather"
+    },
+    "T": {
+      "item": "celestial_core:treasure_fragment"
+    }
+  },
+  "pattern": [
+    "BA ",
+    "ATA",
+    "AAB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:iron_scabbard"
+  }
+}

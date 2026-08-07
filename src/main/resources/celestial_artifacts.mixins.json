@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.xiaoyue.celestial_artifacts.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "celestial_artifacts.refmap.json",
+  "mixins": [
+    "AbstractArrowAccessor",
+    "EnchantmentMenuMixin",
+    "PhantomSpawnerMixin"
+  ],
+  "minVersion": "0.8",
+  "client": [
+	]
+}

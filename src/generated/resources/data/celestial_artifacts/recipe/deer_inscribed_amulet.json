@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "deer_inscribed_amulet"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "celestial_core:light_fragment"
+    },
+    "G": {
+      "item": "minecraft:diamond"
+    },
+    "I": {
+      "item": "minecraft:feather"
+    },
+    "T": {
+      "item": "celestial_artifacts:deers_mercy_amulet"
+    },
+    "X": {
+      "item": "celestial_artifacts:life_etching"
+    }
+  },
+  "pattern": [
+    "I I",
+    "GTG",
+    "DXD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:deer_inscribed_amulet"
+  }
+}

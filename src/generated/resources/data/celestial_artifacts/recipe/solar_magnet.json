@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "solar_magnet"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:iron_ingot"
+    },
+    "B": {
+      "item": "minecraft:redstone"
+    },
+    "C": {
+      "item": "celestial_core:fire_essence"
+    },
+    "D": {
+      "item": "minecraft:experience_bottle"
+    }
+  },
+  "pattern": [
+    "B B",
+    "ADA",
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:solar_magnet"
+  }
+}

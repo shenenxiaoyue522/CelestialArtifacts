@@ -1,0 +1,18 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_artifacts-server.toml/materials.guardianEyeDropChance",
+  "conditions": [
+    {
+      "condition": "celestial_core:enabled",
+      "item": "celestial_artifacts:guardian_eye"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:elder_guardian"
+      }
+    }
+  ],
+  "item": "celestial_artifacts:guardian_eye"
+}

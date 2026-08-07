@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "ender_protector"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "celestial_core:void_essence"
+    },
+    "B": {
+      "item": "minecraft:ender_eye"
+    },
+    "C": {
+      "item": "celestial_core:shulker_scrap"
+    },
+    "D": {
+      "item": "minecraft:glow_ink_sac"
+    },
+    "E": {
+      "item": "minecraft:amethyst_shard"
+    }
+  },
+  "pattern": [
+    "EAE",
+    "ABA",
+    "DCD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:ender_protector"
+  }
+}

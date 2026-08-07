@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "flight_ring"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "celestial_artifacts:gold_ring"
+    },
+    "B": {
+      "item": "minecraft:feather"
+    },
+    "C": {
+      "item": "celestial_core:soaring_wings"
+    }
+  },
+  "pattern": [
+    " C ",
+    "BAB",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:flight_ring"
+  }
+}

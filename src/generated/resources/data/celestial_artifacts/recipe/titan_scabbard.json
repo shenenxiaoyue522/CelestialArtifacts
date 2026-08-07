@@ -1,0 +1,41 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "l2core:bool_config",
+      "expected": true,
+      "line": [
+        "itemToggle",
+        "titan_scabbard"
+      ],
+      "path": "celestial_configs/celestial_artifacts-server.toml"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "celestial_artifacts:iron_scabbard"
+    },
+    "B": {
+      "item": "celestial_core:light_fragment"
+    },
+    "C": {
+      "item": "minecraft:experience_bottle"
+    },
+    "D": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:lime_dye"
+    }
+  },
+  "pattern": [
+    " DB",
+    "EAD",
+    "CE "
+  ],
+  "result": {
+    "count": 1,
+    "id": "celestial_artifacts:titan_scabbard"
+  }
+}

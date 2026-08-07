@@ -1,0 +1,22 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_artifacts-server.toml/materials.twistedHeartDropChance",
+  "conditions": [
+    {
+      "condition": "celestial_core:enabled",
+      "item": "celestial_artifacts:twisted_heart"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "attacker",
+      "predicate": {
+        "type": "minecraft:wither"
+      }
+    },
+    {
+      "condition": "celestial_core:entity_health",
+      "min": "celestial_configs/celestial_artifacts-server.toml/materials.twistedHeartHealthRequirement"
+    }
+  ],
+  "item": "celestial_artifacts:twisted_heart"
+}

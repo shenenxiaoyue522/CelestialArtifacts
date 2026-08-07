@@ -1,0 +1,25 @@
+{
+  "type": "celestial_core:add_item",
+  "chance": "celestial_configs/celestial_artifacts-server.toml/materials.twistedBrainDropChance",
+  "conditions": [
+    {
+      "condition": "celestial_core:enabled",
+      "item": "celestial_artifacts:twisted_brain"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "attacker",
+      "predicate": {
+        "type": "minecraft:wither"
+      }
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "#minecraft:raiders"
+      }
+    }
+  ],
+  "item": "celestial_artifacts:twisted_brain"
+}
