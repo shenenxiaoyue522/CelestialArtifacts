@@ -28,7 +28,9 @@ public class TwistedScabbard extends BaseTickingToken implements NetworkSensitiv
 
 	public static final TokenFacet<TwistedScabbard> TOKEN = new TokenFacet<>("twisted_scabbard", TwistedScabbard::new);
 	@SerialField
-	public int twisted_scabbard_add, timer;
+	public int twisted_scabbard_add;
+    @SerialField
+    public int timer;
 
 	private static int interval() {
 		return CAModConfig.SERVER.back.twistedScabbardInterval.get();
@@ -50,13 +52,13 @@ public class TwistedScabbard extends BaseTickingToken implements NetworkSensitiv
 	public void onPlayerKill(Player player, LivingDeathEvent event) {
 		twisted_scabbard_add++;
 		timer = 0;
-		if (player instanceof ServerPlayer sp)
-			sync(TOKEN.getKey(), this, sp);
-
+		if (player instanceof ServerPlayer sp) {
+            sync(TOKEN.getKey(), this, sp);
+        }
 	}
 
 	private AttrAdder attr(Player player) {
-		return AttrAdder.of("twisted_scabbard", () -> Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_VALUE, () -> getVal(player));
+		return AttrAdder.of("twisted_scabbard", () -> Attributes.ATTACK_DAMAGE, AttributeModifier.Operation.ADD_MULTIPLIED_BASE, () -> getVal(player));
 	}
 
 	private double getVal(Player player) {

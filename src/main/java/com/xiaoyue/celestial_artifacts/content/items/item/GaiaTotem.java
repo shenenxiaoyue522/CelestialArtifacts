@@ -9,6 +9,7 @@ import com.xiaoyue.celestial_invoker.invoker.tooltip.TooltipEntry;
 import dev.xkmc.l2damagetracker.contents.curios.L2Totem;
 import dev.xkmc.l2damagetracker.contents.curios.TotemUseToClient;
 import dev.xkmc.l2damagetracker.init.L2DamageTracker;
+import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
@@ -48,6 +49,6 @@ public class GaiaTotem extends Item implements L2Totem {
 		if (stack.is(CATagGen.REQUIRE_CURSE)) {
 			list.add(CALang.Modular.curse());
 		}
-		list.add(CALang.Tooltip.GAIA_TOTEM.get(TooltipEntry.eff(CCEffects.UNYIELDING.get())));
+		list.add(CALang.Tooltip.GAIA_TOTEM.get(TooltipEntry.eff(CCEffects.UNYIELDING.get())).withStyle(ChatFormatting.GRAY));
 	}
 }

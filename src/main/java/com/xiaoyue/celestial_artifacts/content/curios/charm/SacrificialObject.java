@@ -31,7 +31,6 @@ public class SacrificialObject implements MultiLineText {
 			player.spawnAtLocation(Items.GOLD_INGOT);
 		}
 		List<LivingEntity> entities = EntityUtils.getExceptForCentralEntity(player, 8, 4, e -> e instanceof Enemy);
-		entities.remove(player);
 		for (LivingEntity e : entities) {
 			if (e.getMaxHealth() < player.getMaxHealth()) {
 				if (CAAttackToken.chance(e, chance())) {

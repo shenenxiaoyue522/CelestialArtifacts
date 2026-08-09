@@ -35,8 +35,9 @@ public class PurifiedPowder extends Item {
 		if (other.isEnchanted()) {
 			if (!level.isClientSide()) {
 				ItemEnchantments map = other.getTagEnchantments();
-				map.keySet().removeIf(ench -> ench.is(EnchantmentTags.CURSE));
-				EnchantmentHelper.setEnchantments(other, map);
+				ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(map);
+				mutable.removeIf(ench -> ench.is(EnchantmentTags.CURSE));
+				EnchantmentHelper.setEnchantments(other, mutable.toImmutable());
 				stack.shrink(1);
 			}
 			return InteractionResultHolder.success(stack);
