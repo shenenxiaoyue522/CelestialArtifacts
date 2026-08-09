@@ -49,12 +49,12 @@ public class EnderJumpScepter extends Item {
 	public InteractionResult interactLivingEntity(ItemStack pStack, Player pPlayer, LivingEntity target, InteractionHand pUsedHand) {
 		MinecraftServer server = pPlayer.level().getServer();
 		CompoundData data = CompoundData.getOrCreate(pStack);
-		if (!data.isEmpty() && server != null) {
-			int charging = data.tag().getInt(CHARGING);
+		if (server != null) {
 			ServerLevel level = server.getLevel(getLevelFromTag(pStack));
+			int charging = data.tag().getInt(CHARGING);
 			if (charging > 0 && level != null) {
 				TeleportTool.performTeleport(target, level, data.tag().getDouble(X_POS), data.tag().getDouble(Y_POS), data.tag().getDouble(Z_POS), target.getYRot(), target.getXRot());
-				data.update(tag -> tag.putInt(CHARGING, charging - 1));
+				CompoundData.update(pStack, tag -> tag.putInt(CHARGING, charging - 1));
 				return InteractionResult.SUCCESS;
 			}
 		}
