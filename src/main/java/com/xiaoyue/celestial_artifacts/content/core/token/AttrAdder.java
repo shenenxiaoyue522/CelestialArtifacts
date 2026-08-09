@@ -50,11 +50,11 @@ public record AttrAdder(ResourceLocation name, Supplier<Holder<Attribute>> attr,
 	}
 
 	public MutableComponent getTooltip() {
-		return attr.get().value().toValueComponent(op, value.getAsDouble(), TooltipFlag.NORMAL);
+		return attr.get().value().toComponent(new AttributeModifier(name, value.getAsDouble(), op), TooltipFlag.NORMAL);
 	}
 
 	public MutableComponent getText(double val) {
-		return attr.get().value().toValueComponent(op, val, TooltipFlag.NORMAL);
+		return attr.get().value().toComponent(new AttributeModifier(name, val, op), TooltipFlag.NORMAL);
 	}
 
 }

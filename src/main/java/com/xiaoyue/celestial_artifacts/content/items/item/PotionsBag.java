@@ -1,6 +1,7 @@
 package com.xiaoyue.celestial_artifacts.content.items.item;
 
 import com.xiaoyue.celestial_artifacts.content.container.PotionsBagMenu;
+import com.xiaoyue.celestial_artifacts.content.container.SimpleInventory;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.register.CAMenus;
 import com.xiaoyue.celestial_core.data.CCDataMapGen;
@@ -10,7 +11,6 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.SimpleMenuProvider;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
@@ -39,13 +39,12 @@ public class PotionsBag extends Item {
 				this.openSimpleMenu(serverPlayer, stack);
 			}
 			return InteractionResultHolder.success(stack);
-
 		}
 		return InteractionResultHolder.fail(stack);
 	}
 
-	public @NotNull SimpleContainer getSimpleInv() {
-		return new SimpleContainer(27) {
+	public @NotNull SimpleInventory getSimpleInv(ItemStack stack) {
+		return new SimpleInventory(stack, 27) {
 			@Override
 			public boolean canPlaceItem(int pIndex, ItemStack pStack) {
 				return PotionsBag.isPotion(pStack);
@@ -67,21 +66,21 @@ public class PotionsBag extends Item {
 	}
 
 	public void onShiftUse(ServerPlayer player, ItemStack stack) {
-		SimpleContainer inv = this.getSimpleInv();
+		SimpleInventory inv = this.getSimpleInv(stack);
 		if (inv.isEmpty()) return;
 		for (int i = 0; i < inv.getContainerSize(); i++) {
 			ItemStack invItem = inv.getItem(i);
 			if (invItem.isEmpty() || !(invItem.getItem() instanceof PotionItem)) continue;
-			PotionContents contents = invItem.get(DataComponents.POTION_CONTENTS);
+			ItemStack copy = invItem.copy();
+			PotionContents contents = copy.get(DataComponents.POTION_CONTENTS);
             if (contents != null) {
 				contents.getAllEffects().forEach(ins -> {
 					if (!player.hasEffect(ins.getEffect())) {
 						player.addEffect(ins);
+						copy.shrink(1);
 					}
 				});
 			}
-            ItemStack copy = invItem.copy();
-			copy.shrink(1);
 			inv.setItem(i, copy);
 		}
 	}

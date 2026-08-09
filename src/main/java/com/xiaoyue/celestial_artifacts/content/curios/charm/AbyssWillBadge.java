@@ -180,7 +180,7 @@ public class AbyssWillBadge extends BaseTickingToken implements NetworkSensitive
 
 	@Override
 	public void onSync(@Nullable AbyssWillBadge abyssWillBadge, Player player) {
-
+		System.out.println(abyss_will_badge_add);
 	}
 
 }

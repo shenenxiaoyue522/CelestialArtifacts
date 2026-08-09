@@ -184,7 +184,7 @@ public class CALang {
 		}
 
 		public static MutableComponent curse() {
-			return CURSE.get(curseItem()).withStyle(ChatFormatting.RED);
+			return CURSE.get(curseItem().withStyle(ChatFormatting.RED));
 		}
 
 		public static MutableComponent shift() {

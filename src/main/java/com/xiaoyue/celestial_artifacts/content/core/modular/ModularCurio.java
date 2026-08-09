@@ -178,7 +178,7 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 	}
 
 	@Override
-	public int getLootingLevel(SlotContext slotContext, DamageSource source, LivingEntity target, int baseLooting, ItemStack stack) {
+	public int getLootingLevel(SlotContext slotContext, @Nullable LootContext lootContext, ItemStack stack) {
 		return prop.loot;
 	}
 
@@ -210,7 +210,7 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 	}
 
 	@Override
-	public List<Component> getAttributesTooltip(List<Component> tooltips, ItemStack stack) {
+	public List<Component> getAttributesTooltip(List<Component> tooltips, TooltipContext context, ItemStack stack) {
 		if (attributes.isEmpty()) {
 			if (prop.hideAttr || Proxy.getPlayer() == null) return tooltips;
 			if (attrText.isEmpty() && prop.fortune == 0 && prop.loot == 0) return tooltips;
@@ -230,8 +230,8 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 		for (var e : attrText) {
 			e.addAttrText(tooltips);
 		}
-        return tooltips;
-    }
+		return tooltips;
+	}
 
 	@Override
 	public boolean isEnderMask(ItemStack stack, Player player, EnderMan endermanEntity) {
@@ -274,10 +274,9 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 		return slotContext.entity() instanceof Player player && player.isCreative();
 	}
 
-	@NotNull
 	@Override
-	public ICurio.DropRule getDropRule(SlotContext ctx, DamageSource source, int loot, boolean hit, ItemStack stack) {
-		return prop.curse() ? ICurio.DropRule.ALWAYS_KEEP : super.getDropRule(ctx, source, loot, hit, stack);
+	public @NotNull ICurio.DropRule getDropRule(SlotContext ctx, DamageSource source, boolean hit, ItemStack stack) {
+		return prop.curse() ? ICurio.DropRule.ALWAYS_KEEP : super.getDropRule(ctx, source, hit, stack);
 	}
 
 	public record Prop(

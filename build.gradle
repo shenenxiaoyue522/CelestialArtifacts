@@ -108,13 +108,13 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     implementation "xiaoyue.celestial_invoker:celestial_invoker:[21nf10cd2,)"
-    implementation "xiaoyue.celestial_core:celestial_core:[2.0.0-test13,)"
+    implementation "xiaoyue.celestial_core:celestial_core:[2.0.0-test14,)"
 
     implementation "dev.xkmc.l2serial:l2serial:[3.0.9,)"
     implementation "dev.xkmc.l2core:l2core:[3.0.8+11,)"
     implementation "dev.xkmc.l2tabs:l2tabs:[3.0.5+1,)"
     implementation "dev.xkmc.l2itemselector:l2itemselector:[3.0.7,)"
-    implementation "dev.xkmc.l2damagetracker:l2damagetracker:[3.0.8+3,)"
+    implementation "dev.xkmc.l2damagetracker:l2damagetracker:[3.0.8+4,)"
     implementation "dev.xkmc.l2menustacker:l2menustacker:[3.0.9,)"
     implementation "dev.xkmc.l2library:l2library:[3.0.4,)"
     implementation "com.tterrag.registrate:Registrate:${registrate_version}"

@@ -1,5 +1,6 @@
 package com.xiaoyue.celestial_artifacts.content.container;
 
+import com.xiaoyue.celestial_artifacts.content.items.item.PotionsBag;
 import com.xiaoyue.celestial_artifacts.register.CAItems;
 import com.xiaoyue.celestial_core.utils.ItemUtils;
 import net.minecraft.network.FriendlyByteBuf;
@@ -21,7 +22,11 @@ public class PotionsBagMenu extends AbstractContainerMenu {
 	public PotionsBagMenu(MenuType<?> type, int id, Inventory inv, ItemStack bag) {
 		super(type, id);
 		this.bag = bag;
-		this.bagInv = new SimpleContainer(27);
+		if (bag.getItem() instanceof PotionsBag bagItem) {
+			bagInv = bagItem.getSimpleInv(bag);
+		} else {
+            this.bagInv = new SimpleContainer(27);
+        }
 		for (int row = 0; row < 3; ++row) {
 			for (int col = 0; col < 9; ++col) {
 				addSlot(new PotionSlot(bagInv, col + row * 9, 8 + col * 18, 18 + row * 18));
