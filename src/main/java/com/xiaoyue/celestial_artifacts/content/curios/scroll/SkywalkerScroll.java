@@ -3,6 +3,7 @@ package com.xiaoyue.celestial_artifacts.content.curios.scroll;
 import com.xiaoyue.celestial_artifacts.content.core.feature.SkillFeature;
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
 import com.xiaoyue.celestial_artifacts.content.core.token.BaseTickingToken;
+import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
@@ -21,7 +22,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 @SerialClass
-public class SkywalkerScroll extends BaseTickingToken implements NetworkSensitiveToken<SkywalkerScroll>, SkillFeature {
+public class SkywalkerScroll extends SyncedTickingToken<SkywalkerScroll> implements SkillFeature {
 
 	public static final TokenFacet<SkywalkerScroll> TOKEN = new TokenFacet<>("skywalker_scroll", SkywalkerScroll::new);
 	@SerialField
@@ -73,10 +74,4 @@ public class SkywalkerScroll extends BaseTickingToken implements NetworkSensitiv
 	protected void tickImpl(Player player) {
 
 	}
-
-	@Override
-	public void onSync(@Nullable SkywalkerScroll skywalkerScroll, Player player) {
-
-	}
-
 }

@@ -1,14 +1,10 @@
 package com.xiaoyue.celestial_artifacts.content.curios.back;
 
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
-import com.xiaoyue.celestial_artifacts.content.core.token.AttrAdder;
-import com.xiaoyue.celestial_artifacts.content.core.token.BaseTickingToken;
-import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
-import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
+import com.xiaoyue.celestial_artifacts.content.core.token.*;
 import com.xiaoyue.celestial_artifacts.content.curios.curse.CatastropheScroll;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
-import dev.xkmc.l2core.capability.conditionals.NetworkSensitiveToken;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
 import net.minecraft.ChatFormatting;
@@ -24,7 +20,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 @SerialClass
-public class TwistedScabbard extends BaseTickingToken implements NetworkSensitiveToken<TwistedScabbard>, CAAttackToken {
+public class TwistedScabbard extends SyncedTickingToken<TwistedScabbard> implements CAAttackToken {
 
 	public static final TokenFacet<TwistedScabbard> TOKEN = new TokenFacet<>("twisted_scabbard", TwistedScabbard::new);
 	@SerialField
@@ -101,10 +97,4 @@ public class TwistedScabbard extends BaseTickingToken implements NetworkSensitiv
 				TextFacet.num(twisted_scabbard_add), TextFacet.num(maxAtkBonus())
 		).withStyle(ChatFormatting.DARK_PURPLE)));
 	}
-
-	@Override
-	public void onSync(@Nullable TwistedScabbard old, Player player) {
-
-	}
-
 }

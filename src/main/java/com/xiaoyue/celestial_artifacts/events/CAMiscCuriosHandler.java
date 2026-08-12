@@ -26,6 +26,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -96,8 +97,16 @@ public class CAMiscCuriosHandler {
 
 	@SubscribeEvent(priority = EventPriority.LOW)
 	public static void onEnderManAnger(EnderManAngerEvent event) {
-		if (event.getPlayer() instanceof ServerPlayer sp && sp.hasLineOfSight(event.getEntity()))
-			CatastropheScroll.Curses.END.trigger(sp);
+		if (event.getPlayer() instanceof ServerPlayer sp) {
+			var ender = event.getEntity();
+			Vec3 vec3 = sp.getViewVector(1.0F).normalize();
+			Vec3 vec31 = new Vec3(ender.getX() - sp.getX(), ender.getEyeY() - sp.getEyeY(), ender.getZ() - sp.getZ());
+			double d0 = vec31.length();
+			vec31 = vec31.normalize();
+			double d1 = vec3.dot(vec31);
+			if (d1 > (double) 1.0F - 0.025 / d0 && sp.hasLineOfSight(ender))
+				CatastropheScroll.Curses.END.trigger(sp);
+		}
 	}
 
 	@SubscribeEvent

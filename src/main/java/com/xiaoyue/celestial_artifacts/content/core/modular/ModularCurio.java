@@ -275,8 +275,8 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 	}
 
 	@Override
-	public @NotNull ICurio.DropRule getDropRule(SlotContext ctx, DamageSource source, boolean hit, ItemStack stack) {
-		return prop.curse() ? ICurio.DropRule.ALWAYS_KEEP : super.getDropRule(ctx, source, hit, stack);
+	public @NotNull ICurio.DropRule getDropRule(SlotContext ctx, DamageSource source, int lootingLevel, boolean recentlyHit, ItemStack stack) {
+		return prop.curse() ? ICurio.DropRule.ALWAYS_KEEP : super.getDropRule(ctx, source, lootingLevel, recentlyHit, stack);
 	}
 
 	public record Prop(

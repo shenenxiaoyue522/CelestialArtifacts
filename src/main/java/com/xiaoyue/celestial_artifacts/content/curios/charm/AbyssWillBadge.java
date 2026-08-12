@@ -4,6 +4,7 @@ import com.xiaoyue.celestial_artifacts.content.core.feature.SkillFeature;
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
 import com.xiaoyue.celestial_artifacts.content.core.token.BaseTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
+import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
@@ -23,7 +24,7 @@ import org.jetbrains.annotations.Nullable;
 import java.util.List;
 
 @SerialClass
-public class AbyssWillBadge extends BaseTickingToken implements NetworkSensitiveToken<AbyssWillBadge>, CAAttackToken, SkillFeature {
+public class AbyssWillBadge extends SyncedTickingToken<AbyssWillBadge> implements CAAttackToken, SkillFeature {
 
 	public static final TokenFacet<AbyssWillBadge> TOKEN = new TokenFacet<>("abyss_will_badge", AbyssWillBadge::new);
 
@@ -177,10 +178,4 @@ public class AbyssWillBadge extends BaseTickingToken implements NetworkSensitive
 	protected void removeImpl(Player player) {
 
 	}
-
-	@Override
-	public void onSync(@Nullable AbyssWillBadge abyssWillBadge, Player player) {
-
-	}
-
 }
