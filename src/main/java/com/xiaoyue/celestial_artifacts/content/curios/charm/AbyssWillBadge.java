@@ -2,14 +2,12 @@ package com.xiaoyue.celestial_artifacts.content.curios.charm;
 
 import com.xiaoyue.celestial_artifacts.content.core.feature.SkillFeature;
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
-import com.xiaoyue.celestial_artifacts.content.core.token.BaseTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
 import com.xiaoyue.celestial_artifacts.register.CAItems;
-import dev.xkmc.l2core.capability.conditionals.NetworkSensitiveToken;
 import dev.xkmc.l2damagetracker.contents.attack.DamageData;
 import dev.xkmc.l2damagetracker.contents.attack.DamageModifier;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;

@@ -2,19 +2,18 @@ package com.xiaoyue.celestial_artifacts.content.curios.scroll;
 
 import com.xiaoyue.celestial_artifacts.content.core.feature.SkillFeature;
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
-import com.xiaoyue.celestial_artifacts.content.core.token.BaseTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.data.CALang;
-import com.xiaoyue.celestial_artifacts.data.CAModConfig;
 import com.xiaoyue.celestial_artifacts.register.CAItems;
-import dev.xkmc.l2core.capability.conditionals.NetworkSensitiveToken;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -31,7 +30,8 @@ public class SkywalkerScroll extends SyncedTickingToken<SkywalkerScroll> impleme
 	public double x, y, z;
 
 	private static int cooldownFactor() {
-		return CAModConfig.SERVER.scroll.skyWalkerCooldown.get();
+		// return CAModConfig.SERVER.scroll.skyWalkerCooldown.get();
+		return 1;
 	}
 
 	@Override
@@ -58,10 +58,12 @@ public class SkywalkerScroll extends SyncedTickingToken<SkywalkerScroll> impleme
 			z = player.getZ();
 			id = player.level().dimension().location();
 			sync(TOKEN.getKey(), this, serverPlayer);
+			player.level().playSound(null, player.getOnPos(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 1f, 1f);
 		} else if (player.level().dimension().location().equals(id) &&
 				!player.getCooldowns().isOnCooldown(item)) {
 			player.teleportTo(x, y, z);
 			player.getCooldowns().addCooldown(item, cooldownFactor() * 20);
+			player.level().playSound(null, player.getOnPos(), SoundEvents.PLAYER_TELEPORT, SoundSource.PLAYERS, 1f, 1f);
 		}
 	}
 

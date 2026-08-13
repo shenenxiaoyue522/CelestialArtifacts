@@ -278,7 +278,7 @@
   "celestial_artifacts.charms.knight_shelter_2": "使用盾牌格挡伤害后对攻击者反伤格挡伤害的%s",
   "celestial_artifacts.charms.sacrificial_object_1": "当你死亡时:",
   "celestial_artifacts.charms.sacrificial_object_2": "%s概率在原地留下1块金锭",
-  "celestial_artifacts.charms.sacrificial_object_3": "%s概率使周围最大生命小于自身的敌对生物陪葬",
+  "celestial_artifacts.charms.sacrificial_object_3": "且周围最大生命小于自身的敌对生物%s概率陪葬",
   "celestial_artifacts.charms.solar_magnet": "吸引周围的物品",
   "celestial_artifacts.charms.soul_box_0": "受到攻击时有%s概率对攻击者施加%s",
   "celestial_artifacts.charms.soul_box_1": "受到致命攻击时规避该伤害，冷却%s秒，并且:",

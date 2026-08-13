@@ -1,7 +1,10 @@
 package com.xiaoyue.celestial_artifacts.content.curios.back;
 
 import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
-import com.xiaoyue.celestial_artifacts.content.core.token.*;
+import com.xiaoyue.celestial_artifacts.content.core.token.AttrAdder;
+import com.xiaoyue.celestial_artifacts.content.core.token.CAAttackToken;
+import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
+import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.content.curios.curse.CatastropheScroll;
 import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
