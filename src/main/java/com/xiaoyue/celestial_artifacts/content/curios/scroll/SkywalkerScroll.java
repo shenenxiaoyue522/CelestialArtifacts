@@ -5,6 +5,7 @@ import com.xiaoyue.celestial_artifacts.content.core.modular.TextFacet;
 import com.xiaoyue.celestial_artifacts.content.core.token.SyncedTickingToken;
 import com.xiaoyue.celestial_artifacts.content.core.token.TokenFacet;
 import com.xiaoyue.celestial_artifacts.data.CALang;
+import com.xiaoyue.celestial_artifacts.data.CAModConfig;
 import com.xiaoyue.celestial_artifacts.register.CAItems;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
@@ -30,8 +31,7 @@ public class SkywalkerScroll extends SyncedTickingToken<SkywalkerScroll> impleme
 	public double x, y, z;
 
 	private static int cooldownFactor() {
-		// return CAModConfig.SERVER.scroll.skyWalkerCooldown.get();
-		return 1;
+		return CAModConfig.SERVER.scroll.skyWalkerCooldown.get();
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class SkywalkerScroll extends SyncedTickingToken<SkywalkerScroll> impleme
 			z = player.getZ();
 			id = player.level().dimension().location();
 			sync(TOKEN.getKey(), this, serverPlayer);
-			player.level().playSound(null, player.getOnPos(), SoundEvents.EXPERIENCE_ORB_PICKUP, SoundSource.PLAYERS, 1f, 1f);
+			player.level().playSound(null, player.getOnPos(), SoundEvents.UI_BUTTON_CLICK.getDelegate().value(), SoundSource.PLAYERS, 1f, 1f);
 		} else if (player.level().dimension().location().equals(id) &&
 				!player.getCooldowns().isOnCooldown(item)) {
 			player.teleportTo(x, y, z);

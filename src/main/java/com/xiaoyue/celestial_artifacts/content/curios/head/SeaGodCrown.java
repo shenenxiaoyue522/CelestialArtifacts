@@ -9,6 +9,8 @@ import com.xiaoyue.celestial_artifacts.register.CAItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -27,6 +29,7 @@ public class SeaGodCrown implements MultiLineText, SkillFeature {
 			if (!player.getCooldowns().isOnCooldown(CAItems.SEA_GOD_CROWN.get())) {
 				serverLevel.setWeatherParameters(0, 20000, true, true);
 				player.getCooldowns().addCooldown(CAItems.SEA_GOD_CROWN.get(), cd() * 20);
+				player.level().playSound(null, player.getOnPos(), SoundEvents.LIGHTNING_BOLT_THUNDER, SoundSource.PLAYERS, 1f, 1f);
 			}
 		}
 	}

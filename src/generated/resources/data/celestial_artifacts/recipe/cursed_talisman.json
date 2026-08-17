@@ -7,7 +7,7 @@
         "itemToggle",
         "cursed_talisman"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -29,7 +29,7 @@
       "item": "celestial_artifacts:nebula_cube"
     },
     "D": {
-      "item": "celestial_core:heart_fragment"
+      "item": "celestial_core:cursed_essence"
     },
     "E": {
       "item": "celestial_artifacts:unowned_pendant"

@@ -7,14 +7,14 @@
         "itemToggle",
         "sea_god_crown"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
     "A": {
-      "item": "minecraft:prismarine_shard"
+      "item": "celestial_core:ocean_ingot"
     },
     "B": {
       "item": "minecraft:diamond"

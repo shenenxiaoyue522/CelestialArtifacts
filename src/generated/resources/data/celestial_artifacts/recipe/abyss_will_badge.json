@@ -7,7 +7,7 @@
         "itemToggle",
         "abyss_will_badge"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -26,7 +26,7 @@
       "item": "celestial_artifacts:the_end_dust"
     },
     "E": {
-      "item": "minecraft:disc_fragment_5"
+      "item": "celestial_core:cursed_essence"
     },
     "F": {
       "item": "celestial_artifacts:nebula_cube"

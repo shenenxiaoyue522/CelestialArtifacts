@@ -7,7 +7,7 @@
         "itemToggle",
         "ring_of_life"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "parent": "minecraft:recipes/root",

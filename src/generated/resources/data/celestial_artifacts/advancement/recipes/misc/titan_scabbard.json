@@ -7,7 +7,7 @@
         "itemToggle",
         "titan_scabbard"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "parent": "minecraft:recipes/root",

@@ -7,7 +7,7 @@
         "itemToggle",
         "lock_of_abyss"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -20,7 +20,7 @@
       "item": "celestial_artifacts:chaotic_etching"
     },
     "C": {
-      "item": "celestial_core:heart_fragment"
+      "item": "celestial_core:cursed_essence"
     },
     "D": {
       "item": "celestial_artifacts:the_end_dust"

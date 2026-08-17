@@ -38,7 +38,8 @@ public class DeerButterflySet extends BaseTickingToken implements CAAttackToken 
     @Override
     public void onPlayerDamageTargetFinal(Player player, DamageData.DefenceMax cache) {
         List<DamageSource> types = List.of(CCDamageTypes.magic(player), CCDamageTypes.abyss(player));
-        if (types.stream().noneMatch(source -> source.type().equals(cache.getSource().type()))) {
+        if (types.stream().noneMatch(source -> source.type().equals(cache.getSource().type()))
+                && player.getLastHurtMobTimestamp() < 1) {
             SchedulerHandler.schedule(() -> {
                 LivingEntity target = cache.getTarget();
                 target.hurt(types.get(player.getRandom().nextInt(types.size())), cache.getDamageFinal() * dmgMul());

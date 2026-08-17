@@ -7,7 +7,7 @@
         "itemToggle",
         "greedy_heart"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -17,10 +17,10 @@
       "item": "celestial_core:heart_fragment"
     },
     "B": {
-      "item": "minecraft:nether_star"
+      "item": "minecraft:diamond"
     },
     "C": {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:glowstone"
     },
     "D": {
       "item": "minecraft:gold_block"

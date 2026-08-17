@@ -7,7 +7,7 @@
         "itemToggle",
         "treasure_hunter_necklace"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",

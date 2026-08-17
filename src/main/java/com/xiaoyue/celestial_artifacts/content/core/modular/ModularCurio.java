@@ -257,7 +257,7 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 			var rl = BuiltInRegistries.ITEM.getKey(this);
             idCache = rl.getPath();
 		}
-		return CAModConfig.SERVER.toggles.get(idCache);
+		return CAModConfig.COMMON.toggles.get(idCache);
 	}
 
 	public void enableMap(Consumer<ModularCurio> cons) {

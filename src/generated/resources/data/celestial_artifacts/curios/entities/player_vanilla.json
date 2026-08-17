@@ -3,12 +3,12 @@
     "minecraft:player"
   ],
   "slots": [
-    "head",
-    "charm",
-    "ring",
     "back",
+    "body",
     "bracelet",
+    "charm",
+    "head",
     "necklace",
-    "body"
+    "ring"
   ]
 }

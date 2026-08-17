@@ -7,7 +7,7 @@
         "itemToggle",
         "cursed_totem"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -23,7 +23,7 @@
       "item": "celestial_core:death_essence"
     },
     "D": {
-      "item": "minecraft:totem_of_undying"
+      "item": "celestial_core:broken_totem"
     },
     "E": {
       "item": "celestial_artifacts:end_etching"

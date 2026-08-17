@@ -7,7 +7,7 @@
         "itemToggle",
         "holy_talisman"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -29,7 +29,7 @@
       "item": "celestial_core:light_fragment"
     },
     "F": {
-      "item": "celestial_core:midnight_fragment"
+      "item": "celestial_core:celestial_fragment"
     },
     "G": {
       "item": "celestial_core:soaring_wings"

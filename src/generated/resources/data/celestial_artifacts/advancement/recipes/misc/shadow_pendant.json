@@ -7,7 +7,7 @@
         "itemToggle",
         "shadow_pendant"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "parent": "minecraft:recipes/root",

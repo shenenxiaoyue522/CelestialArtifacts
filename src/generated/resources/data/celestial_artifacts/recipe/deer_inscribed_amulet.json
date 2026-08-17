@@ -7,7 +7,7 @@
         "itemToggle",
         "deer_inscribed_amulet"
       ],
-      "path": "celestial_configs/celestial_artifacts-server.toml"
+      "path": "celestial_configs/celestial_artifacts-common.toml"
     }
   ],
   "type": "minecraft:crafting_shaped",
@@ -17,7 +17,7 @@
       "item": "celestial_core:light_fragment"
     },
     "G": {
-      "item": "minecraft:diamond"
+      "item": "celestial_core:celestial_fragment"
     },
     "I": {
       "item": "minecraft:feather"

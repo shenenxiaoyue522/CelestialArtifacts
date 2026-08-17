@@ -35,7 +35,6 @@ public class CAModConfig {
 		public final Body body;
 		public final Set set;
 		public final Misc misc;
-		public final Toggles toggles;
 
 		Server(Builder builder) {
 			setCelestial();
@@ -53,7 +52,6 @@ public class CAModConfig {
 			body = new Body(builder);
 			set = new Set(builder);
 			misc = new Misc(builder);
-			toggles = new Toggles(builder);
 		}
 
 		public static class Materials {
@@ -1397,9 +1395,17 @@ public class CAModConfig {
 			}
 
 		}
+	}
 
-		public static class Toggles {
+	public static class Common extends ConfigWrapper {
+		public final Toggles toggles;
 
+        public Common(Builder builder) {
+			setCelestial();
+            this.toggles = new Toggles(builder);
+        }
+
+        public static class Toggles {
 
 			private final LinkedHashMap<String, ModConfigSpec.BooleanValue> itemToggle = new LinkedHashMap<>();
 
@@ -1414,10 +1420,10 @@ public class CAModConfig {
 			public ModConfigSpec.BooleanValue get(String item) {
 				var ans = itemToggle.get(item);
 				if (ans == null) {
-                    CelestialArtifacts.LOGGER.error("Item toggle failed to load. Toggle map size: {}", itemToggle.size());
-                    CelestialArtifacts.LOGGER.error("Iten ID: {}, containing: {}", item, itemToggle.containsKey(item));
+					CelestialArtifacts.LOGGER.error("Item toggle failed to load. Toggle map size: {}", itemToggle.size());
+					CelestialArtifacts.LOGGER.error("Iten ID: {}, containing: {}", item, itemToggle.containsKey(item));
 					for (var e : itemToggle.entrySet()) {
-                        CelestialArtifacts.LOGGER.error("{} -> {}", e.getKey(), e.getValue());
+						CelestialArtifacts.LOGGER.error("{} -> {}", e.getKey(), e.getValue());
 					}
 					throw new IllegalStateException("Iten ID: " + item + " is not in config");
 				}
@@ -1425,10 +1431,10 @@ public class CAModConfig {
 			}
 
 		}
-
 	}
 
 	public static final Server SERVER = CelestialArtifacts.EXTRA.initConfig(ModConfig.Type.SERVER, Server::new);
+	public static final Common COMMON = CelestialArtifacts.EXTRA.initConfig(ModConfig.Type.COMMON, Common::new);
 
 	public static void init() {
 	}
