@@ -107,7 +107,7 @@ repositories {
 dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
-    implementation "xiaoyue.celestial_invoker:celestial_invoker:[21nf10cd2,)"
+    implementation "xiaoyue.celestial_invoker:celestial_invoker:[21nf10cd5,)"
     implementation "xiaoyue.celestial_core:celestial_core:[2.0.0-test16,)"
 
     implementation "dev.xkmc.l2serial:l2serial:[3.0.9,)"

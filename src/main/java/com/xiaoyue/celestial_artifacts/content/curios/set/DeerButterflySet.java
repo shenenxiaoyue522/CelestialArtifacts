@@ -7,6 +7,7 @@ import com.xiaoyue.celestial_artifacts.data.CALang;
 import com.xiaoyue.celestial_artifacts.data.CAModConfig;
 import com.xiaoyue.celestial_artifacts.register.CAItems;
 import com.xiaoyue.celestial_core.data.CCDamageTypes;
+import com.xiaoyue.celestial_invoker.content.common.helper.CooldownHelper;
 import dev.xkmc.l2core.events.SchedulerHandler;
 import dev.xkmc.l2damagetracker.contents.attack.DamageData;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @SerialClass
 public class DeerButterflySet extends BaseTickingToken implements CAAttackToken {
+    public static final String COOLDOWN_ID = "celestial_artifacts:deer_butterfly_set";
 
     private static float dmgMul() {
         return CAModConfig.SERVER.set.deerButterFlyDmgMul.get().floatValue();
@@ -39,10 +41,11 @@ public class DeerButterflySet extends BaseTickingToken implements CAAttackToken 
     public void onPlayerDamageTargetFinal(Player player, DamageData.DefenceMax cache) {
         List<DamageSource> types = List.of(CCDamageTypes.magic(player), CCDamageTypes.abyss(player));
         if (types.stream().noneMatch(source -> source.type().equals(cache.getSource().type()))
-                && player.getLastHurtMobTimestamp() < 1) {
+                && CooldownHelper.isCooldownReady(player, COOLDOWN_ID)) {
             SchedulerHandler.schedule(() -> {
                 LivingEntity target = cache.getTarget();
                 target.hurt(types.get(player.getRandom().nextInt(types.size())), cache.getDamageFinal() * dmgMul());
+                CooldownHelper.setCooldown(player, COOLDOWN_ID, 10);
             });
         }
     }
