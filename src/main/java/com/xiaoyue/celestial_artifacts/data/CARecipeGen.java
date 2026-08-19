@@ -378,8 +378,8 @@ public class CARecipeGen {
 				unlock(pvd, ShapedRecipeBuilder.shaped(RecipeCategory.MISC, CAItems.GREEDY_HEART.get(), 1)::unlockedBy, CCItems.HEART_FRAGMENT.get())
 						.pattern("CBC").pattern("BAB").pattern("DBD")
 						.define('A', CCItems.HEART_FRAGMENT.get())
-						.define('B', Items.NETHER_STAR)
-						.define('C', Items.NETHERITE_INGOT)
+						.define('B', Items.DIAMOND)
+						.define('C', Items.GLOWSTONE)
 						.define('D', Items.GOLD_BLOCK)
 						.save(saver);
 

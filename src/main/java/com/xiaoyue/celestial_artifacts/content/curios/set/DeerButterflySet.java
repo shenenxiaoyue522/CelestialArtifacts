@@ -15,6 +15,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
@@ -38,7 +39,10 @@ public class DeerButterflySet extends BaseTickingToken implements CAAttackToken 
     @Override
     public void onPlayerDamageTargetFinal(Player player, AttackCache cache) {
         List<DamageSource> types = List.of(CCDamageTypes.magic(player), CCDamageTypes.abyss(player));
-        if (types.stream().noneMatch(source -> source.type().equals(cache.getLivingDamageEvent().getSource().type()))) {
+        if (types.stream().noneMatch(source -> {
+            LivingDamageEvent event = cache.getLivingDamageEvent();
+            return source.type().equals(event.getSource().type());
+        }) && player.getLastHurtMobTimestamp() < 1) {
             GeneralEventHandler.schedule(() -> {
                 LivingEntity target = cache.getAttackTarget();
                 target.hurt(types.get(player.getRandom().nextInt(types.size())), cache.getDamageDealt() * dmgMul());

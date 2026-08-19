@@ -15,6 +15,8 @@ import dev.xkmc.l2serial.serialization.SerialClass;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -115,6 +117,7 @@ public class CorruptBadge extends BaseTickingToken implements SkillFeature, Brea
 			player.addEffect(ins1());
 			player.addEffect(ins2());
 			player.getCooldowns().addCooldown(item, cooldown() * 20);
+			player.level().playSound(null, player.getOnPos(), SoundEvents.EVOKER_CAST_SPELL, SoundSource.PLAYERS, 1f, 1f);
 		}
 	}
 

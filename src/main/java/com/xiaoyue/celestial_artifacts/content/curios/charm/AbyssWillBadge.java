@@ -15,6 +15,8 @@ import dev.xkmc.l2serial.serialization.SerialClass;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.Nullable;
@@ -106,6 +108,7 @@ public class AbyssWillBadge extends BaseTickingToken implements NetworkSensitive
 			abyss_will_badge_add = initial();
 			sync(TOKEN.getKey(), this, player);
 			player.getCooldowns().addCooldown(item, duration() * 20);
+			player.level().playSound(null, player.getOnPos(), SoundEvents.END_PORTAL_SPAWN, SoundSource.PLAYERS, 1f, 1f);
 		}
 	}
 
