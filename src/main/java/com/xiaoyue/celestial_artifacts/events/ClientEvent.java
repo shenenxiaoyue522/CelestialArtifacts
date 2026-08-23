@@ -8,6 +8,7 @@ import com.xiaoyue.celestial_artifacts.register.CAItems;
 import com.xiaoyue.celestial_artifacts.register.CAKeyMapping;
 import com.xiaoyue.celestial_artifacts.register.CAbilityPacket;
 import com.xiaoyue.celestial_invoker.content.generic.shared.CompoundData;
+import com.xiaoyue.celestial_invoker.register.CIObjects;
 import net.minecraft.ChatFormatting;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.api.distmarker.Dist;
@@ -25,20 +26,20 @@ public class ClientEvent {
 	@SubscribeEvent
 	public static void onAddInfo(ItemTooltipEvent event) {
 		ItemStack stack = event.getItemStack();
-		CompoundData data = CompoundData.getOrCreate(stack);
-		if (!data.isEmpty()) {
-			if (data.tag().getBoolean(CAMiscCuriosHandler.AMETHYST_REF)) {
-				event.getToolTip().add(CALang.Tooltip.REINFORCE_PLATE_USED.get(
-						TextFacet.item(CAItems.AMETHYST_REINFORCE_PLATE.get()))
-						.withStyle(ChatFormatting.GRAY));
-			}
-			if (data.tag().getBoolean(CAMiscCuriosHandler.COPPER_REF)) {
-				event.getToolTip().add(CALang.Tooltip.REINFORCE_PLATE_USED.get(
-						TextFacet.item(CAItems.COPPER_REINFORCE_PLATE.get()))
-						.withStyle(ChatFormatting.GRAY));
-			}
-		}
-	}
+		CompoundData data = stack.get(CIObjects.COMPOUND_DATA);
+        if (data != null && !data.isEmpty()) {
+            if (data.tag().getBoolean(CAMiscCuriosHandler.AMETHYST_REF)) {
+                event.getToolTip().add(CALang.Tooltip.REINFORCE_PLATE_USED.get(
+                                TextFacet.item(CAItems.AMETHYST_REINFORCE_PLATE.get()))
+                        .withStyle(ChatFormatting.GRAY));
+            }
+            if (data.tag().getBoolean(CAMiscCuriosHandler.COPPER_REF)) {
+                event.getToolTip().add(CALang.Tooltip.REINFORCE_PLATE_USED.get(
+                                TextFacet.item(CAItems.COPPER_REINFORCE_PLATE.get()))
+                        .withStyle(ChatFormatting.GRAY));
+            }
+        }
+    }
 
 	@SubscribeEvent
 	public static void renderTooltip(RenderTooltipEvent.Color event) {

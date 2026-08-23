@@ -1,7 +1,11 @@
 package com.xiaoyue.celestial_artifacts.content.core.token;
 
 import com.xiaoyue.celestial_artifacts.CelestialArtifacts;
+import com.xiaoyue.celestial_artifacts.content.core.modular.AttrFacet;
+import com.xiaoyue.celestial_invoker.invoker.tooltip.TooltipEntry;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.Holder;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
@@ -50,11 +54,12 @@ public record AttrAdder(ResourceLocation name, Supplier<Holder<Attribute>> attr,
 	}
 
 	public MutableComponent getTooltip() {
-		return attr.get().value().toComponent(new AttributeModifier(name, value.getAsDouble(), op), TooltipFlag.NORMAL);
+		MutableComponent base = Component.literal(value.getAsDouble() < 0 ? "-" : "+");
+		return base.append(attr.get().value().toComponent(new AttributeModifier(name, value.getAsDouble(), op), TooltipFlag.NORMAL)
+				.withStyle(ChatFormatting.BLUE)).withStyle(ChatFormatting.BLUE);
 	}
 
 	public MutableComponent getText(double val) {
-		return attr.get().value().toComponent(new AttributeModifier(name, val, op), TooltipFlag.NORMAL);
+		return attr.get().value().toComponent(new AttributeModifier(name, val, op), TooltipFlag.NORMAL).copy().withStyle(ChatFormatting.BLUE);
 	}
-
 }

@@ -55,7 +55,7 @@ public class CALang {
 		}
 		for (var type : CASlotGen.Type.values()) {
 			pvd.add("curios.identifier." + type.id(), "Celestial - " + RegistrateLangProvider.toEnglishName(type.id()));
-			pvd.add("curios.modifiers." + type.id(), "When wearing as " + RegistrateLangProvider.toEnglishName(type.id()) + ": ");
+			pvd.add("curios.modifiers." + type.id(), "While wearing as " + RegistrateLangProvider.toEnglishName(type.id()) + ": ");
 		}
 		pvd.add("key.celestial_artifacts.ability_key", "Activate Curio Effects");
 		pvd.add("key.category.celestial_artifacts.celestial_artifacts", "Celestial Artifacts");
@@ -66,22 +66,22 @@ public class CALang {
 	}
 
 	public enum Tooltip implements Info {
-		END_DUST("%2$s chance to drop when players equipped with [%1$s] kill monsters targeting them", 2),
-		NEBULA_CUBE("Dropped when player failed to get etchings while meeting conditions", 0),
-		BACKTRACK("Teleport player to spawning point. Cool down: %s seconds", 1),
-		REPENT("Teleport player to last death position. Cool down: %s seconds", 1),
-		PURIFIED("Remove curse on off hand item", 0),
-		AMETHYST_REINFORCE_PLATE("Reinforced item may lose at most %s durability at a time", 1),
-		COPPER_REINFORCE_PLATE("Reinforced item has %s resistance to durability loss", 1),
+		END_DUST("%2$s chance to drop when a player equipped with [%1$s] kills a monster targeting them", 2),
+		NEBULA_CUBE("Dropped when a player meets the conditions but fails to obtain an etching", 0),
+		BACKTRACK("Teleports you to your spawn point. Cooldown: %s seconds", 1),
+		REPENT("Teleports you to your last death position. Cooldown: %s seconds", 1),
+		PURIFIED("Removes the curse on the offhand item", 0),
+		AMETHYST_REINFORCE_PLATE("The reinforced item loses at most %s durability at a time", 1),
+		COPPER_REINFORCE_PLATE("The reinforced item has %s resistance to durability loss", 1),
 		REINFORCE_PLATE_USED("Reinforced %s", 1),
-		CAN_STORAGE_POTION("Able to store potions", 0),
-		POTIONS_BAG_INFO("Sneak right click with the bag to consume potions that is not active on player", 0),
-		GAIA_TOTEM("Triggers when dying and gives the holder %s for a few seconds", 1),
-		CURRENT_POS("Current pos: %s %s %s", 3),
+		CAN_STORAGE_POTION("Can store potions", 0),
+		POTIONS_BAG_INFO("Sneak and right-click with the bag to consume potions that are not active on the player", 0),
+		GAIA_TOTEM("Triggers on death and grants the holder %s for a few seconds", 1),
+		CURRENT_POS("Current position: %s %s %s", 3),
 		CURRENT_LEVEL("Current level: %s", 1),
-		CURRENT_CHARGING("Current charging: %s", 1),
-		SCEPTER_CHARGING("Use [%s] to right click scepter in inventory to recharge", 1),
-		ENDER_JUMP_SCEPTER("Right click on a block to bind position, and right-click a mob to teleport it to the bound position", 0),
+		CURRENT_CHARGING("Current charge: %s", 1),
+		SCEPTER_CHARGING("Use [%s] and right-click the scepter in your inventory to recharge it", 1),
+		ENDER_JUMP_SCEPTER("Right-click a block to bind a position, and right-click a mob to teleport it to the bound position", 0),
 		BAN("This item is disabled", 0);
 
 		final Entry entry;
@@ -99,18 +99,18 @@ public class CALang {
 
 	public enum JEIInfo implements Info {
 		FIND("Can be found in %s", 1),
-		CURSE("%s chance to drop when player bearing %s Curse kills %s", 3),
+		CURSE("%s chance to drop when a player bearing the %s Curse kills %s", 3),
 		CURSE_BY("%s chance to drop when %s is killed by %s", 3),
-		DESIRE("%s with %s or higher looting", 2),
+		DESIRE("%s with Looting %s or higher", 2),
 		END("%s while having %s or more harmful effects", 2),
-		ORIGIN("%s at y=200 or higher", 1),
-		LIFE("mobs with %s or higher health", 1),
-		NIHILITY("%s with abyss damage", 1),
+		ORIGIN("%s at Y level 200 or higher", 1),
+		LIFE("mobs with %s or more health", 1),
+		NIHILITY("%s with abyssal damage", 1),
 		CHAOTIC("explosion damage", 0),
 		TRUTH("raiders", 0),
 
-		CURSE_DROP("With %s, %s chance to drop when player kills %s", 3),
-		CHARMING("When player with %s or higher reputation kills villager: %s chance to drop %s, otherwise drops %s", 4),
+		CURSE_DROP("With %s, %s chance to drop when a player kills %s", 3),
+		CHARMING("When a player with %s or higher reputation kills a villager: %s chance to drop %s, otherwise drops %s", 4),
 		WITHER_KILL("%s chance to drop when %s kills %s", 3),
 		;
 
@@ -135,22 +135,22 @@ public class CALang {
 	}
 
 	public enum Modular implements Info {
-		EFFECT_REFRESH("Grants wearer: ", 0),
-		EFFECT_FLASH("For every %s seconds, grants wearer: ", 1),
-		EFFECT_INFLICT("On hit targets, inflicts: ", 0),
-		EFFECT_INFLICT_CHANCE("On hit targets, %s chance to inflict: ", 1),
+		EFFECT_REFRESH("Grants the wearer:", 0),
+		EFFECT_FLASH("For every %s seconds, grants the wearer:", 1),
+		EFFECT_INFLICT("On hit, inflicts:", 0),
+		EFFECT_INFLICT_CHANCE("On hit, %s chance to inflict:", 1),
 		EFFECT_HURT("On hurt, grants: ", 0),
 		EFFECT_HURT_CHANCE("On hurt, %s chance to grant: ", 1),
 		FORTUNE("Fortune", 0),
 		LOOT("Looting", 0),
-		XP("Xp Gain", 0),
-		ENDER_MASK("Looking at endermen will not aggravate them", 0),
+		XP("XP Gain", 0),
+		ENDER_MASK("Endermen will not become hostile when you look at them", 0),
 		IMMUNE("This item cannot be destroyed", 0),
 		CURSE("Requires %s to be equipped", 1),
 		SHIFT("Press [%s] to display curio effects", 1),
 		ALT("Press [%s] to display set effects", 1),
-		INVUL_TIME("Invulnerable time", 0),
-		HURT_BONUS("Increase damage by %s", 1),
+		INVUL_TIME("Invulnerability time", 0),
+		HURT_BONUS("Increases damage by %s", 1),
 		JUMP_POWER("Jump Power", 0),
 		PROTECT("+%s Damage Reduction", 1),
 		PROTECT_TYPE("+%2$s %1$s damage reduction", 2),
@@ -159,10 +159,10 @@ public class CALang {
 		COMMA(", ", 0),
 		SET("Requires [%s] to take effect:", 1),
 		SKILL("Active Skill: ", 0),
-		SKILL_CD("Cool Down: %s seconds", 1),
+		SKILL_CD("Cooldown: %s seconds", 1),
 		CURRENT_BONUS("Current bonus:", 0),
-		DIG_SPEED("Dig Speed", 0),
-		PUT_DOWN_FIRE("Put down fire", 0),
+		DIG_SPEED("Mining Speed", 0),
+		PUT_DOWN_FIRE("Extinguish fire", 0),
 		;
 
 		final Entry entry;
@@ -209,19 +209,19 @@ public class CALang {
 	}
 
 	public enum Condition implements Info {
-		PLAYER_WET("When player is in water or rain:", 0),
-		NIGHT("At Night:", 0),
-		DAY("At Day:", 0),
+		PLAYER_WET("When in water or rain:", 0),
+		NIGHT("At night:", 0),
+		DAY("During the day:", 0),
 		HOT_REGION("When in hot biomes:", 0),
 		ATTACK_BEHIND("When attacking from behind:", 0),
 		FRONT_DAMAGE("When attacked by mobs in front:", 0),
-		TARGET_HAS_ARMOR("When target has armor:", 0),
+		TARGET_HAS_ARMOR("When the target has armor:", 0),
 		REVENGE("When hurt, for the next %s seconds: ", 1),
 		LUCK("When you have %s or more Luck: ", 1),
 		TITAN("With %s, when you deal melee damage to mobs with higher max health than you: ", 1),
-		NETHER("When you are in nether: ", 0),
+		NETHER("When you are in the Nether:", 0),
 		SNEAK("When you are sneaking: ", 0),
-		HURT_FIRE("When you are hurt with fire damage:", 0),
+		HURT_FIRE("When you take fire damage:", 0),
 		LOW_HEALTH("When you are at %s or lower health:", 1);
 
 		final Entry entry;
@@ -264,13 +264,13 @@ public class CALang {
 	}
 
 	public enum Back implements Info {
-		FLAME("Arrows you shoot will burn target for %s seconds", 1),
-		LEECH("When you have %s effect, heal %s of your melee damage dealt", 2),
+		FLAME("Arrows you shoot will burn the target for %s seconds", 1),
+		LEECH("When you have the %s effect, heal for %s of your melee damage dealt", 2),
 
 		TWIST_0("Every time you kill a mob, you gain 1 [Twist]", 0),
 		TWIST_1("You lose 1 [Twist] every %s seconds", 1),
-		TWIST_2("Every [Twist] increase your melee damage by %s", 1),
-		TWIST_3("When you bear %s curse, increase by %s instead", 2),
+		TWIST_2("Every [Twist] increases your melee damage by %s", 1),
+		TWIST_3("When you bear the %s curse, increases by %s instead", 2),
 		TWIST_4("Current [Twist]: %s / %s", 2);
 
 		final Entry entry;
@@ -287,16 +287,16 @@ public class CALang {
 
 	public enum Bracelet implements Info {
 
-		HIDDEN_0("Gain %3$s %2$s seconds after %1$s disappears", 3),
-		HIDDEN_1("When you have %s, increase attack damage by %s", 2),
+		HIDDEN_0("Gain %3$s for %2$s seconds after %1$s disappears", 3),
+		HIDDEN_1("When you have %s, increases attack damage by %s", 2),
 
-		CHARM_1("When you are attacked, mobs around you will help you to revenge. Cool down: %s seconds", 1),
-		CHARM_0("When you kill zombies, increase your reputation by %s", 1),
+		CHARM_1("When you are attacked, mobs around you will retaliate on your behalf. Cooldown: %s seconds", 1),
+		CHARM_0("When you kill zombies, increases your reputation by %s", 1),
 
-		SCARLET_0("When you attack, consume your health till %s of your max health", 1),
-		SCARLET_1("For every HP consumed, increase your damage by %s of target max health, capped at %s", 2),
+		SCARLET_0("When you attack, consumes your health down to %s of your max health", 1),
+		SCARLET_1("For every HP consumed, increases your damage by %s of the target's max health, capped at %s", 2),
 
-		SPIRIT_0("Increase bow / crossbow pulling speed by %s", 1),
+		SPIRIT_0("Increases bow and crossbow draw speed by %s", 1),
 		SPIRIT_1("Projectiles you shoot will inflict %s", 1);
 
 		final Entry entry;
@@ -313,70 +313,70 @@ public class CALang {
 
 	public enum Charm implements Info {
 		WAR_DEAD_BADGE_1("For every 1% health lost:", 0),
-		WAR_DEAD_BADGE_9("If you bear Chaotic Curse and your health is below %s:", 1),
-		WAR_DEAD_BADGE_11("For  mob around you, heals %s after attack", 1),
+		WAR_DEAD_BADGE_9("If you bear the Chaotic Curse and your health is below %s:", 1),
+		WAR_DEAD_BADGE_11("For each mob around you, heals %s after attacking", 1),
 
-		CURSED_PROTECTOR_0("Shields on your offhand will not be disabled", 0),
+		CURSED_PROTECTOR_0("Your offhand shield will not be disabled", 0),
 		CURSED_PROTECTOR_1("When you take damage higher than %s of your current health, reduce it by %s", 2),
 
-		UNDEAD_CHARM("Negate a fatal damage with %s seconds cool down", 1),
+		UNDEAD_CHARM("Negates fatal damage with a %s-second cooldown", 1),
 		TWISTED_BRAIN("%s chance to avoid incoming damage and gain %s", 2),
 
-		SOUL_BOX_0("When hurt, %s chance to inflict %s to attacker", 2),
-		SOUL_BOX_1("Negate a fatal damage with %s seconds cool down, and:", 1),
-		SOUL_BOX_2("Inflict %s to attacker", 1),
-		SOUL_BOX_3("Hurt opponent with abyssal damage for %s of your max health", 1),
+		SOUL_BOX_0("When hurt, %s chance to inflict %s on the attacker", 2),
+		SOUL_BOX_1("Negates fatal damage with a %s-second cooldown, and:", 1),
+		SOUL_BOX_2("Inflicts %s on the attacker", 1),
+		SOUL_BOX_3("Deals abyssal damage equal to %s of your max health to the opponent", 1),
 
-		SOLAR_MAGNET("Attract surrounding items", 0),
+		SOLAR_MAGNET("Attracts nearby items", 0),
 
 		SACRIFICIAL_OBJECT_1("When you die:", 0),
 		SACRIFICIAL_OBJECT_2("%s chance to leave a gold ingot in place", 1),
-		SACRIFICIAL_OBJECT_3("%a chance to kill surrounding enemies with lower max health than you", 1),
+		SACRIFICIAL_OBJECT_3("%s chance to kill surrounding enemies with lower max health than you", 1),
 
-		KNIGHT_SHELTER_1("When you have shield in off hand, heal 1 point every %s seconds. Heals at double rate when you have shield in main hand.", 1),
-		KNIGHT_SHELTER_2("When you use shield to block damage reflect %s of the damage blocked", 1),
+		KNIGHT_SHELTER_1("When you have a shield in your offhand, heal 1 health every %s seconds. Heals at double the rate when you have a shield in your main hand.", 1),
+		KNIGHT_SHELTER_2("When you block damage with a shield, reflects %s of the damage blocked", 1),
 
-		HOLY_TALISMAN_1("For every %s seconds, inflict surrounding mobs with Weakness for mob count x %s seconds", 2),
-		HOLY_TALISMAN_2("Reduce incoming damage by %s. If it's from undead mobs, reduce by %s instead.", 2),
-		HOLY_TALISMAN_3("Negate a fatal damage and gain absorption equal to your max health. Cool down: %s seconds", 1),
+		HOLY_TALISMAN_1("Every %s seconds, inflicts Weakness on surrounding mobs for mob count x %s seconds", 2),
+		HOLY_TALISMAN_2("Reduces incoming damage by %s. If it is from undead mobs, reduces by %s instead.", 2),
+		HOLY_TALISMAN_3("Negates fatal damage and grants absorption equal to your max health. Cooldown: %s seconds", 1),
 
-		HOLY_SWORD_1("Reflect %s of damage you take", 1),
-		HOLY_SWORD_2("Heal the same amount when you deal damage to undead mob", 0),
-		HOLY_SWORD_3("For every life point you lose, increase damage by %s", 1),
+		HOLY_SWORD_1("Reflects %s of the damage you take", 1),
+		HOLY_SWORD_2("Heals for the same amount when you deal damage to an undead mob", 0),
+		HOLY_SWORD_3("For every health point you lose, increases damage by %s", 1),
 
-		GLUTTONY_BADGE_1("Gain %s and %s after eating food", 2),
-		GLUTTONY_BADGE_2("For every food point you have, reduce incoming damage by %s", 1),
+		GLUTTONY_BADGE_1("Gains %s and %s after eating food", 2),
+		GLUTTONY_BADGE_2("For every food point you have, reduces incoming damage by %s", 1),
 
 		DEMON_CURSE_0("You cannot heal", 0),
-		DEMON_CURSE_1("For every 1% extra regen rate:", 0),
+		DEMON_CURSE_1("For every 1% extra regeneration:", 0),
 
-		CURSED_TOTEM_1("When you trigger totem, inflict attacker with %s", 1),
-		CURSED_TOTEM_2("When you take non-fatal damage, stack 1 [Resentment]. Capped at %s.", 1),
-		CURSED_TOTEM_3("When you take fatal damage, consume %s [Resentment] and negate the damage.", 1),
+		CURSED_TOTEM_1("When you trigger a totem, inflicts the attacker with %s", 1),
+		CURSED_TOTEM_2("When you take non-fatal damage, gains 1 [Resentment]. Capped at %s.", 1),
+		CURSED_TOTEM_3("When you take fatal damage, consumes %s [Resentment] and negates the damage.", 1),
 		CURSED_TOTEM_4("Current [Resentment]: %s", 1),
 
-		CURSED_TALISMAN_1("For every cursed enchantment you have on your equipments:", 0),
+		CURSED_TALISMAN_1("For every cursed enchantment on your equipment:", 0),
 
-		CORRUPT_BADGE_2("Gain %s, %s, and %s", 3),
+		CORRUPT_BADGE_2("Gains %s, %s, and %s", 3),
 		CORRUPT_BADGE_3("For every harmful effect you have:", 0),
 
 		ANGEL_PEARL_1("Surrounding players gain regeneration:", 0),
 		ANGEL_PEARL_2("For every beneficial effect you have:", 0),
 
-		ANGEL_HEART_1("For every %s seconds, heal %s health", 2),
-		ANGEL_HEART_2("For every %s seconds, clear all harmful effects", 1),
+		ANGEL_HEART_1("For every %s seconds, heals %s health", 2),
+		ANGEL_HEART_2("For every %s seconds, clears all harmful effects", 1),
 
-		ABYSS_WILL_BADGE_1("Increase [Abyssal Call] to %s for %s seconds", 2),
-		ABYSS_WILL_BADGE_2("After skill ends, clear [Abyssal Call] and retain only %s of current health", 1),
+		ABYSS_WILL_BADGE_1("Increases [Abyssal Call] to %s for %s seconds", 2),
+		ABYSS_WILL_BADGE_2("When the skill ends, clears [Abyssal Call] and retains only %s of current health", 1),
 		ABYSS_WILL_BADGE_3("%s chance to deal %s damage, and %s chance to deal %s", 4),
 		ABYSS_WILL_BADGE_4("%s chance to take %s damage, and %s chance to take %s", 4),
-		ABYSS_WILL_BADGE_5("For every %s seconds, gain 1 [Abyssal Call]. Capped at %s", 2),
-		ABYSS_WILL_BADGE_6("Every [Abyssal Call] increase attack damage by %s and incoming damage by %s", 2),
+		ABYSS_WILL_BADGE_5("For every %s seconds, gains 1 [Abyssal Call]. Capped at %s", 2),
+		ABYSS_WILL_BADGE_6("Each [Abyssal Call] increases attack damage by %s and incoming damage by %s", 2),
 		ABYSS_WILL_BADGE_7("Current [Abyssal Call]: %s", 1),
 
-		DEER_INSCRIBED_AMULET_1("Strengthen the next attack every %s seconds, during which the attack traps the target in a %s effect", 2),
-		DEER_INSCRIBED_AMULET_2("When wearing the catastrophe scroll:", 0),
-		DEER_INSCRIBED_AMULET_3("each curse reversal will increase the attack damage dealt by you by %s, and an additional %s will be dealt when reversing all curses", 2);
+		DEER_INSCRIBED_AMULET_1("Strengthens your next attack every %s seconds; the strengthened attack traps the target in a %s effect", 2),
+		DEER_INSCRIBED_AMULET_2("When wearing the Catastrophe Scroll:", 0),
+		DEER_INSCRIBED_AMULET_3("Each reversed curse increases your attack damage by %s, and reversing all curses deals an additional %s", 2);
 
 		final Entry entry;
 
@@ -391,30 +391,30 @@ public class CALang {
 	}
 
 	public enum Curse implements Info {
-		SCROLL_0("You cannot take it down once equipped", 0),
+		SCROLL_0("Once equipped, it cannot be unequipped", 0),
 		SCROLL_1("Unlocks some powerful trinkets and loot", 0),
 		SCROLL_2("Find and equip etchings to reverse the curses", 0),
-		TRIGGER("%s Curse is activated", 1),
+		TRIGGER("The %s Curse is activated", 1),
 		TRIGGER_COND("Trigger Condition:", 0),
-		CURSE_EFF("Effect in Curse:", 0),
-		BLESS_EFF("Effect with Etchings:", 0),
+		CURSE_EFF("Curse Effects:", 0),
+		BLESS_EFF("Blessing Effects:", 0),
 		ALT("Press [%s] to display curse details", 1),
 
 		CHAOS_TITLE("[Chaotic]", 0),
 		CHAOS_TRIGGER("Activates when you equip enchanted armor", 0),
-		CHAOS_CURSE_0("Increase incoming explosion damage by %s", 1),
-		CHAOS_CURSE_1("Increase other incoming damage by %s", 1),
-		CHAOS_BONUS("For every %s HP you lose, reduce damage by %s", 2),
+		CHAOS_CURSE_0("Increases incoming explosion damage by %s", 1),
+		CHAOS_CURSE_1("Increases other incoming damage by %s", 1),
+		CHAOS_BONUS("For every %s HP you lose, reduces damage by %s", 2),
 
 		ORIGIN_TITLE("[Origin]", 0),
 		ORIGIN_TRIGGER("Activates when you hold items with %s or more durability", 1),
-		ORIGIN_CURSE("Reduce attack damage by %s", 1),
-		ORIGIN_BONUS("Increase dig speed and attack damage by %s", 1),
+		ORIGIN_CURSE("Reduces attack damage by %s", 1),
+		ORIGIN_BONUS("Increases mining speed and attack damage by %s", 1),
 
 		LIFE_TITLE("[Life]", 0),
 		LIFE_TRIGGER("Activates when you take damage", 0),
-		LIFE_CURSE("Reduce max HP by %s. Reduce regen rate by %s.", 2),
-		LIFE_BONUS("Increase max HP by %s. Increase regen rate by %s.", 2),
+		LIFE_CURSE("Reduces max HP by %s and regeneration rate by %s.", 2),
+		LIFE_BONUS("Increases max HP by %s and regeneration rate by %s.", 2),
 
 		TRUTH_TITLE("[Truth]", 0),
 		TRUTH_TRIGGER("Activates when you equip etchings", 0),
@@ -424,17 +424,17 @@ public class CALang {
 		DESIRE_TITLE("[Desire]", 0),
 		DESIRE_TRIGGER("Activates when you attack passive mobs.", 0),
 		DESIRE_CURSE("Passive mobs will escape from you, and neutral mobs will attack you.", 0),
-		DESIRE_BONUS("Increase Fortune and Looting by %s", 1),
+		DESIRE_BONUS("Increases Fortune and Looting by %s", 1),
 
 		NIHILITY_TITLE("[Nihility]", 0),
 		NIHILITY_TRIGGER("Activates when you gain beneficial effects.", 0),
-		NIHILITY_CURSE("Harmful effects you get will have +%s duration", 1),
-		NIHILITY_BONUS("Reduce void damage by %s. Inflict target with %s", 2),
+		NIHILITY_CURSE("Harmful effects you receive have +%s duration", 1),
+		NIHILITY_BONUS("Reduces void damage by %s and inflicts the target with %s", 2),
 
 		END_TITLE("[End]", 0),
-		END_TRIGGER("Activates when you look at enderman", 0),
-		END_CURSE("When you take damage higher than %s of your max health, gain %s and %s", 3),
-		END_BONUS("When you deal damage, recover %s of your lost health", 1),
+		END_TRIGGER("Activates when you look at an enderman", 0),
+		END_CURSE("When you take damage higher than %s of your max health, gains %s and %s", 3),
+		END_BONUS("When you deal damage, recovers %s of your lost health", 1),
 		;
 
 		final Entry entry;
@@ -451,18 +451,18 @@ public class CALang {
 
 	public enum Head implements Info {
 		EVIL_EYE("Immune to Darkness and Blindness effects", 0),
-		ABYSS_CORE("When you take %s or more damage, reduce it to %s. Cool down: %s seconds", 3),
-		GUARDIAN_EYE_1("Inflict %s to surrounding mobs.", 1),
-		GUARDIAN_EYE_2("Gain infinite water breathing", 0),
-		SEA_GOD_CROWN("Change weather to raining", 0),
-		PRAYER_CROWN("When you take damage, %s chance to recover %s of the damage took.", 2),
-		SPIRIT_CROWN_1("When there are %s or fewer mobs around you, increase projectile damage by %s", 2),
-		SPIRIT_CROWN_2("For every block in between increase projectile damage by %s", 1),
-		SAKURA_HAIRPIN("For every luck: ", 0),
-		YELLOW_DUCK("You can walk on the water", 0),
-		ANGEL_DESIRE_1("When flying: ", 1),
+		ABYSS_CORE("When you take %s or more damage, reduces it to %s. Cooldown: %s seconds", 3),
+		GUARDIAN_EYE_1("Inflicts %s on surrounding mobs", 1),
+		GUARDIAN_EYE_2("Grants infinite water breathing", 0),
+		SEA_GOD_CROWN("Changes the weather to rain", 0),
+		PRAYER_CROWN("When you take damage, %s chance to recover %s of the damage taken", 2),
+		SPIRIT_CROWN_1("When there are %s or fewer mobs around you, increases projectile damage by %s", 2),
+		SPIRIT_CROWN_2("Increases projectile damage by %s for every block of distance", 1),
+		SAKURA_HAIRPIN("For every point of Luck: ", 0),
+		YELLOW_DUCK("You can walk on water", 0),
+		ANGEL_DESIRE_1("While flying: ", 1),
 		ANGEL_DESIRE_2("Immune to projectile damage", 0),
-		ANGEL_DESIRE_3("Boost elytra flying", 0),
+		ANGEL_DESIRE_3("Boosts elytra flight", 0),
 		;
 
 		final Entry entry;
@@ -482,12 +482,12 @@ public class CALang {
 		DEMON_HEART_2("+%s Armor Toughness", 1),
 		DEMON_HEART_3("+%s Attack Damage", 1),
 		DEMON_HEART_4("-%s Incoming Damage", 1),
-		DEMON_HEART_5("When you bear 3 or more curses, you are not flammable.", 0),
+		DEMON_HEART_5("When you bear 3 or more curses, you cannot be set on fire.", 0),
 		DEMON_HEART_6("When you bear 5 or more curses, you are immune to Slowness and Weakness.", 0),
 
-		TWISTED_HEART_1("Reduce Armor Toughness by %s", 1),
-		TWISTED_HEART_2("Reduce attack damage by %s", 1),
-		TWISTED_HEART_3("If you bear Nihility curse, reverse the above effects", 0);
+		TWISTED_HEART_1("Reduces Armor Toughness by %s", 1),
+		TWISTED_HEART_2("Reduces attack damage by %s", 1),
+		TWISTED_HEART_3("If you bear the Nihility curse, reverses the above effects", 0);
 
 		final Entry entry;
 
@@ -502,15 +502,15 @@ public class CALang {
 	}
 
 	public enum Necklace implements Info {
-		GALLOP("When you attack while moving, increase damage by %s of your speed", 1),
+		GALLOP("When you attack while moving, increases damage by %s of your speed", 1),
 		EMERALD("%s chance to gain an emerald when killing mobs", 1),
-		ENDER_PROTECTOR("When you block damage with shield, %s chance to teleport attacker away", 1),
-		HOLY("Gain %s after healing. Cool down: %s seconds", 2),
-		LOCK_OF_ABYSS_1("Inflict target with %s seconds of Slowness on hit", 1),
-		LOCK_OF_ABYSS_2("Increase target Slowness level instead if it already has the effect.", 0),
-		LOCK_OF_ABYSS_3("If target has %s or higher Slowness effect when attacked:", 1),
-		LOCK_OF_ABYSS_4("Remove slowness and append abyssal damage equal to %s of original damage", 1),
-		TREASURE_HUNTER_NECKLACE("When fishing in some biomes, you may catch the structural spoils of the corresponding biomes, cooldown for %s seconds", 1);
+		ENDER_PROTECTOR("When you block damage with a shield, %s chance to teleport the attacker away", 1),
+		HOLY("Gains %s after healing. Cooldown: %s seconds", 2),
+		LOCK_OF_ABYSS_1("Inflicts the target with %s seconds of Slowness on hit", 1),
+		LOCK_OF_ABYSS_2("Increases the target's Slowness level instead if it already has the effect.", 0),
+		LOCK_OF_ABYSS_3("If the target has Slowness %s or higher when attacked:", 1),
+		LOCK_OF_ABYSS_4("Removes the slowness and deals additional abyssal damage equal to %s of the original damage", 1),
+		TREASURE_HUNTER_NECKLACE("When fishing in certain biomes, you may catch that biome's structure loot. Cooldown: %s seconds", 1);
 
 		final Entry entry;
 
@@ -541,12 +541,12 @@ public class CALang {
 	}
 
 	public enum Pendant implements Info {
-		SHADOW_1("Heal with %s of damage you dealt", 1),
-		SHADOW_2("Prevent Phantom spawn", 0),
-		SHADOW_3("For every level of brightness below %s:", 1),
-		SHADOW_4("Increase attack damage by %s", 1),
-		SHADOW_5("Reduce incoming damage by %s", 1),
-		CHAOTIC("Increase enchantment level obtained from enchanting table by %s", 1);
+		SHADOW_1("Heals for %s of the damage you deal", 1),
+		SHADOW_2("Prevents Phantoms from spawning", 0),
+		SHADOW_3("For every light level below %s:", 1),
+		SHADOW_4("Increases attack damage by %s", 1),
+		SHADOW_5("Reduces incoming damage by %s", 1),
+		CHAOTIC("Increases the enchantment level obtained from an enchanting table by %s", 1);
 
 		final Entry entry;
 
@@ -561,9 +561,9 @@ public class CALang {
 	}
 
 	public enum Ring implements Info {
-		FLIGHT("Gain creative flying ability", 0),
-		NETHER_FIRE("Burn target for %s seconds on hit", 1),
-		RING_OF_LIFE("For every %s seconds, boost growth on surrounding crops", 1);
+		FLIGHT("Grants creative flight", 0),
+		NETHER_FIRE("Burns the target for %s seconds on hit", 1),
+		RING_OF_LIFE("Every %s seconds, boosts the growth of surrounding crops", 1);
 
 		final Entry entry;
 
@@ -578,12 +578,12 @@ public class CALang {
 	}
 
 	public enum Scroll implements Info {
-		SEA_GOD("Boost mining speed under water", 0),
-		SKY_WALKER_2("Store current position when sneaking, otherwise teleport you to stored position.", 0),
-		SKY_WALKER_3("Can only teleport in the same dimension", 0),
+		SEA_GOD("Boosts mining speed underwater", 0),
+		SKY_WALKER_2("While sneaking, stores your current position; otherwise teleports you to the stored position.", 0),
+		SKY_WALKER_3("Can only teleport within the same dimension", 0),
 		SKY_WALKER_4("Current stored position: %s - (%s,%s,%s)", 4),
-		TRAVELER("Gain %s and %s when changing dimensions", 2),
-		TWIST("Mobs you encounter has %s chance to duplicate", 1);
+		TRAVELER("Gains %s and %s when changing dimensions", 2),
+		TWIST("Mobs you encounter have a %s chance to duplicate", 1);
 
 		final Entry entry;
 
@@ -598,13 +598,13 @@ public class CALang {
 	}
 
 	public enum Sets implements Info {
-		SEA_GOD("When you hold trident:", 0),
-		SPIRIT_0("Gain %2$s after pulling bow for %1$s", 2),
-		SPIRIT_1("Increase %s damage from behind by %s", 2),
+		SEA_GOD("When you hold a trident:", 0),
+		SPIRIT_0("Gains %2$s after drawing a bow for %1$s", 2),
+		SPIRIT_1("Increases %s damage from behind by %s", 2),
 		SPIRIT_2("When you have %s:", 1),
-		SPIRIT_3("Your projectile has %s chance to inflict %s", 2),
-		DEER_BUTTERFLY_0("When attacking with a non-Abyssal Damage type", 0),
-		DEER_BUTTERFLY_1("there is a chance to inflict additional Magic Damage or Abyssal Damage equal to %s of Attack Damage", 1);
+		SPIRIT_3("Your projectiles have a %s chance to inflict %s", 2),
+		DEER_BUTTERFLY_0("When attacking with a non-Abyssal damage type", 0),
+		DEER_BUTTERFLY_1("there is a chance to inflict additional Magic Damage or Abyssal Damage equal to %s of your attack damage", 1);
 
 		final Entry entry;
 

@@ -1,6 +1,6 @@
-// 1.21.1	2026-08-17T20:08:05.8086825	Registrate Provider for celestial_artifacts [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
-8d5ca301a6ad04d3669f03f9a873b2c74cbc1d64 assets/celestial_artifacts/lang/en_ud.json
-a67ae596fdda86ea857bd14c569f0b82e11c4af9 assets/celestial_artifacts/lang/en_us.json
+// 1.21.1	2026-08-23T23:46:56.353041	Registrate Provider for celestial_artifacts [Registries, Data Maps, Recipes, Advancements, Loot Tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), generic_server_provider, Blockstates, Item models, Lang (en_us/en_ud), generic_client_provider, Tags (mob_effect), Tags (attribute), Tags (enchantment), Tags (damage_type), Global Loot Modifier Registrate Provider]
+dbd8bd95550a152068877c75841dfa6856659d46 assets/celestial_artifacts/lang/en_ud.json
+23d7a2d123085d7c30728bf7151b37064dc2444f assets/celestial_artifacts/lang/en_us.json
 6bac01ffbdb846e51d42cc3387aa9add978b1ccf assets/celestial_artifacts/models/item/abyss_core.json
 aa8ae8969def9a9afc7e66a3e189cb3ec87c48ad assets/celestial_artifacts/models/item/abyss_will_badge.json
 d9744c1da9516b25ffbab28cdfb841b7f055d9f2 assets/celestial_artifacts/models/item/amethyst_reinforce_plate.json

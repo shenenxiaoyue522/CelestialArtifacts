@@ -685,7 +685,7 @@ public class CAItems {
 							EffectFacet.of(CCEffects.BLADE_MODIFIER::holder, () -> 3, () -> 0,
 									CAModConfig.SERVER.back.twistedScabbardBladeInterval::get),
 							AttrFacet.multBase(() -> Attributes.ATTACK_KNOCKBACK,
-									CAModConfig.SERVER.back.twistedScabbardAtkKonck::get),
+									CAModConfig.SERVER.back.twistedScabbardAtkKnock::get),
 							AttrFacet.multBase(() -> Attributes.ATTACK_SPEED,
 									CAModConfig.SERVER.back.twistedScabbardAtkSpeed::get),
 							AttrFacet.multTotal(L2DamageTracker.REGEN::holder,

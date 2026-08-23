@@ -53,9 +53,9 @@ public record AttrFacet(Supplier<Holder<Attribute>> attr, DoubleSupplier val,
 		MutableComponent base = Component.literal(val < 0 ? "-" : "+");
 		base.append(ATTRIBUTE_MODIFIER_FORMAT.format(Math.abs(val * 100)));
 		base.append("%");
-		base = Component.empty().append(base.withStyle(ChatFormatting.AQUA)).append(" ");
+		base = Component.empty().append(base.withStyle(ChatFormatting.BLUE)).append(" ");
 		base.append(text);
-		return base.withStyle(ChatFormatting.GRAY);
+		return base.withStyle(ChatFormatting.BLUE);
 	}
 
 }
