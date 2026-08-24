@@ -720,7 +720,7 @@ public class CAItems {
 							EffectFacet.of(CCEffects.BLADE_MODIFIER::get, () -> 3, () -> 0,
 									CAModConfig.COMMON.back.twistedScabbardBladeInterval::get),
 							AttrFacet.multBase(() -> Attributes.ATTACK_KNOCKBACK,
-									CAModConfig.COMMON.back.twistedScabbardAtkKonck::get),
+									CAModConfig.COMMON.back.twistedScabbardAtkKnock::get),
 							AttrFacet.multBase(() -> Attributes.ATTACK_SPEED,
 									CAModConfig.COMMON.back.twistedScabbardAtkSpeed::get),
 							AttrFacet.multTotal(CCAttributes.REPLY_POWER::get,

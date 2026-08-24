@@ -124,7 +124,7 @@ public class CAModConfig {
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAttack;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAttackEnd;
 			public final ForgeConfigSpec.IntValue twistedScabbardMaxAttackBonus;
-			public final ForgeConfigSpec.DoubleValue twistedScabbardAtkKonck;
+			public final ForgeConfigSpec.DoubleValue twistedScabbardAtkKnock;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardAtkSpeed;
 			public final ForgeConfigSpec.DoubleValue twistedScabbardHealRate;
 			public final ForgeConfigSpec.IntValue ironScabbardBladeInterval;
@@ -137,51 +137,51 @@ public class CAModConfig {
 
 				magicArrowBagBowStrength = builder.comment("Magic Arrow Bag: bow strength")
 						.defineInRange("magicArrowBagBowStrength", 0.1, 0, 10);
-				magicArrowBagArrowKnock = builder.comment("Magic Arrow Bag: arrow knock")
+				magicArrowBagArrowKnock = builder.comment("Magic Arrow Bag: arrow knockback")
 						.defineInRange("magicArrowBagArrowKnock", 1, 0, 100);
 
 				flameArrowBagBowStrength = builder.comment("Flame Arrow Bag: bow strength")
 						.defineInRange("flameArrowBagBowStrength", 0.1, 0, 10);
-				flameArrowBagArrowKnock = builder.comment("Flame Arrow Bag: arrow knock")
+				flameArrowBagArrowKnock = builder.comment("Flame Arrow Bag: arrow knockback")
 						.defineInRange("flameArrowBagArrowKnock", 1, 0, 100);
-				flameArrowBagTime = builder.comment("Flame Arrow Bag: flame")
+				flameArrowBagTime = builder.comment("Flame Arrow Bag: fire duration in ticks")
 						.defineInRange("flameArrowBagTime", 60, 1, 36000);
 
 				spiritArrowBagBowStrength = builder.comment("Spirit Arrow Bag: bow strength")
 						.defineInRange("spiritArrowBagBowStrength", 0.2, 0, 1);
 				spiritArrowBagArrowSpeed = builder.comment("Spirit Arrow Bag: arrow speed")
 						.defineInRange("spiritArrowBagArrowSpeed", 0.5, 0, 10);
-				spiritArrowBagArrowKnock = builder.comment("Spirit Arrow Bag: arrow knock")
+				spiritArrowBagArrowKnock = builder.comment("Spirit Arrow Bag: arrow knockback")
 						.defineInRange("spiritArrowBagArrowKnock", 2, 0, 100);
 
-				ironScabbardBladeInterval = builder.comment("Iron Scabbard: interval in seconds for blade modifier effect")
+				ironScabbardBladeInterval = builder.comment("Iron Scabbard: blade modifier effect interval in seconds")
 						.defineInRange("ironScabbardBladeInterval", 10, 0, 100);
 
-				leechScabbardBladeInterval = builder.comment("Leech Scabbard: interval in seconds for blade modifier effect")
+				leechScabbardBladeInterval = builder.comment("Leech Scabbard: blade modifier effect interval in seconds")
 						.defineInRange("leechScabbardBladeInterval", 10, 0, 100);
-				leechScabbardHealFactor = builder.comment("Leech Scabbard: healing rate as percentage of damage dealt")
+				leechScabbardHealFactor = builder.comment("Leech Scabbard: healing as a percentage of damage dealt")
 						.defineInRange("leechScabbardHealFactor", 0.25, 0, 100);
 
-				titanScabbardBladeInterval = builder.comment("Titan Scabbard: interval in seconds for blade modifier effect")
+				titanScabbardBladeInterval = builder.comment("Titan Scabbard: blade modifier effect interval in seconds")
 						.defineInRange("titanScabbardBladeInterval", 7, 0, 100);
-				titanScabbardDamageFactor = builder.comment("Titan Scabbard: damage bonus when effect applies")
+				titanScabbardDamageFactor = builder.comment("Titan Scabbard: damage bonus while the effect is active")
 						.defineInRange("titanScabbardDamageFactor", 0.75, 0, 100);
 
-				twistedScabbardInterval = builder.comment("Twisted Scabbard: interval, in seconds, to lose 1 layer of Twist")
+				twistedScabbardInterval = builder.comment("Twisted Scabbard: interval in seconds to lose one stack of Twist")
 						.defineInRange("twistedScabbardInterval", 5, 1, 1000);
-				twistedScabbardAttack = builder.comment("Twisted Scabbard: attack bonus per layer of Twist")
+				twistedScabbardAttack = builder.comment("Twisted Scabbard: attack bonus per stack of Twist")
 						.defineInRange("twistedScabbardAttack", 0.05, 0, 1);
-				twistedScabbardAttackEnd = builder.comment("Twisted Scabbard: attack bonus in End curse")
+				twistedScabbardAttackEnd = builder.comment("Twisted Scabbard: attack bonus while under the End curse")
 						.defineInRange("twistedScabbardAttackEnd", 0.1, 0, 1);
-				twistedScabbardMaxAttackBonus = builder.comment("Twisted Scabbard: Maximum number of stacks")
+				twistedScabbardMaxAttackBonus = builder.comment("Twisted Scabbard: maximum number of stacks")
 						.defineInRange("twistedScabbardMaxAttackBonus", 100, 1, Integer.MAX_VALUE);
-				twistedScabbardBladeInterval = builder.comment("Twisted Scabbard: interval in seconds for blade modifier effect")
+				twistedScabbardBladeInterval = builder.comment("Twisted Scabbard: blade modifier effect interval in seconds")
 						.defineInRange("twistedScabbardBladeInterval", 5, 0, 100);
-				twistedScabbardAtkKonck = builder.comment("Twisted Scabbard: attack knock back")
-						.defineInRange("twistedScabbardAtkKonck", 1d, 0, 100);
+				twistedScabbardAtkKnock = builder.comment("Twisted Scabbard: attack knockback")
+						.defineInRange("twistedScabbardAtkKnock", 1d, 0, 100);
 				twistedScabbardAtkSpeed = builder.comment("Twisted Scabbard: attack speed bonus")
 						.defineInRange("twistedScabbardAtkSpeed", 0.25, 0, 1);
-				twistedScabbardHealRate = builder.comment("Twisted Scabbard: heal rate penalty")
+				twistedScabbardHealRate = builder.comment("Twisted Scabbard: healing rate penalty")
 						.defineInRange("twistedScabbardHealRate", 0.5, 0, 1);
 
 				builder.pop();
@@ -225,36 +225,36 @@ public class CAModConfig {
 				// hidden_bracelet
 				{
 					hiddenBraceletInterval = builder
-							.comment("Hidden Bracelet: Hidden effect interval")
+							.comment("Hidden Bracelet: hidden effect interval")
 							.defineInRange("hiddenBraceletInterval", 7, 1, 100000);
 					hiddenBraceletDamageBoost = builder
-							.comment("Hidden Bracelet: Damage boost in hidden effect")
+							.comment("Hidden Bracelet: damage bonus while hidden")
 							.defineInRange("hiddenBraceletDamageBoost", 0.25, 0, 100);
 				}
 
 				//charming bracelet
 				{
 					charmingBraceletArmor = builder
-							.comment("Charming Bracelet: Armor bonus")
+							.comment("Charming Bracelet: armor bonus")
 							.defineInRange("charmingBraceletArmor", 2, 0, Integer.MAX_VALUE);
 					charmingBraceletCooldown = builder
-							.comment("Charming Bracelet: Cool down for target transfer on hurt, in seconds")
+							.comment("Charming Bracelet: cooldown in seconds for redirecting damage to a target")
 							.defineInRange("charmingBraceletCooldown", 10, 1, Integer.MAX_VALUE);
 					charmingBraceletReputationBonus = builder
-							.comment("Charming Bracelet: Reputation bonus when you kill zombies")
+							.comment("Charming Bracelet: reputation bonus per zombie killed")
 							.defineInRange("charmingBraceletReputationBonus", 1, 0, Integer.MAX_VALUE);
 				}
 
 				//scarlet_brace
 				{
 					scarletBraceletMaxCost = builder
-							.comment("Scarlet Bracelet: remaining HP as percentage")
+							.comment("Scarlet Bracelet: remaining HP as a percentage")
 							.defineInRange("scarletMaxCost", 0.50, 0, 1);
 					scarletBraceletDamageBonus = builder
-							.comment("Scarlet Bracelet: damage boost as percentage of target max health per health cost")
+							.comment("Scarlet Bracelet: damage bonus as a percentage of the target's max health per health spent")
 							.defineInRange("scarletBraceletDamageBonus", 0.0001, 0, Integer.MAX_VALUE);
 					scarletBraceletDamageLimit = builder
-							.comment("Scarlet Bracelet: max damage boost as percentage of target max health")
+							.comment("Scarlet Bracelet: max damage bonus as a percentage of the target's max health")
 							.defineInRange("scarletBraceletDamageLimit", 0.50, 0, Integer.MAX_VALUE);
 
 				}
@@ -268,11 +268,11 @@ public class CAModConfig {
 				// emerald bracelet
 				{
 					emeraldBraceletCritRate = builder
-							.comment("Emerald Bracelet: crit rate bonus")
+							.comment("Emerald Bracelet: critical hit rate bonus")
 							.defineInRange("emeraldBraceletCritRate", 0.1, 0, 1);
 
 					emeraldBraceletLuckReq = builder
-							.comment("Emerald Bracelet: luck requirement to gain effect")
+							.comment("Emerald Bracelet: luck required to gain the effect")
 							.defineInRange("emeraldBraceletLuckReq", 2, 0, 100);
 
 					emeraldBraceletEffChance = builder
@@ -281,7 +281,7 @@ public class CAModConfig {
 				}
 
 				lifeBraceletRegenBonus = builder
-						.comment("Life Bracelet: regen rate bonus")
+						.comment("Life Bracelet: regeneration rate bonus")
 						.defineInRange("lifeBraceletRegenBonus", 0.15, 0, 10);
 
 				preciousBraceletReach = builder
@@ -453,20 +453,20 @@ public class CAModConfig {
 							.comment("Destroyer Badge: damage penalty")
 							.defineInRange("destroyerBadgeDamagePenalty", 0.5, 0, 100);
 					destroyerBadgeThreshold = builder
-							.comment("Destroyer Badge: health threshold for hurt boost")
+							.comment("Destroyer Badge: health threshold to trigger the damage bonus")
 							.defineInRange("destroyerBadgeThreshold", 0.5, 0, 100);
 					destroyerBadgeHurtBonus = builder
-							.comment("Destroyer Badge: hurt boost")
+							.comment("Destroyer Badge: damage bonus while below the threshold")
 							.defineInRange("destroyerBadgeHurtBonus", 0.2, 0, 100);
 				}
 
 				// holy_sword
 				{
 					holySwordCritRate = builder
-							.comment("Holy Sword: crit rate bonus")
+							.comment("Holy Sword: critical hit rate bonus")
 							.defineInRange("holySwordCritRate", 0.15, 0, 1);
 					holySwordLostLifeAddDamage = builder
-							.comment("Holy Sword: atk bonus per life lost")
+							.comment("Holy Sword: attack bonus per point of health lost")
 							.defineInRange("holySwordLostLifeAddDamage", 0.02, 0, 100);
 					holySwordReflect = builder
 							.comment("Holy Sword: damage reflection rate")
@@ -476,7 +476,7 @@ public class CAModConfig {
 				//holy talisman
 				{
 					holyTalismanWeakenInterval = builder
-							.comment("Holy Talisman: weakness apply interval in seconds")
+							.comment("Holy Talisman: weakness effect interval in seconds")
 							.defineInRange("holyTalismanWeakenInterval", 10, 1, Integer.MAX_VALUE);
 					holyTalismanEffectDuration = builder
 							.comment("Holy Talisman: effect duration per mob in seconds")
@@ -488,7 +488,7 @@ public class CAModConfig {
 							.comment("Holy Talisman: undead protection")
 							.defineInRange("holyTalismanProtectionUndead", 0.35, 0, 1.00);
 					holyTalismanCooldown = builder
-							.comment("Holy Talisman: totem cool down")
+							.comment("Holy Talisman: totem cooldown")
 							.defineInRange("holyTalismanCooldown", 60, 1, Integer.MAX_VALUE);
 				}
 
@@ -496,43 +496,43 @@ public class CAModConfig {
 				//AbyssWillBadge
 				{
 					abyssWillBadgeInitialLevel = builder
-							.comment("AbyssWillBadge: The levels after triggering the skill")
+							.comment("Abyss Will Badge: stacks granted when the skill is triggered")
 							.defineInRange("abyssWillBadgeInitialLevel", 15, 0, Integer.MAX_VALUE);
 					abyssWillBadgeDuration = builder
-							.comment("AbyssWillBadge: The duration of the skill in seconds")
+							.comment("Abyss Will Badge: skill duration in seconds")
 							.defineInRange("abyssWillBadgeDuration", 15, 0, Integer.MAX_VALUE);
 					abyssWillBadgeRemainingHealth = builder
-							.comment("AbyssWillBadge: Remaining HP in percentage after skill ends")
+							.comment("Abyss Will Badge: remaining HP as a percentage after the skill ends")
 							.defineInRange("abyssWillBadgeRemainingHealth", 0.2, 0, 1.00);
 					abyssWillBadgeChanceSmall = builder
-							.comment("AbyssWillBadge: Chance of small damage bonus")
+							.comment("Abyss Will Badge: chance of the small damage bonus")
 							.defineInRange("abyssWillBadgeChanceSmall", 0.4, 0.0, 1.0);
 					abyssWillBadgeChanceLarge = builder
-							.comment("AbyssWillBadge: Chance of large damage bonus")
+							.comment("Abyss Will Badge: chance of the large damage bonus")
 							.defineInRange("abyssWillBadgeChanceLarge", 0.1, 0.0, 1.0);
 					abyssWillBadgeBonusSmall = builder
-							.comment("AbyssWillBadge: Small damage bonus")
+							.comment("Abyss Will Badge: small damage bonus")
 							.defineInRange("abyssWillBadgeBonusSmall", 1.5, 0.0, 10);
 					abyssWillBadgeBonusLarge = builder
-							.comment("AbyssWillBadge: Large damage bonus")
+							.comment("Abyss Will Badge: large damage bonus")
 							.defineInRange("abyssWillBadgeBonusLarge", 2.0, 0.0, 50);
 					abyssWillBadgePenaltySmall = builder
-							.comment("AbyssWillBadge: Small hurt penalty")
+							.comment("Abyss Will Badge: small damage-taken penalty")
 							.defineInRange("abyssWillBadgePenaltySmall", 2.0, 0.0, 10);
 					abyssWillBadgePenaltyLarge = builder
-							.comment("AbyssWillBadge: Large hurt penalty")
+							.comment("Abyss Will Badge: large damage-taken penalty")
 							.defineInRange("abyssWillBadgePenaltyLarge", 2.5, 0.0, 50);
 					abyssWillBadgeGrowInterval = builder
-							.comment("AbyssWillBadge: Interval for adding levels in seconds")
+							.comment("Abyss Will Badge: interval in seconds to gain a stack")
 							.defineInRange("abyssWillBadgeGrowInterval", 20, 1, Integer.MAX_VALUE);
 					abyssWillBadgeLimit = builder
-							.comment("AbyssWillBadge: Maximum level for passive growth")
+							.comment("Abyss Will Badge: maximum stacks from passive growth")
 							.defineInRange("abyssWillBadgeLimit", 10, 1, Integer.MAX_VALUE);
 					abyssWillBadgeDamageBonus = builder
-							.comment("AbyssWillBadge: damage bonus per level")
+							.comment("Abyss Will Badge: damage bonus per stack")
 							.defineInRange("abyssWillBadgeDamageBonus", 0.20, 0, 1.00);
 					abyssWillBadgeDamagePenalty = builder
-							.comment("AbyssWillBadge: damage penalty per level")
+							.comment("Abyss Will Badge: damage-taken penalty per stack")
 							.defineInRange("abyssWillBadgeDamagePenalty", 0.25, 0, 1.00);
 
 				}
@@ -555,14 +555,14 @@ public class CAModConfig {
 							.defineInRange("angelHeartBloodInterval", 2, 1, Integer.MAX_VALUE);
 
 					angelHeartHealAmount = builder
-							.comment("Angel Heart: how much health is restored at once")
+							.comment("Angel Heart: health restored each time")
 							.defineInRange("angelHeartHealAmount", 1, 1, Integer.MAX_VALUE);
 				}
 
 				// angel_pearl
 				{
 					angelPearlRegen = builder
-							.comment("Angel Pearl: Regen rate per beneficial effect")
+							.comment("Angel Pearl: regeneration rate per beneficial effect")
 							.defineInRange("angelPearlRegen", 0.08, 0, 1.00);
 					angelPearlArmor = builder
 							.comment("Angel Pearl: armor bonus per beneficial effect")
@@ -572,10 +572,10 @@ public class CAModConfig {
 				//CorruptBadge
 				{
 					corruptBadgeDebuffDuration = builder
-							.comment("Corrupt Badge: Negative effect duration in seconds")
+							.comment("Corrupt Badge: negative effect duration in seconds")
 							.defineInRange("corruptBadgeDebuffDuration", 15, 1, Integer.MAX_VALUE);
 					corruptBadgeDigSpeedBonus = builder
-							.comment("Corrupt Badge: dig speed bonus per negative effect")
+							.comment("Corrupt Badge: mining speed bonus per negative effect")
 							.defineInRange("corruptBadgeDigSpeedBonus", 0.09, 0.00, Integer.MAX_VALUE);
 					corruptBadgeAttackSpeedBonus = builder
 							.comment("Corrupt Badge: attack speed bonus per negative effect")
@@ -584,14 +584,14 @@ public class CAModConfig {
 							.comment("Corrupt Badge: attack bonus per negative effect")
 							.defineInRange("corruptBadgeAttackBonus", 0.14, 0.00, Integer.MAX_VALUE);
 					corruptBadgeCooldown = builder
-							.comment("Corrupt Badge: Skill cooldown in seconds")
+							.comment("Corrupt Badge: skill cooldown in seconds")
 							.defineInRange("corruptBadgeCooldown", 60, 1, Integer.MAX_VALUE);
 				}
 
 				// cursed_protector
 				{
 					cursedProtectorFrontProtect = builder
-							.comment("Cursed Protector: damage reduction from front")
+							.comment("Cursed Protector: damage reduction from frontal attacks")
 							.defineInRange("cursedProtectorFrontProtect", 0.3, 0, 1);
 					cursedProtectorThreshold = builder
 							.comment("Cursed Protector: health threshold to trigger damage reduction")
@@ -604,11 +604,11 @@ public class CAModConfig {
 				// cursed_talisman
 				{
 					cursedTalismanCritRateAdd = builder
-							.comment("Cursed Talisman: critical hit rate increased by each enchantment")
+							.comment("Cursed Talisman: critical hit rate gained per enchantment")
 							.defineInRange("cursedTalismanCritRateAdd", 0.04, 0, 1);
 
 					cursedTalismanCritDamageAdd = builder
-							.comment("Cursed Talisman: critical hit damage increased by each enchantment")
+							.comment("Cursed Talisman: critical damage gained per enchantment")
 							.defineInRange("cursedTalismanCritDamageAdd", 0.08, 0, 1);
 				}
 
@@ -621,7 +621,7 @@ public class CAModConfig {
 							.comment("Cursed Totem: levels consumed when negating fatal damage")
 							.defineInRange("cursedTotemConsumption", 5, 0, Integer.MAX_VALUE);
 					cursedTotemEffectDuration = builder
-							.comment("Cursed Totem: duration of wither effect in seconds")
+							.comment("Cursed Totem: wither effect duration in seconds")
 							.defineInRange("cursedTotemEffectDuration", 30, 0, Integer.MAX_VALUE);
 					cursedTotemEffectLevel = builder
 							.comment("Cursed Totem: level of wither effect (0 means Lv.I)")
@@ -631,17 +631,17 @@ public class CAModConfig {
 				//demon curse
 				{
 					demonCurseAttackBonus = builder
-							.comment("Demon Curse: attack bonus per 1% extra regen rate")
+							.comment("Demon Curse: attack bonus per 1% extra regeneration")
 							.defineInRange("demonCurseAttackBonus", 0.02, 0.0, 10.0);
 					demonCurseSpeedBonus = builder
-							.comment("Demon Curse: speed bonus per 1% extra regen rate")
+							.comment("Demon Curse: speed bonus per 1% extra regeneration")
 							.defineInRange("demonCurseSpeedBonus", 0.01, 0.0, 10.0);
 				}
 
 				//gluttony badge
 				{
 					gluttonyBadgeHungerLevel = builder
-							.comment("Gluttony Badge: Hunger effect level")
+							.comment("Gluttony Badge: hunger effect level")
 							.defineInRange("gluttonyBadgeHungerLevel", 2, 1, 100);
 					gluttonyBadgeProtection = builder
 							.comment("Gluttony Badge: damage reduction per food level")
@@ -660,7 +660,7 @@ public class CAModConfig {
 							.comment("Knight Shelter: damage reduction")
 							.defineInRange("knightShelterDamageReduction", 4, 0, Integer.MAX_VALUE);
 					knightShelterHealInterval = builder
-							.comment("Knight Shelter: healing interval for offhand shield in seconds. Main hand shield takes half of the time")
+							.comment("Knight Shelter: healing interval in seconds for an offhand shield; a mainhand shield takes half the time")
 							.defineInRange("knightShelterHealInterval", 4, 0, Integer.MAX_VALUE);
 					knightShelterReflection = builder
 							.comment("Knight Shelter: reflection percentage")
@@ -674,7 +674,7 @@ public class CAModConfig {
 							.defineInRange("magicHorseshoeSpeedBonus", 0.25, 0, 10);
 
 					magicHorseshoeLuck = builder
-							.comment("Magic Horseshoe: luck")
+							.comment("Magic Horseshoe: luck bonus")
 							.defineInRange("magicHorseshoeLuck", 1.0, 0, 10);
 
 					magicHorseshoeFallReduction = builder
@@ -686,38 +686,38 @@ public class CAModConfig {
 				//sacrificial object
 				{
 					sacrificialObjectReduction = builder
-							.comment("Sacrificial Object: damage reduction percentage")
+							.comment("Sacrificial Object: damage reduction")
 							.defineInRange("sacriReduction", 0.05, 0, 1);
 					sacrificialObjectHeritage = builder
 							.comment("Sacrificial Object: gold ingot drop chance on death")
 							.defineInRange("sacrificialObjectHeritage", 0.5, 0, 1);
 					sacrificialObjectSacrifice = builder
-							.comment("Sacrificial Object :death sacrifice chance")
+							.comment("Sacrificial Object: death sacrifice chance")
 							.defineInRange("sacrificialObjectSacrifice", 0.45, 0, 1);
 				}
 
 				//soul box
 				{
 					soulBoxShatterChance = builder
-							.comment("Soul Box: chance to inflict shatter effect")
+							.comment("Soul Box: chance to inflict the Shatter effect")
 							.defineInRange("soulBoxShatterChance", 0.30, 0, 1);
 					soulBoxReflect = builder
-							.comment("Soul Box: abyss damage as percentage of original damage")
+							.comment("Soul Box: abyss damage as a percentage of the original damage")
 							.defineInRange("soulBoxReflect", 2.50, 0, 100);
 					soulBoxCooldown = builder
-							.comment("Soul Box: cool down in seconds")
+							.comment("Soul Box: cooldown in seconds")
 							.defineInRange("soulBoxCooldown", 240, 1, Integer.MAX_VALUE);
 					soulBoxShatterHighDuration = builder
-							.comment("Soul Box: effect duration inflicted on fatal hit, in seconds")
+							.comment("Soul Box: effect duration inflicted on a fatal hit, in seconds")
 							.defineInRange("soulBoxShatterHighDuration", 60, 1, Integer.MAX_VALUE);
 					soulBoxShatterHighLevel = builder
-							.comment("Soul Box: effect level inflicted on fatal hit, (0 means Lv.I)")
+							.comment("Soul Box: effect level inflicted on a fatal hit (0 means Lv.I)")
 							.defineInRange("soulBoxShatterHighLevel", 2, 0, 100);
 					soulBoxShatterLowDuration = builder
-							.comment("Soul Box: effect duration inflicted on non-fatal hit, in seconds")
+							.comment("Soul Box: effect duration inflicted on a non-fatal hit, in seconds")
 							.defineInRange("soulBoxShatterLowDuration", 5, 1, Integer.MAX_VALUE);
 					soulBoxShatterLowLevel = builder
-							.comment("Soul Box: effect level inflicted on non-fatal hit, (0 means Lv.I)")
+							.comment("Soul Box: effect level inflicted on a non-fatal hit (0 means Lv.I)")
 							.defineInRange("soulBoxShatterLowLevel", 0, 0, 100);
 				}
 
@@ -727,7 +727,7 @@ public class CAModConfig {
 							.comment("Bearing Stamen: max health bonus")
 							.defineInRange("bearingStamenMaxHealth", 20d, 0, 1000);
 					bearingStamenRegen = builder
-							.comment("Bearing Stamen: regen bonus")
+							.comment("Bearing Stamen: regeneration bonus")
 							.defineInRange("bearingStamenRegen", 0.25, 0, 10);
 					bearingStamenLevel = builder
 							.comment("Bearing Stamen: effect level (0 means Lv.I)")
@@ -740,7 +740,7 @@ public class CAModConfig {
 							.comment("Sands Talisman: damage bonus in hot regions")
 							.defineInRange("sandsTalismanDamageBonus", 0.3, 0, 10);
 					sandsTalismanExpBonus = builder
-							.comment("Sands Talisman: exp bonus")
+							.comment("Sands Talisman: XP bonus")
 							.defineInRange("sandsTalismanExpBonus", 0.5, 0, 10);
 				}
 
@@ -750,24 +750,24 @@ public class CAModConfig {
 							.comment("Twisted Brain: chance to avoid damage")
 							.defineInRange("twistedbrainAvoidChance", 0.17, 0, 1);
 					twistedBrainEffectDuration = builder
-							.comment("Twisted Brain: damage boost effect duration")
+							.comment("Twisted Brain: damage bonus effect duration")
 							.defineInRange("twistedBrainEffectDuration", 5, 0, 100);
 				}
 
 				//undead charm
 				{
 					undeadCharmCooldown = builder
-							.comment("Undead Charm: Cool Down in seconds")
+							.comment("Undead Charm: cooldown in seconds")
 							.defineInRange("undeadCharmCooldown", 180, 1, Integer.MAX_VALUE);
 				}
 
 				//wardead badge
 				{
 					warDeadBadgeHeal = builder
-							.comment("War Dead Badge: healing in percentage of lost health per surrounding entity")
+							.comment("War Dead Badge: healing as a percentage of lost health per nearby entity")
 							.defineInRange("warDeadBadgeHeal", 0.01, 0, 1);
 					warDeadBadgeAtk = builder
-							.comment("War Dead Badge: damage bonus per 1% lost health")
+							.comment("War Dead Badge: attack bonus per 1% lost health")
 							.defineInRange("warDeadBadgeAtk", 0.02, 0, 1);
 					warDeadBadgeArmor = builder
 							.comment("War Dead Badge: armor bonus per 1% lost health")
@@ -783,17 +783,17 @@ public class CAModConfig {
 				// solar magnet
 				{
 					solarMagnetDamageBonus = builder
-							.comment("Solar Magnet: damage bonus at day")
+							.comment("Solar Magnet: damage bonus during the day")
 							.defineInRange("solarMagnetDamageBonus", 0.25, 0, 10);
 				}
 
 				// deers mercy amulet
 				{
 					deersMercyAmuletDamage = builder
-							.comment("Deers Mercy Amulet: attack damage bonus")
+							.comment("Deer's Mercy Amulet: attack damage bonus")
 							.defineInRange("deersMercyAmuletDamage", 2, 1, 100);
 					deersMercyAmuletMaxHealth = builder
-							.comment("Deers Mercy Amulet: max health bonus")
+							.comment("Deer's Mercy Amulet: max health bonus")
 							.defineInRange("deersMercyAmuletMaxHealth", 10, 1, 100);
 				}
 
@@ -812,10 +812,10 @@ public class CAModConfig {
 							.comment("Deer Inscribed Amulet: attack damage bonus")
 							.defineInRange("deerInscribedAmuletDamage", 5.0, 1, 100);
 					deerInscribedAmuletBlessBonus = builder
-							.comment("Deer Inscribed Amulet: The bonus provided by reversing the curse")
+							.comment("Deer Inscribed Amulet: bonus provided per reversed curse")
 							.defineInRange("deerInscribedAmuletBlessBonus", 0.05, 0.01, 10);
 					deerInscribedAmuletStrengthInterval = builder
-							.comment("Deer Inscribed Amulet: Strengthen attack interval")
+							.comment("Deer Inscribed Amulet: interval in seconds to strengthen the next attack")
 							.defineInRange("deerInscribedAmuletStrengthInterval", 10, 1, 100);
 				}
 
@@ -857,43 +857,43 @@ public class CAModConfig {
 				builder.push("curse");
 
 				chaoticExplosionDamage = builder
-						.comment("Chaotic Curse: Damage increment percentage for explosion")
+						.comment("Chaotic Curse: explosion damage increase")
 						.defineInRange("chaoticExplosionDamage", 0.75, 0, 100);
 
 				chaoticOtherDamage = builder
-						.comment("Chaotic Curse: Damage increment percentage for non-explosion")
+						.comment("Chaotic Curse: non-explosion damage increase")
 						.defineInRange("chaoticOtherDamage", 0.5, 0, 100);
 
 				chaoticBlessDamageReduction = builder
-						.comment("Chaotic Bless: Max damage reduction at zero health")
+						.comment("Chaotic Bless: maximum damage reduction at zero health")
 						.defineInRange("chaoticBlessDamageReduction", 0.5, 0, 1);
 
 				originTriggerDurability = builder
-						.comment("Origin Curse: Durability threshold to trigger curse ")
+						.comment("Origin Curse: durability threshold to trigger the curse")
 						.defineInRange("originTriggerDurability", 500, 0, 1000000);
 
 				originCurseDamage = builder
-						.comment("Origin Curse: Player attack damage reduction")
+						.comment("Origin Curse: player attack damage reduction")
 						.defineInRange("originCurseDamage", 0.5, 0, 1);
 
 				originBlessDamage = builder
-						.comment("Origin Bless: Player attack damage bonus")
+						.comment("Origin Bless: player attack damage bonus")
 						.defineInRange("originBlessDamage", 0.25, 0, 100);
 
 				lifeCurseHealth = builder
-						.comment("Life Curse: Player max health reduction")
+						.comment("Life Curse: player max health reduction")
 						.defineInRange("lifeCurseHealth", 0.25, 0, 1);
 
 				lifeCurseHeal = builder
-						.comment("Life Curse: Player healing reduction")
+						.comment("Life Curse: player healing reduction")
 						.defineInRange("lifeCurseHeal", 0.5, 0, 1);
 
 				lifeBlessHealth = builder
-						.comment("Life Bless: Player max health bonus")
+						.comment("Life Bless: player max health bonus")
 						.defineInRange("lifeBlessHealth", 0.2, 0, 100);
 
 				lifeBlessHeal = builder
-						.comment("Life Bless: Player healing bonus")
+						.comment("Life Bless: player healing bonus")
 						.defineInRange("lifeBlessHeal", 0.3, 0, 100);
 
 				truthCurseMinDamage = builder
@@ -925,15 +925,15 @@ public class CAModConfig {
 						.defineInRange("endCurseDuration", 10, 1, 1000);
 
 				endBlessHeal = builder
-						.comment("End Bless: healing as percentage of health lost")
+						.comment("End Bless: healing as a percentage of health lost")
 						.defineInRange("endBlessHeal", 0.2, 0, 1);
 
 				etchingSlotSize = builder
-						.comment("Catastrophe Scroll: Number of etching slots size")
+						.comment("Catastrophe Scroll: number of etching slots")
 						.defineInRange("etchingSlotSize", 7, 0, 7);
 
 				charmSlotSize = builder
-						.comment("Catastrophe Scroll: Number of charm slots size")
+						.comment("Catastrophe Scroll: number of charm slots")
 						.defineInRange("charmSlotSize", 3, 0, 10);
 
 				builder.pop();
@@ -966,10 +966,10 @@ public class CAModConfig {
 						.comment("Abyss Core: effect cooldown")
 						.defineInRange("abyssCoreCooldown", 60, 0, 100000);
 				abyssCoreDamageJudgement = builder
-						.comment("Abyss Core: damage judgement")
+						.comment("Abyss Core: damage judgment")
 						.defineInRange("abyssCoreDamageJudgement", 12, 1, 100000);
 				abyssCoreReduce = builder
-						.comment("Abyss Core: damage reduce")
+						.comment("Abyss Core: damage reduction")
 						.defineInRange("abyssCoreReduce", 12, 0, 100000);
 				guardianEyeSwimSpeedBonus = builder
 						.comment("Guardian Eye: swim speed bonus")
@@ -978,34 +978,34 @@ public class CAModConfig {
 						.comment("Guardian Eye: protection")
 						.defineInRange("guardianEyeProtection", 0.2, 0, 1);
 				prayerCrownHealAmount = builder
-						.comment("Prayer Crown: heal amount")
+						.comment("Prayer Crown: healing amount")
 						.defineInRange("prayerCrownHealAmount", 0.25, 0, 10);
 				prayerCrownHealChance = builder
-						.comment("Prayer Crown: heal chance")
+						.comment("Prayer Crown: healing chance")
 						.defineInRange("prayerCrownHealChance", 0.5, 0, 1);
 				prayerCrownProtection = builder
 						.comment("Prayer Crown: protection")
 						.defineInRange("prayerCrownProtection", 0.25, 0, 10);
 				spiritCrownMaxEntityCount = builder
-						.comment("Spirit Crown: max entity count around player to trigger damage boost")
+						.comment("Spirit Crown: max entities around the player to trigger the damage bonus")
 						.defineInRange("spiritCrownMaxEntityCount", 3, 0, 100);
 				spiritCrownArrowDamageMultiplier = builder
 						.comment("Spirit Crown: arrow damage multiplier")
 						.defineInRange("spiritCrownArrowDamageMultiplier", 0.45, 0, 100);
 				spiritCrownDistanceDamage = builder
-						.comment("Spirit Crown: distance damage multiplier")
+						.comment("Spirit Crown: damage bonus per block of distance")
 						.defineInRange("spiritCrownDistanceDamage", 0.02, 0, 1);
 				seaGodCrownCoolDown = builder
-						.comment("Sea God Crown: skill cool down")
+						.comment("Sea God Crown: skill cooldown")
 						.defineInRange("seaGodCrownCoolDown", 30, 0, 1000);
 				sakuraHairpinMaxHealthAdd = builder
-						.comment("Sakura Hairpin: max health add amount")
+						.comment("Sakura Hairpin: max health bonus")
 						.defineInRange("sakuraHairpinMaxHealthAdd", 10, 0, 500);
 				sakuraHairpinArmorBonus = builder
-						.comment("Sakura Hairpin: armor bonus amount")
+						.comment("Sakura Hairpin: armor bonus")
 						.defineInRange("sakuraHairpinArmorBonus", 0.1, 0, 10);
 				sakuraHairpinCritBonusFromLuck = builder
-						.comment("Sakura Hairpin: crit rate bonus from luck")
+						.comment("Sakura Hairpin: critical hit rate bonus per point of luck")
 						.defineInRange("sakuraHairpinCritBonusFromLuck", 0.03, 0, 1);
 				angelDesireDamageBonus = builder
 						.comment("Angel Desire: damage bonus when flying")
@@ -1033,10 +1033,10 @@ public class CAModConfig {
 						.comment("Heart of Revenge: bow strength")
 						.defineInRange("heartOfRevengeBowStrength", 0.06, 0, 1);
 				heartOfRevengeValidTime = builder
-						.comment("Heart of Revenge: valid time for revenge")
+						.comment("Heart of Revenge: revenge effect duration")
 						.defineInRange("heartOfRevengeValidTime", 3, 0, 10);
 				heartOfRevengeDamageBonus = builder
-						.comment("Heart of Revenge: revenge damage")
+						.comment("Heart of Revenge: revenge damage bonus")
 						.defineInRange("heartOfRevengeDamageBonus", 0.25, 0, 10);
 				demonHeartDamageBonus = builder
 						.comment("Demon Heart: damage bonus")
@@ -1051,7 +1051,7 @@ public class CAModConfig {
 						.comment("Twisted Heart: toughness")
 						.defineInRange("twistedHeartToughness", 0.2, 0, 1);
 				greedyHeartXpBonus = builder
-						.comment("Greedy Heart: Xp pickup bonus")
+						.comment("Greedy Heart: XP pickup bonus")
 						.defineInRange("greedyHeartXpBonus", 2d, 0, 100);
 
 				builder.pop();
@@ -1092,19 +1092,19 @@ public class CAModConfig {
 			private Necklace(ForgeConfigSpec.Builder builder) {
 				builder.push("necklace");
 				starNecklaceDamageBonus = builder
-						.comment("Star Necklace: Damage bonus from behind")
+						.comment("Star Necklace: damage bonus from behind")
 						.defineInRange("starNecklaceDamageBonus", 0.4, 0, 10);
 				crossNecklaceInvulTick = builder
-						.comment("Cross Necklace: Invulnerability time bonus in ticks")
+						.comment("Cross Necklace: invulnerability time bonus in ticks")
 						.defineInRange("crossNecklaceInvulTick", 10, 0, 100);
 				gallopNecklaceSpeedBonus = builder
 						.comment("Gallop Necklace: speed bonus")
 						.defineInRange("gallopNecklaceSpeedBonus", 0.08, 0, 10);
 				gallopNecklaceDamageFactor = builder
-						.comment("Gallop Necklace: damage factor of speed")
+						.comment("Gallop Necklace: damage multiplier based on speed")
 						.defineInRange("gallopNecklaceDamageFactor", 1.5, 0, 100000);
 				emeraldNecklaceDrop = builder
-						.comment("Emerald Necklace: factor of dropping an emerald")
+						.comment("Emerald Necklace: chance to drop an emerald")
 						.defineInRange("emeraldNecklaceDropEmerald", 0.02, 0, 1);
 				enderProtectorChance = builder
 						.comment("Ender Protector: teleport chance")
@@ -1116,53 +1116,53 @@ public class CAModConfig {
 						.comment("Holy Necklace: duration in seconds")
 						.defineInRange("holyNecklaceDuration", 2, 0, 600);
 				lockOfAbyssExtraDamage = builder
-						.comment("Lock Of Abyss: extra damage multiplier")
+						.comment("Lock of Abyss: extra damage multiplier")
 						.defineInRange("lockOfAbyssExtraDamage", 2.5, 0, 10);
 				lockOfAbyssDuration = builder
-						.comment("Lock Of Abyss: slowness duration in seconds")
+						.comment("Lock of Abyss: slowness duration in seconds")
 						.defineInRange("lockOfAbyssDuration", 10, 1, 1000);
 				lockOfAbyssThreshold = builder
-						.comment("Lock Of Abyss: layer of slowness to take effect")
+						.comment("Lock of Abyss: slowness level required to take effect")
 						.defineInRange("lockOfAbyssThreshold", 7, 1, 10);
 				// fang necklace
 				{
 					fangNecklaceAttack = builder
-							.comment("Fang Necklace: Attack bonus")
+							.comment("Fang Necklace: attack bonus")
 							.defineInRange("fangNecklaceAttack", 0.1, 0, 10);
 					fangNecklaceDamageBonus = builder
-							.comment("Fang Necklace: Damage bonus from behind")
+							.comment("Fang Necklace: damage bonus from behind")
 							.defineInRange("fangNecklaceDamageBonus", 0.25, 0, 10);
 					fangNecklacePoisonChance = builder
-							.comment("Fang Necklace: poison inflict chance")
+							.comment("Fang Necklace: poison effect chance")
 							.defineInRange("fangNecklacePoisonChance", 0.5, 0, 1);
 					fangNecklacePoisonDuration = builder
-							.comment("Fang Necklace: poison inflicted duration in seconds")
+							.comment("Fang Necklace: poison effect duration in seconds")
 							.defineInRange("fangNecklacePoisonDuration", 5, 0, 1000);
 					fangNecklacePoisonLevel = builder
-							.comment("Fang Necklace: poison inflicted level (0 means Lv.I)")
+							.comment("Fang Necklace: poison effect level (0 means Lv.I)")
 							.defineInRange("fangNecklacePoisonLevel", 2, 0, 5);
 
 				}
 				preciousNecklaceCritDmg = builder
-						.comment("Precious Necklace: crit damage bonus")
+						.comment("Precious Necklace: critical damage bonus")
 						.defineInRange("preciousNecklaceCritDmg", 0.2, 0, 10);
 				holyNecklaceMaxHealth = builder
-						.comment("Holy Necklace: Max health boost")
+						.comment("Holy Necklace: max health bonus")
 						.defineInRange("holyNecklaceMaxHealth", 4d, 0, 100);
 				holyNecklaceInvulTick = builder
-						.comment("Holy Necklace: additional invul tick")
+						.comment("Holy Necklace: additional invulnerability ticks")
 						.defineInRange("holyNecklaceInvulTick", 5, 0, 100);
 				//hierloom necklace
 				{
 
 					hierloomNecklaceArmor = builder
-							.comment("Hierloom Necklace: armor bonus")
+							.comment("Heirloom Necklace: armor bonus")
 							.defineInRange("hierloomNecklaceArmor", 2d, 0, 100);
 					hierloomNecklaceSpeed = builder
-							.comment("Hierloom Necklace: movement speed bonus")
+							.comment("Heirloom Necklace: movement speed bonus")
 							.defineInRange("hierloomNecklaceSpeed", 0.05, 0, 10);
 					hierloomNecklaceExp = builder
-							.comment("Hierloom Necklace: exp pickup bonus")
+							.comment("Heirloom Necklace: XP pickup bonus")
 							.defineInRange("hierloomNecklaceExp", 0.1, 0, 10);
 				}
 				enderProtectorToughness = builder
@@ -1175,10 +1175,10 @@ public class CAModConfig {
 						.comment("Spirit Necklace: projectile damage bonus")
 						.defineInRange("spiritNecklaceProjectile", 0.25, 0, 10);
 				treasureHunterNecklaceCooldown = builder
-						.comment("Treasure Hunter Necklace: Cooldown time")
+						.comment("Treasure Hunter Necklace: cooldown")
 						.defineInRange("treasureHunterNecklaceCoolDown", 6000, 0, 10000000);
 				treasureHunterNecklaceChance = builder
-						.comment("Treasure Hunter Necklace: chance to catch a loot")
+						.comment("Treasure Hunter Necklace: chance to obtain loot")
 						.defineInRange("treasureHunterNecklaceChance", 0.05, 0, 1);
 				builder.pop();
 			}
@@ -1197,10 +1197,10 @@ public class CAModConfig {
 			private Pendant(ForgeConfigSpec.Builder builder) {
 				builder.push("pendant");
 				shadowPendantDamageHeal = builder
-						.comment("Shadow Pendant: damage heal multiplier")
+						.comment("Shadow Pendant: healing from damage dealt")
 						.defineInRange("shadowPendantDamageHeal", 0.25, 0, 1);
 				shadowPendantLightLevel = builder
-						.comment("Shadow Pendant: Starting light level to give bonus")
+						.comment("Shadow Pendant: light level threshold for the bonus")
 						.defineInRange("shadowPendantLightLevel", 7, 0, 15);
 				shadowPendantDamageBonus = builder
 						.comment("Shadow Pendant: damage bonus")
@@ -1227,21 +1227,21 @@ public class CAModConfig {
 
 			private Ring(ForgeConfigSpec.Builder builder) {
 				builder.push("ring");
-				amethystRingDamage = builder.comment("Amethyst Ring: damage boost")
+				amethystRingDamage = builder.comment("Amethyst Ring: damage bonus")
 						.defineInRange("amethystRingDamage", 0.1, 0, 100);
-				netheriteRingProtection = builder.comment("Netherite Ring: protection in nether")
+				netheriteRingProtection = builder.comment("Netherite Ring: protection in the Nether")
 						.defineInRange("netheriteRingProtection", 0.1, 0, 1);
 				netherFireRingFireTime = builder
-						.comment("Nether Fire Ring: fire burning time")
+						.comment("Nether Fire Ring: fire burn duration")
 						.defineInRange("netherFireRingFireBurningTime", 5, 0, 1000);
 				ringOfLifeEffectInterval = builder
-						.comment("Ring Of Life: effect interval")
+						.comment("Ring of Life: effect interval")
 						.defineInRange("ringOfLifeEffectInterval", 5, 1, 100);
 				nostalgicButterflyRingCritRate = builder
-						.comment("Nostalgic Butterfly Ring: crit rate bonus")
+						.comment("Nostalgic Butterfly Ring: critical hit rate bonus")
 						.defineInRange("nostalgicButterflyRingCritRate", 0.2, 0, 100);
 				nostalgicButterflyRingCritDmg = builder
-						.comment("Nostalgic Butterfly Ring: crit damage reduce")
+						.comment("Nostalgic Butterfly Ring: critical damage reduction")
 						.defineInRange("nostalgicButterflyRingCritDmg", 0.2, 0, 100);
 				builder.pop();
 			}
@@ -1269,7 +1269,7 @@ public class CAModConfig {
 						.comment("Twisted Scroll: chance for encountered mobs to duplicate")
 						.defineInRange("twistedDuplicateChance", 0.6, 0, 1);
 				travellerScrollSpeedBonus = builder
-						.comment("Traveller Scroll: speed bonus of all kinds")
+						.comment("Traveller Scroll: speed bonus")
 						.defineInRange("travellerScrollSpeedBonus", 0.25, 0, 10);
 
 				builder.pop();
@@ -1293,9 +1293,9 @@ public class CAModConfig {
 			private Body(ForgeConfigSpec.Builder builder) {
 				builder.push("body");
 
-				forestCloakDodgeChance = builder.comment("forest cloak: chance to dodge projectile")
+				forestCloakDodgeChance = builder.comment("Forest Cloak: chance to dodge projectiles")
 						.defineInRange("forestCloakDodgeChance", 0.2, 0, 1);
-				forestCloakJumpPower = builder.comment("forest cloak: jump power bonus")
+				forestCloakJumpPower = builder.comment("Forest Cloak: jump power bonus")
 						.defineInRange("forestCloakJumpPower", 0.25, 0, 10);
 				builder.pop();
 			}
@@ -1322,27 +1322,27 @@ public class CAModConfig {
 
 				// sea god
 				{
-					seaGodProtect = builder.comment("Sea God Set: damage reduction of water mob damage")
+					seaGodProtect = builder.comment("Sea God Set: damage reduction against aquatic mobs")
 							.defineInRange("seaGodProtect", 0.35, 0, 1);
-					seaGodMelee = builder.comment("Sea God Set: damage bonus of trident melee")
+					seaGodMelee = builder.comment("Sea God Set: trident melee damage bonus")
 							.defineInRange("seaGodMelee", 0.5, 0, 10);
-					seaGodThrow = builder.comment("Sea God Set: damage bonus of trident throw")
+					seaGodThrow = builder.comment("Sea God Set: thrown trident damage bonus")
 							.defineInRange("seaGodThrow", 0.75, 0, 10);
 				}
 
 				// emerald
 				{
-					emeraldLuck = builder.comment("Emerald Set: Luck bonus")
+					emeraldLuck = builder.comment("Emerald Set: luck bonus")
 							.defineInRange("emeraldLuck", 2, 0, 10);
-					emeraldCrit = builder.comment("Emerald Set: Crit rate bonus")
+					emeraldCrit = builder.comment("Emerald Set: critical hit rate bonus")
 							.defineInRange("emeraldCrit", 0.15, 0, 1);
 				}
 
 				// spirit
 				{
-					spiritPullDuration = builder.comment("Spirit Set: time in seconds after pulling bow to apply pulling bonus")
+					spiritPullDuration = builder.comment("Spirit Set: bow draw time in seconds required for the bonus")
 							.defineInRange("spiritPullDuration", 3, 0, 100);
-					spiritBackShootBonus = builder.comment("Spirit Set: damage bonus when shooting target from behind")
+					spiritBackShootBonus = builder.comment("Spirit Set: damage bonus when shooting a target from behind")
 							.defineInRange("spiritBackShootBonus", 0.5, 0, 10);
 					spiritInflictChance = builder.comment("Spirit Set: chance to inflict slowness effect")
 							.defineInRange("spiritInflictChance", 0.5, 0, 1);
@@ -1354,7 +1354,7 @@ public class CAModConfig {
 							.defineInRange("spiritProtect", 0.2, 0, 1);
 				}
 
-				deerButterFlyDmgMul = builder.comment("Deer Butter Fly Set: extra damage multiplier")
+				deerButterFlyDmgMul = builder.comment("Deer Butterfly Set: extra damage multiplier")
 						.defineInRange("deerButterFlyDmgMul", 0.15, 0, 100);
 				builder.pop();
 			}
@@ -1385,11 +1385,11 @@ public class CAModConfig {
 						1, 0, 100);
 
 				giveItemsOnStart = builder
-						.comment("If true, Hierloom Necklace and Catastrophe Scroll will be given to new players")
+						.comment("If true, Heirloom Necklace and Catastrophe Scroll will be given to new players")
 						.define("giveItemsOnStart", true);
 				// catastrophe_scroll
 				catastropheScrollEquipOnStart = builder
-						.comment("If true, Catastrophe Scroll will be directly equipped onto new players")
+						.comment("If true, Catastrophe Scroll will be equipped to new players automatically")
 						.define("catastropheScrollStart", false);
 				catastropheScrollPreventUnequip = builder
 						.comment("If true, Catastrophe Scroll cannot be unequipped once equipped")

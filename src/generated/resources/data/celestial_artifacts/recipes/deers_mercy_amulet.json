@@ -14,16 +14,16 @@
   ],
   "key": {
     "D": {
-      "item": "minecraft:glowstone_dust"
+      "item": "minecraft:iron_ingot"
     },
     "G": {
       "item": "minecraft:gold_ingot"
     },
     "I": {
-      "item": "minecraft:iron_ingot"
+      "item": "celestial_core:treasure_fragment"
     },
     "T": {
-      "item": "celestial_core:treasure_fragment"
+      "item": "minecraft:diamond"
     }
   },
   "pattern": [

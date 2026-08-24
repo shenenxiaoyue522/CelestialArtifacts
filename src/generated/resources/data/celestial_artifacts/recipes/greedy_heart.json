@@ -17,10 +17,10 @@
       "item": "celestial_core:heart_fragment"
     },
     "B": {
-      "item": "minecraft:nether_star"
+      "item": "minecraft:diamond"
     },
     "C": {
-      "item": "minecraft:netherite_ingot"
+      "item": "minecraft:glowstone"
     },
     "D": {
       "item": "minecraft:gold_block"
