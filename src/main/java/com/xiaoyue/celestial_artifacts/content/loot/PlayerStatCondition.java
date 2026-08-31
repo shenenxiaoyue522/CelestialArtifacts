@@ -2,10 +2,8 @@ package com.xiaoyue.celestial_artifacts.content.loot;
 
 import com.xiaoyue.celestial_artifacts.register.CALootModifier;
 import com.xiaoyue.celestial_core.content.loot.IntConfigValue;
-import com.xiaoyue.celestial_invoker.content.common.Bindings;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.npc.Villager;
@@ -18,8 +16,8 @@ import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.neoforged.neoforge.common.CommonHooks;
+import top.theillusivec4.curios.api.CuriosApi;
 
-import java.util.Optional;
 import java.util.function.BiFunction;
 
 @SerialClass
@@ -56,8 +54,11 @@ public class PlayerStatCondition implements LootItemCondition {
 		LOOT((player, ctx) -> {
 			HolderLookup.RegistryLookup<Enchantment> lookup = CommonHooks.resolveLookup(Registries.ENCHANTMENT);
 			if (lookup != null) {
-				Optional<Holder.Reference<Enchantment>> looting = lookup.get(Enchantments.LOOTING);
-				return looting.map(e -> EnchantmentHelper.getEnchantmentLevel(e.getDelegate(), player)).orElse(0);
+				var looting = lookup.get(Enchantments.LOOTING);
+				var inv = CuriosApi.getCuriosInventory(player);
+				int curioLooting = inv.map(handler -> handler.getLootingLevel(ctx)).orElse(0);
+				int enchLooting = looting.map(e -> EnchantmentHelper.getEnchantmentLevel(e.getDelegate(), player)).orElse(0);
+				return curioLooting + enchLooting;
 			}
             return 0;
         }),
