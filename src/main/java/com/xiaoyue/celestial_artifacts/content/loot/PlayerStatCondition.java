@@ -5,14 +5,21 @@ import com.xiaoyue.celestial_core.content.loot.IntConfigValue;
 import com.xiaoyue.celestial_invoker.content.common.Bindings;
 import dev.xkmc.l2serial.serialization.marker.SerialClass;
 import dev.xkmc.l2serial.serialization.marker.SerialField;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.npc.Villager;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.enchantment.Enchantment;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
+import net.neoforged.neoforge.common.CommonHooks;
 
+import java.util.Optional;
 import java.util.function.BiFunction;
 
 @SerialClass
@@ -46,7 +53,14 @@ public class PlayerStatCondition implements LootItemCondition {
 	}
 
 	public enum Type {
-		LOOT((player, ctx) -> Bindings.getEnchantmentLv(player.getMainHandItem(), Enchantments.LOOTING)),
+		LOOT((player, ctx) -> {
+			HolderLookup.RegistryLookup<Enchantment> lookup = CommonHooks.resolveLookup(Registries.ENCHANTMENT);
+			if (lookup != null) {
+				Optional<Holder.Reference<Enchantment>> looting = lookup.get(Enchantments.LOOTING);
+				return looting.map(e -> EnchantmentHelper.getEnchantmentLevel(e.getDelegate(), player)).orElse(0);
+			}
+            return 0;
+        }),
 		REPUTATION((player, ctx) -> ctx.hasParam(LootContextParams.THIS_ENTITY) &&
 				ctx.getParam(LootContextParams.THIS_ENTITY) instanceof Villager vil ?
 				vil.getPlayerReputation(player) : 0);
