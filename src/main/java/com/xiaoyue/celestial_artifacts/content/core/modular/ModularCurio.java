@@ -13,9 +13,7 @@ import dev.xkmc.l2core.util.Proxy;
 import dev.xkmc.l2damagetracker.contents.curios.L2Totem;
 import dev.xkmc.l2damagetracker.contents.curios.TotemHelper;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
-import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -28,7 +26,10 @@ import net.minecraft.world.entity.monster.EnderMan;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.storage.loot.LootContext;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.common.ModConfigSpec;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -125,12 +126,12 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 
 	@Override
 	public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> list, TooltipFlag tooltipFlag) {
-		ClientLevel level = Minecraft.getInstance().level;
+		Level level = Proxy.getLevel();
 		if (!enableConfig().get()) {
 			list.add(CALang.Tooltip.BAN.get().withStyle(ChatFormatting.RED));
 			return;
 		}
-		if (level == null || Screen.hasShiftDown()) {
+		if (level == null || hasShiftDown()) {
 			for (var e : text) {
 				e.addText(level, list);
 			}
@@ -149,19 +150,33 @@ public final class ModularCurio extends BaseCurio implements L2Totem {
 			}
 		}
 		if (set != null) {
-			if (level == null || Screen.hasAltDown()) {
+			if (level == null || hasAltDown()) {
 				set.addText(level, list);
 			} else {
 				list.add(CALang.Modular.alt());
 			}
 		}
-		if (!Screen.hasShiftDown() && prop.curse()) {
-			if (Screen.hasAltDown()) {
+		if (!hasShiftDown() && prop.curse()) {
+			if (hasAltDown()) {
 				list.addAll(CatastropheScroll.addInfo());
 			} else {
 				list.add(CALang.Modular.curseAlt());
 			}
 		}
+	}
+
+	private static boolean hasShiftDown() {
+		if (FMLEnvironment.dist == Dist.CLIENT) {
+			return Screen.hasShiftDown();
+		}
+		return false;
+	}
+
+	private static boolean hasAltDown() {
+		if (FMLEnvironment.dist == Dist.CLIENT) {
+			return Screen.hasAltDown();
+		}
+		return false;
 	}
 
 	@Override
