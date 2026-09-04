@@ -8,7 +8,7 @@ import net.minecraft.ChatFormatting;
 
 public class AmethystReinforcePlate extends CCTooltipItem {
 	public AmethystReinforcePlate() {
-		super(new Properties(), true, ChatFormatting.LIGHT_PURPLE, () -> CALang.Tooltip.AMETHYST_REINFORCE_PLATE.get(
+		super(new Properties(), true, ChatFormatting.LIGHT_PURPLE, true, () -> CALang.Tooltip.AMETHYST_REINFORCE_PLATE.get(
 				TextFacet.num(CAModConfig.SERVER.misc.amethystReinforceEffect.get())));
 	}
 }

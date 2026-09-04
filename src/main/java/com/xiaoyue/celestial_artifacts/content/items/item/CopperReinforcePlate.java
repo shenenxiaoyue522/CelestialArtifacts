@@ -9,7 +9,7 @@ import net.minecraft.world.item.Rarity;
 
 public class CopperReinforcePlate extends CCTooltipItem {
 	public CopperReinforcePlate() {
-		super(new Properties().rarity(Rarity.RARE), true, ChatFormatting.AQUA, () ->
+		super(new Properties().rarity(Rarity.RARE), true, ChatFormatting.AQUA, true, () ->
 				CALang.Tooltip.COPPER_REINFORCE_PLATE.get(TextFacet.perc(CAModConfig.SERVER.misc
 						.copperReinforceChance.get())));
 	}
